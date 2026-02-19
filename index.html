@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strata Growth Advisors — AI Decision Intelligence for SMEs</title>
-  <meta name="description" content="Strata delivers AI-powered decision intelligence for SMEs—detect bottlenecks, identify root causes, and get a clear 90-day roadmap with KPIs and quick wins. Clarity before automation." />
+  <meta name="description" content="Strata delivers AI-powered decision intelligence for SMEs—detect bottlenecks, find root causes, and get a clear 90-day roadmap with KPIs and quick wins. Clarity before automation." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://strataadv.com/" />
 
@@ -16,9 +16,9 @@
   <meta property="og:image" content="https://strataadv.com/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="/assets/strata-favicon.png?v=2">
-  <meta name="theme-color" content="#061320">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/strata-favicon.png?v=4">
+  <meta name="theme-color" content="#0C1B2A">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,27 +27,28 @@
 
   <style>
     :root{
-      --bg:#050B14;
-      --bg2:#061320;
-      --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.08);
-      --border: rgba(255,255,255,0.12);
-      --text:#EEF3FF;
-      --muted: rgba(238,243,255,0.74);
-      --muted2: rgba(238,243,255,0.58);
+      --bg0: #0B1623;
+      --bg1: #0F2233;
 
-      /* Navy -> Teal */
+      --panel: rgba(255,255,255,0.10);
+      --panel2: rgba(255,255,255,0.14);
+      --border: rgba(255,255,255,0.14);
+
+      --text: rgba(245,250,255,0.96);
+      --muted: rgba(245,250,255,0.74);
+      --muted2: rgba(245,250,255,0.60);
+
       --teal:#1FD3C6;
-      --teal2:#43E7DB;
+      --teal2:#4AE9DD;
       --tealGlow: rgba(31,211,198,0.22);
-      --tealGlow2: rgba(67,231,219,0.16);
+      --tealGlow2: rgba(74,233,221,0.14);
 
-      --shadow: 0 24px 90px rgba(0,0,0,0.55);
-      --shadow2: 0 18px 60px rgba(0,0,0,0.38);
+      --shadow: 0 24px 90px rgba(0,0,0,0.45);
+      --shadow2: 0 14px 44px rgba(0,0,0,0.30);
 
       --max: 1180px;
       --r: 18px;
-      --r2: 24px;
+      --r2: 26px;
     }
 
     *{box-sizing:border-box}
@@ -57,79 +58,55 @@
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(1000px 520px at 16% 10%, var(--tealGlow), transparent 60%),
-        radial-gradient(900px 520px at 86% 20%, var(--tealGlow2), transparent 55%),
-        radial-gradient(900px 520px at 50% 80%, rgba(31,211,198,0.12), transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
+        radial-gradient(900px 520px at 18% 6%, var(--tealGlow), transparent 60%),
+        radial-gradient(900px 520px at 86% 18%, var(--tealGlow2), transparent 55%),
+        radial-gradient(900px 520px at 50% 84%, rgba(31,211,198,0.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
       overflow-x:hidden;
     }
     a{color:inherit; text-decoration:none}
     .container{max-width: var(--max); margin:0 auto; padding: 0 18px}
     @media(min-width:960px){ .container{padding: 0 40px} }
 
+    /* Icons */
+    .ico{width:18px;height:18px;display:inline-block;vertical-align:-3px;opacity:.95;flex:0 0 auto}
+    .icoStroke{stroke: currentColor; stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round}
+
     /* Header */
     .header{
       position:sticky; top:0; z-index:99;
-      background: rgba(5,11,20,0.68);
+      background: rgba(10,20,31,0.68);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
-    .headerInner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 12px 0;
-      gap: 12px;
-    }
-    .brand{display:flex; align-items:center; gap:12px; min-width: 270px}
+    .headerInner{display:flex; align-items:center; justify-content:space-between; padding: 12px 0; gap: 12px}
+    .brand{display:flex; align-items:center; gap:12px; min-width: 260px}
     .logoWrap{
-      background:#fff;
+      background: rgba(255,255,255,0.92);
       padding:6px 10px;
-      border-radius:10px;
-      display:flex;
-      align-items:center;
-      box-shadow:0 6px 18px rgba(0,0,0,.35);
+      border-radius:12px;
+      display:flex; align-items:center;
+      box-shadow:0 10px 26px rgba(0,0,0,.25);
       border: 1px solid rgba(0,0,0,0.06);
     }
     .brandLogo{height:34px; width:auto; display:block}
     .brandText{display:flex; flex-direction:column; line-height:1.1}
     .brandName{font-weight:900; letter-spacing:-0.2px}
-    .brandTag{
-      font-size:12px; color: var(--muted2);
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap
-    }
-
-    /* Simple badge */
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-    }
-    .badgeDot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
-    .badgeText{font-weight:850; font-size:12.5px; color: rgba(238,243,255,0.86)}
+    .brandTag{font-size:12px; color: var(--muted2); display:flex; gap:10px; align-items:center; flex-wrap:wrap}
 
     .nav{display:none; gap:8px; align-items:center}
     .nav a{
-      font-size:13px;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      white-space:nowrap;
+      font-size:13px; color: var(--muted);
+      padding: 8px 10px; border-radius: 12px;
+      border: 1px solid transparent; white-space:nowrap;
     }
-    .nav a:hover{
-      border-color: rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-    }
+    .nav a:hover{border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.06); color: var(--text)}
     @media(min-width:980px){ .nav{display:flex} }
 
     .btnRow{display:flex; gap:10px; align-items:center}
     .btn{
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.08);
       color: var(--text);
       padding: 10px 14px;
       border-radius: 14px;
@@ -140,73 +117,61 @@
       display:inline-flex; align-items:center; gap:10px;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); background: rgba(255,255,255,0.08)}
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 14px 38px rgba(0,0,0,0.30); background: rgba(255,255,255,0.10)}
     .btnPrimary{
-      border-color: rgba(31,211,198,0.42);
+      border-color: rgba(31,211,198,0.50);
       background: linear-gradient(135deg, var(--teal), var(--teal2));
       box-shadow: 0 20px 70px rgba(31,211,198,0.22);
-      color:#05121e;
+      color:#061320;
     }
-    .btnPrimary:hover{box-shadow: 0 26px 90px rgba(31,211,198,0.28)}
+    .btnPrimary:hover{box-shadow: 0 28px 90px rgba(31,211,198,0.26)}
     .btnGhost{background: transparent}
 
     /* Sections */
     .section{padding: 64px 0}
-    @media(min-width:960px){ .section{padding: 84px 0} }
+    @media(min-width:960px){ .section{padding: 86px 0} }
+
+    /* Reveal on scroll (progressive enhancement) */
+    .reveal{
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 600ms ease, transform 600ms ease;
+      will-change: opacity, transform;
+    }
+    .reveal.is-visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce){
+      .reveal{opacity: 1 !important; transform:none !important; transition:none !important}
+    }
 
     /* Hero */
-    .hero{padding: 48px 0 10px; position:relative;}
-    .heroGrid{
-      display:grid; gap: 18px;
-      grid-template-columns: 1fr;
-      align-items:start;
-    }
-    @media(min-width:980px){
-      .heroGrid{grid-template-columns: 1.06fr 0.94fr; gap: 28px; align-items:center;}
-    }
+    .hero{padding: 52px 0 18px; position:relative;}
+    .heroGrid{display:grid; gap: 18px; grid-template-columns: 1fr; align-items:start;}
+    @media(min-width:980px){ .heroGrid{grid-template-columns: 1.08fr 0.92fr; gap: 28px; align-items:center;} }
 
     .pillRow{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
     .pill{
       display:inline-flex; align-items:center; gap:10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.05);
-      color: rgba(238,243,255,0.78);
-      font-size: 13px;
-      width: fit-content;
+      padding: 10px 14px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.07);
+      color: rgba(245,250,255,0.82);
+      font-size: 13px; width: fit-content;
     }
     .dot{width:9px; height:9px; border-radius: 50%; background: var(--teal)}
-    h1{
-      margin: 14px 0 10px;
-      font-size: 38px;
-      line-height: 1.04;
-      letter-spacing: -1px;
-      font-weight: 950;
-    }
-    @media(min-width:980px){ h1{font-size: 54px} }
-    .lead{
-      margin:0;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.75;
-      max-width: 68ch;
-    }
+    h1{margin: 14px 0 10px; font-size: 38px; line-height: 1.04; letter-spacing: -1.1px; font-weight: 950;}
+    @media(min-width:980px){ h1{font-size: 56px} }
+    .lead{margin:0; color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 70ch;}
+    .kicker{font-weight:900; letter-spacing:-0.2px; color: rgba(245,250,255,0.94)}
     .heroCTA{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; align-items:center}
-    .micro{
-      margin-top: 10px;
-      color: var(--muted2);
-      font-size: 12.5px;
-      line-height: 1.6;
-    }
+    .micro{margin-top: 10px; color: var(--muted2); font-size: 12.5px; line-height: 1.6;}
 
-    /* Right hero panel */
     .heroPanel{
       border-radius: var(--r2);
-      border: 1px solid rgba(255,255,255,0.12);
-      background:
-        radial-gradient(700px 320px at 18% 10%, rgba(31,211,198,0.16), transparent 55%),
-        rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: radial-gradient(720px 320px at 18% 10%, rgba(31,211,198,0.18), transparent 55%), rgba(255,255,255,0.08);
       box-shadow: var(--shadow);
       padding: 16px;
       overflow:hidden;
@@ -214,25 +179,22 @@
     }
     .panelTop{
       display:flex; align-items:center; justify-content:space-between; gap:10px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.14);
       margin-bottom: 12px;
     }
     .panelTitle{font-weight:950; letter-spacing:-0.2px}
     .chip{
       display:inline-flex; align-items:center; gap:8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(31,211,198,0.22);
-      background: rgba(31,211,198,0.08);
-      color: rgba(238,243,255,0.82);
-      font-size: 12px;
-      white-space:nowrap;
+      padding: 6px 10px; border-radius: 999px;
+      border: 1px solid rgba(31,211,198,0.26);
+      background: rgba(31,211,198,0.10);
+      color: rgba(245,250,255,0.86);
+      font-size: 12px; white-space:nowrap;
     }
     .panelCard{
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
       padding: 12px;
       margin-bottom: 10px;
     }
@@ -240,60 +202,83 @@
     .pcTitle{font-weight:900; font-size:13px}
     .pcMeta{color: var(--muted2); font-size:12px}
     .meter{
-      margin-top:10px;
-      height: 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
+      margin-top:10px; height: 10px; border-radius: 999px;
+      background: rgba(255,255,255,0.10);
       overflow:hidden;
-      border: 1px solid rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.12);
     }
     .meter > span{
-      display:block;
-      height:100%;
-      width: 62%;
-      background: linear-gradient(90deg, rgba(31,211,198,0.75), rgba(67,231,219,0.85));
+      display:block; height:100%; width: 62%;
+      background: linear-gradient(90deg, rgba(31,211,198,0.78), rgba(74,233,221,0.88));
       border-radius: 999px;
     }
-    .pcList{
-      margin:10px 0 0;
-      padding-left: 18px;
-      color: rgba(238,243,255,0.74);
-      line-height:1.7;
-      font-size: 12.5px;
-    }
+    .pcList{margin:10px 0 0; padding-left: 18px; color: rgba(245,250,255,0.78); line-height:1.7; font-size: 12.5px;}
     .pcList li{margin:4px 0}
 
-    /* Proof bar */
-    .proof{
-      margin-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.10);
-      border-bottom: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.03);
-      padding: 12px 0;
+    /* Premium animated gradient line under hero */
+    .glowLineWrap{
+      margin-top: 18px;
+      position: relative;
+      padding: 10px 0 0;
     }
-    .proofRow{display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
-    .proofBadge{
-      display:flex; align-items:center; gap:10px;
-      padding: 9px 12px;
+    .glowLine{
+      height: 2px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-      color: rgba(238,243,255,0.76);
-      font-size: 12.5px;
-      white-space:nowrap;
+      background: linear-gradient(90deg,
+        rgba(31,211,198,0),
+        rgba(31,211,198,0.85),
+        rgba(74,233,221,0.85),
+        rgba(31,211,198,0)
+      );
+      filter: drop-shadow(0 0 12px rgba(31,211,198,0.28));
+      opacity: .9;
+      background-size: 220% 100%;
+      animation: sweep 4.5s ease-in-out infinite;
     }
+    .glowLine:after{
+      content:"";
+      display:block;
+      height: 10px;
+      margin-top: -6px;
+      border-radius: 999px;
+      background: radial-gradient(closest-side, rgba(31,211,198,0.24), transparent);
+      opacity: .7;
+    }
+    @keyframes sweep{
+      0%{background-position: 0% 0%}
+      50%{background-position: 100% 0%}
+      100%{background-position: 0% 0%}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .glowLine{animation:none}
+    }
+
+    /* Problem -> Outcome strip */
+    .strip{
+      margin-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      padding: 14px 0;
+    }
+    .stripRow{display:grid; gap: 10px; grid-template-columns: 1fr; align-items:stretch;}
+    @media(min-width:980px){ .stripRow{grid-template-columns: 1fr 1fr 1fr;} }
+    .stripItem{
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .stripTop{display:flex; gap:10px; align-items:center; justify-content:space-between; margin-bottom:6px}
+    .stripLabel{display:inline-flex; align-items:center; gap:8px; font-weight:900; font-size:12.5px; color: rgba(245,250,255,0.92);}
+    .stripText{margin:0; color: rgba(245,250,255,0.74); font-size: 13px; line-height: 1.65;}
 
     /* Headings */
-    h2{
-      margin:0 0 10px;
-      font-size: 28px;
-      letter-spacing: -0.4px;
-      font-weight: 950;
-    }
-    @media(min-width:980px){ h2{font-size: 36px} }
-    .sub{margin:0; color: var(--muted); line-height:1.75; max-width: 84ch}
+    h2{margin:0 0 10px; font-size: 28px; letter-spacing: -0.4px; font-weight: 950;}
+    @media(min-width:980px){ h2{font-size: 38px} }
+    .sub{margin:0; color: var(--muted); line-height:1.75; max-width: 86ch}
 
-    /* Grids / cards */
+    /* Cards */
     .grid2{display:grid; gap: 12px; grid-template-columns: 1fr}
     .grid3{display:grid; gap: 12px; grid-template-columns: 1fr}
     @media(min-width:980px){
@@ -302,12 +287,22 @@
     }
     .card{
       border-radius: var(--r);
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.08);
       box-shadow: var(--shadow2);
       padding: 16px;
     }
-    .miniTitle{font-weight: 950; margin: 0 0 8px; letter-spacing:-0.2px}
+    .cardTop{display:flex; gap:10px; align-items:flex-start; margin-bottom:8px}
+    .cardIcon{
+      width:34px; height:34px;
+      border-radius: 12px;
+      border: 1px solid rgba(31,211,198,0.28);
+      background: rgba(31,211,198,0.12);
+      display:flex; align-items:center; justify-content:center;
+      color: rgba(245,250,255,0.92);
+      flex:0 0 auto;
+    }
+    .miniTitle{font-weight: 950; margin: 0 0 6px; letter-spacing:-0.2px}
     .miniText{margin:0; color: var(--muted); line-height:1.7; font-size:14px}
 
     /* Steps */
@@ -316,23 +311,34 @@
     .stepNum{
       width: 36px; height: 36px;
       border-radius: 12px;
-      background: rgba(31,211,198,0.14);
-      border: 1px solid rgba(31,211,198,0.26);
+      background: rgba(31,211,198,0.16);
+      border: 1px solid rgba(31,211,198,0.30);
       display:flex; align-items:center; justify-content:center;
       font-weight: 950;
       margin-bottom: 10px;
       color: #fff;
     }
 
+    /* Trust */
+    .trust{
+      border-radius: var(--r2);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: radial-gradient(900px 260px at 20% 0%, rgba(31,211,198,0.16), transparent 60%), rgba(255,255,255,0.08);
+      padding: 18px;
+      box-shadow: var(--shadow2);
+    }
+    .trustRow{display:grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px;}
+    @media(min-width:980px){ .trustRow{grid-template-columns: 1.05fr 0.95fr;} }
+    .trustNote{color: rgba(245,250,255,0.76); font-size: 13.5px; line-height: 1.75; margin:0;}
+    .trustBullets{margin:0; padding-left: 18px; color: rgba(245,250,255,0.74); line-height:1.75; font-size: 13.5px;}
+
     /* Quote */
     .quote{
       border-radius: var(--r2);
-      border: 1px solid rgba(255,255,255,0.12);
-      background:
-        radial-gradient(900px 260px at 20% 0%, rgba(31,211,198,0.18), transparent 60%),
-        rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: radial-gradient(900px 260px at 20% 0%, rgba(31,211,198,0.16), transparent 60%), rgba(255,255,255,0.08);
       padding: 20px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow2);
     }
     .quoteText{margin:0; color: var(--text); font-weight: 900; line-height:1.45; font-size: 18px}
     .quoteMeta{margin-top:10px; color: var(--muted2); font-size: 13px}
@@ -340,8 +346,8 @@
     /* FAQ */
     details{
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.07);
       padding: 12px 14px;
     }
     details + details{margin-top: 10px}
@@ -354,17 +360,15 @@
       text-align:center;
       border-radius: 26px;
       border: 1px solid rgba(31,211,198,0.28);
-      background:
-        radial-gradient(900px 300px at 50% 0%, rgba(31,211,198,0.22), transparent 60%),
-        rgba(255,255,255,0.05);
+      background: radial-gradient(900px 300px at 50% 0%, rgba(31,211,198,0.18), transparent 60%), rgba(255,255,255,0.08);
       box-shadow: var(--shadow);
       padding: 22px 16px;
     }
     .centerRow{display:flex; justify-content:center; gap: 12px; flex-wrap:wrap; margin-top: 12px}
 
     footer{
-      padding: 30px 0;
-      border-top: 1px solid rgba(255,255,255,0.10);
+      padding: 30px 0 92px;
+      border-top: 1px solid rgba(255,255,255,0.14);
       color: var(--muted2);
       font-size: 12px;
     }
@@ -373,26 +377,100 @@
     .footerLinks{display:flex; gap: 14px; flex-wrap:wrap}
     .footerLinks a{color: var(--muted2)}
     .footerLinks a:hover{color: var(--text)}
-    .disclaimer{
-      margin-top: 10px;
-      color: rgba(238,243,255,0.52);
-      max-width: 110ch;
-      line-height: 1.7;
+    .disclaimer{margin-top: 10px; color: rgba(245,250,255,0.56); max-width: 110ch; line-height: 1.7;}
+
+    /* Sticky mobile CTA bar */
+    .mobileCta{
+      position: fixed;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      z-index: 999;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(10,20,31,0.74);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 70px rgba(0,0,0,0.42);
     }
-    .kicker{font-weight:900; letter-spacing:-0.2px; color: rgba(238,243,255,0.92)}
+    .mcText{display:flex; flex-direction:column; gap:2px; min-width: 0;}
+    .mcTitle{font-weight: 950; font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+    .mcSub{color: rgba(245,250,255,0.70); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+    .mcBtn{
+      border: 1px solid rgba(31,211,198,0.50);
+      background: linear-gradient(135deg, var(--teal), var(--teal2));
+      color:#061320;
+      font-weight: 950;
+      font-size: 13px;
+      border-radius: 14px;
+      padding: 10px 12px;
+      cursor: pointer;
+      display:inline-flex; align-items:center; gap:8px;
+      white-space: nowrap;
+      box-shadow: 0 18px 56px rgba(31,211,198,0.18);
+      transition: transform 120ms ease;
+    }
+    .mcBtn:hover{transform: translateY(-1px)}
+    .mcSecondary{
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
+      color: rgba(245,250,255,0.92);
+      font-weight: 900;
+      font-size: 13px;
+      border-radius: 14px;
+      padding: 10px 12px;
+      cursor: pointer;
+      display:inline-flex; align-items:center; gap:8px;
+      white-space: nowrap;
+    }
+    @media(min-width: 980px){
+      .mobileCta{display:none;}
+      footer{padding-bottom: 30px;}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto}
+      .btn, .mcBtn, .mcSecondary{transition:none}
+      .btn:hover, .mcBtn:hover{transform:none}
+      .glowLine{animation:none}
+    }
   </style>
 </head>
 
 <body>
   <script>
-    // Marketing site -> Loveable app
     window.STRATA_APP_URL = "https://strataadv.lovable.app";
 
     function openApp(source){
-      try{
-        if (typeof gtag === "function") gtag("event","cta_click",{source: source || "unknown"});
-      }catch(e){}
+      try{ if (typeof gtag === "function") gtag("event","cta_click",{source: source || "unknown"}); }catch(e){}
       window.open(window.STRATA_APP_URL, "_blank", "noopener,noreferrer");
+    }
+
+    function scrollToHow(){
+      const el = document.getElementById("how");
+      if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
+    }
+
+    // Scroll reveal (no library)
+    function initReveal(){
+      const nodes = Array.from(document.querySelectorAll(".reveal"));
+      if (!("IntersectionObserver" in window)){
+        nodes.forEach(n => n.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach((e)=>{
+          if (e.isIntersecting){
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        });
+      }, {threshold: 0.12, rootMargin: "0px 0px -8% 0px"});
+      nodes.forEach(n => io.observe(n));
     }
   </script>
 
@@ -403,120 +481,137 @@
           <div class="logoWrap">
             <img class="brandLogo" src="/assets/strata-logo.png" alt="Strata logo">
           </div>
-
           <div class="brandText">
             <div class="brandName">Strata Growth Advisors</div>
             <div class="brandTag">
-              <span class="badge" title="Core promise">
-                <span class="badgeDot"></span>
-                <span class="badgeText">Clarity before automation</span>
-              </span>
               <span>AI decision intelligence for SMEs</span>
+              <span style="opacity:.65">•</span>
+              <span>Clarity before automation</span>
             </div>
           </div>
         </a>
 
         <nav class="nav" aria-label="Primary navigation">
           <a href="#why">Why Strata</a>
-          <a href="#how">How it Works</a>
+          <a href="#usecases">Use Cases</a>
+          <a href="#how">How It Works</a>
           <a href="#deliverable">What You Get</a>
           <a href="#faq">FAQ</a>
         </nav>
 
         <div class="btnRow">
-          <button class="btn btnPrimary" onclick="openApp('header')" type="button">Get Free Growth Audit</button>
-          <a class="btn btnGhost" href="#how">See How It Works</a>
+          <button class="btn btnPrimary" onclick="openApp('header')" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+              <path class="icoStroke" d="M5 14l.8 3.4L9 18l-3.2.6L5 22l-.8-3.4L1 18l3.2-.6L5 14z"/>
+            </svg>
+            Get Free Growth Audit
+          </button>
+          <a class="btn btnGhost" href="#how">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="icoStroke" d="M5 12h12"/>
+              <path class="icoStroke" d="M13 6l6 6-6 6"/>
+            </svg>
+            See How It Works
+          </a>
         </div>
       </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="heroGrid">
-          <div>
+          <div class="reveal">
             <div class="pillRow">
-              <div class="pill">
-                <span class="dot"></span>
-                <span>Decision clarity in minutes.</span>
-              </div>
-              <div class="pill">
-                <span class="dot"></span>
-                <span><span class="kicker">Clear insights.</span> Smart decisions. Real growth.</span>
-              </div>
+              <div class="pill"><span class="dot"></span><span>3 minutes → instant roadmap</span></div>
+              <div class="pill"><span class="dot"></span><span><span class="kicker">Clear insights.</span> Smart decisions. Real growth.</span></div>
             </div>
 
-            <h1>Know what to fix first — before you spend on tools, people, or ads.</h1>
+            <h1>Find the bottleneck that’s holding your business back — and what to do next.</h1>
 
             <p class="lead">
-              <span class="kicker">Strata</span> runs a fast AI diagnostic to detect bottlenecks, identify root causes,
-              and generate a consulting-grade report with quick wins, KPIs, and a 90-day roadmap — built for real-world SME constraints.
+              <span class="kicker">Strata</span> runs a fast diagnostic across operations, cash flow, and execution discipline.
+              You get a consulting-grade report: bottlenecks, root causes, quick wins, KPIs, risks, and a 90-day plan.
             </p>
 
             <div class="heroCTA">
-              <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">Get Free Growth Audit</button>
-              <a class="btn" href="#deliverable">See What You Get</a>
+              <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+                </svg>
+                Get Free Growth Audit
+              </button>
+              <a class="btn" href="#deliverable">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path class="icoStroke" d="M7 3h7l3 3v15H7z"/>
+                  <path class="icoStroke" d="M14 3v4h4"/>
+                  <path class="icoStroke" d="M9 12h6M9 16h6"/>
+                </svg>
+                See Deliverables
+              </a>
             </div>
 
-            <div class="micro">Takes 3 minutes • Instant report • No sign-up required</div>
+            <div class="micro">No sign-up required • Marketing site only • Your analysis runs inside the Strata app</div>
+
+            <div class="glowLineWrap" aria-hidden="true">
+              <div class="glowLine"></div>
+            </div>
           </div>
 
-          <!-- Preview panel -->
-          <aside class="heroPanel" aria-label="Strata report preview">
+          <aside class="heroPanel reveal" aria-label="Strata report preview">
             <div class="panelTop">
               <div>
                 <div class="panelTitle">Report Preview</div>
-                <div class="pcMeta">Example sections (illustrative)</div>
+                <div class="pcMeta">Sample sections (illustrative)</div>
               </div>
-              <div class="chip">
-                <span class="dot"></span>
-                <span>Decision Intelligence</span>
-              </div>
+              <div class="chip"><span class="dot"></span><span>Decision-ready</span></div>
             </div>
 
             <div class="panelCard">
-              <div class="pcTop">
-                <div class="pcTitle">Bottlenecks Detected</div>
-                <div class="pcMeta">Top 3</div>
-              </div>
-              <div class="meter"><span style="width:74%"></span></div>
+              <div class="pcTop"><div class="pcTitle">Top Bottlenecks</div><div class="pcMeta">ranked</div></div>
+              <div class="meter"><span style="width:76%"></span></div>
               <ul class="pcList">
-                <li>Cash trapped in slow-moving inventory</li>
-                <li>Lead-time variance causing stockouts + expediting</li>
-                <li>No weekly KPI cadence → priorities drift</li>
+                <li>Cash trapped in slow-moving SKUs</li>
+                <li>Lead-time variance → stockouts + expediting</li>
+                <li>Missing KPI cadence → priorities drift</li>
               </ul>
             </div>
 
             <div class="panelCard">
-              <div class="pcTop">
-                <div class="pcTitle">Quick Wins</div>
-                <div class="pcMeta">7–30 days</div>
-              </div>
+              <div class="pcTop"><div class="pcTitle">Quick Wins</div><div class="pcMeta">7–30 days</div></div>
               <div class="meter"><span style="width:66%"></span></div>
               <ul class="pcList">
-                <li>Reset reorder rules for A-SKUs</li>
-                <li>Standardize SOP checkpoints (reduce rework)</li>
-                <li>Launch weekly 30-min KPI review</li>
+                <li>Reset reorder rules on A-items</li>
+                <li>Introduce SOP checkpoints (reduce rework)</li>
+                <li>Weekly KPI review (30 minutes)</li>
               </ul>
             </div>
 
             <div class="panelCard" style="margin-bottom:0">
-              <div class="pcTop">
-                <div class="pcTitle">KPI Framework</div>
-                <div class="pcMeta">Weekly</div>
-              </div>
+              <div class="pcTop"><div class="pcTitle">KPI Framework</div><div class="pcMeta">weekly</div></div>
               <div class="meter"><span style="width:58%"></span></div>
               <ul class="pcList">
-                <li>OTIF • Inventory turns • Cash conversion cycle</li>
+                <li>OTIF • Inventory turns • Cash conversion</li>
                 <li>Order cycle time • Fill rate • Forecast bias</li>
               </ul>
             </div>
 
             <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-              <button class="btn btnPrimary" onclick="openApp('panel_cta')" type="button">Generate My Report</button>
-              <a class="btn" href="#how">How it Works</a>
+              <button class="btn btnPrimary" onclick="openApp('panel_cta')" type="button">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+                </svg>
+                Generate My Report
+              </button>
+              <a class="btn" href="#how">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path class="icoStroke" d="M5 12h12"/>
+                  <path class="icoStroke" d="M13 6l6 6-6 6"/>
+                </svg>
+                How It Works
+              </a>
             </div>
 
             <div class="micro">Built for SMEs • Works without ERP</div>
@@ -524,13 +619,48 @@
         </div>
       </div>
 
-      <div class="proof">
+      <div class="strip">
         <div class="container">
-          <div class="proofRow">
-            <div class="proofBadge"><span class="dot"></span>Bottleneck + root-cause detection</div>
-            <div class="proofBadge"><span class="dot"></span>Prioritized decisions (impact x feasibility)</div>
-            <div class="proofBadge"><span class="dot"></span>Quick wins + KPI framework</div>
-            <div class="proofBadge"><span class="dot"></span>90-day roadmap</div>
+          <div class="stripRow">
+            <div class="stripItem reveal">
+              <div class="stripTop">
+                <div class="stripLabel">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path class="icoStroke" d="M12 9v5"/>
+                    <path class="icoStroke" d="M12 17h.01"/>
+                    <path class="icoStroke" d="M10.3 4.3l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-2.7l-8-14a2 2 0 0 0-3.4 0z"/>
+                  </svg>
+                  Problem
+                </div>
+              </div>
+              <p class="stripText">Too many priorities, not enough clarity — teams stay busy, results stay flat.</p>
+            </div>
+
+            <div class="stripItem reveal">
+              <div class="stripTop">
+                <div class="stripLabel">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path class="icoStroke" d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/>
+                  </svg>
+                  Strata does
+                </div>
+              </div>
+              <p class="stripText">Detects bottlenecks and root causes, then ranks the few decisions that matter most.</p>
+            </div>
+
+            <div class="stripItem reveal">
+              <div class="stripTop">
+                <div class="stripLabel">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path class="icoStroke" d="M4 19V5"/>
+                    <path class="icoStroke" d="M4 19h16"/>
+                    <path class="icoStroke" d="M7 15l4-4 3 3 6-7"/>
+                  </svg>
+                  Outcome
+                </div>
+              </div>
+              <p class="stripText">A 90-day roadmap with quick wins + KPIs so execution is disciplined, not random.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -539,28 +669,116 @@
     <!-- WHY -->
     <section class="section" id="why">
       <div class="container">
-        <h2>Why Strata</h2>
-        <p class="sub">Most businesses don’t fail from lack of effort — they fail from wrong priorities. Strata gives you decision clarity fast.</p>
+        <div class="reveal">
+          <h2>Why Strata</h2>
+          <p class="sub">Most businesses don’t need more tools. They need decision clarity — the smallest set of actions with the biggest impact.</p>
+        </div>
 
         <div style="height:14px"></div>
         <div class="grid3">
-          <div class="card">
-            <div class="miniTitle">Clarity before spending</div>
-            <p class="miniText">Know what to fix first — before you hire, buy software, or scale ads.</p>
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M12 3v18"/><path class="icoStroke" d="M7 8h10"/><path class="icoStroke" d="M7 16h10"/></svg>
+              </div>
+              <div>
+                <div class="miniTitle">Clarity before spending</div>
+                <p class="miniText">Know what to fix first — before you hire, buy software, or scale ads.</p>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <div class="miniTitle">Operations-first (real-world)</div>
-            <p class="miniText">Designed around operational constraints: inventory, lead time, process, and cash flow.</p>
+
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M12 20a8 8 0 1 0-8-8"/><path class="icoStroke" d="M4 12h8V4"/></svg>
+              </div>
+              <div>
+                <div class="miniTitle">Operations-first logic</div>
+                <p class="miniText">Built around inventory, lead time, process stability, and cash flow.</p>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <div class="miniTitle">Roadmaps that stick</div>
-            <p class="miniText">Quick wins + 90-day plan anchored to KPIs and cadence so execution doesn’t fade.</p>
+
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M9 12l2 2 4-4"/><path class="icoStroke" d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>
+              </div>
+              <div>
+                <div class="miniTitle">Execution that sticks</div>
+                <p class="miniText">Quick wins + cadence + KPIs so improvements don’t fade after week two.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div style="margin-top:14px">
-          <button class="btn btnPrimary" onclick="openApp('why_cta')" type="button">Get Free Growth Audit</button>
+        <div style="margin-top:14px" class="reveal">
+          <button class="btn btnPrimary" onclick="openApp('why_cta')" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+            </svg>
+            Get Free Growth Audit
+          </button>
           <div class="micro">Instant report • No sign-up required</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="section" id="usecases">
+      <div class="container">
+        <div class="reveal">
+          <h2>Use cases</h2>
+          <p class="sub">Built for the messy middle — SMEs scaling with limited time, limited cash, and real operational friction.</p>
+        </div>
+
+        <div style="height:14px"></div>
+        <div class="grid3">
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M12 2v20"/><path class="icoStroke" d="M17 7H9.5a2.5 2.5 0 0 0 0 5H14a2.5 2.5 0 0 1 0 5H6"/></svg>
+              </div>
+              <div>
+                <div class="miniTitle">Inventory & cash trapped</div>
+                <p class="miniText">Spot slow movers, reorder logic gaps, and lead-time variance that drives stockouts.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M12 1v22"/><path class="icoStroke" d="M8 5h8"/><path class="icoStroke" d="M7 9h10"/><path class="icoStroke" d="M8 13h8"/><path class="icoStroke" d="M9 17h6"/></svg>
+              </div>
+              <div>
+                <div class="miniTitle">Margin leakage</div>
+                <p class="miniText">Expose the cost drivers behind low margins—rework, waste, pricing, service failures.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M3 12h6l3 8 4-16 3 8h2"/></svg>
+              </div>
+              <div>
+                <div class="miniTitle">Execution discipline</div>
+                <p class="miniText">Create a weekly KPI rhythm and decision cadence so priorities don’t drift.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="reveal">
+          <button class="btn btnPrimary" onclick="openApp('usecases_cta')" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+            </svg>
+            Run My Audit
+          </button>
         </div>
       </div>
     </section>
@@ -568,31 +786,66 @@
     <!-- HOW -->
     <section class="section" id="how">
       <div class="container">
-        <h2>How it works</h2>
-        <p class="sub">Simple, fast, and designed to reduce decision friction.</p>
+        <div class="reveal">
+          <h2>How it works</h2>
+          <p class="sub">Simple, fast, and designed to reduce decision friction.</p>
+        </div>
 
         <div style="height:14px"></div>
         <div class="steps">
-          <div class="card">
+          <div class="card reveal">
             <div class="stepNum">1</div>
             <div class="miniTitle">Answer key questions</div>
-            <p class="miniText">Share a few details about your costs, operations, constraints, and priorities.</p>
+            <p class="miniText">Share a few details about costs, operations, constraints, and priorities.</p>
           </div>
-          <div class="card">
+          <div class="card reveal">
             <div class="stepNum">2</div>
             <div class="miniTitle">Strata analysis</div>
-            <p class="miniText">We detect bottlenecks, map root causes, and rank the highest-impact decisions.</p>
+            <p class="miniText">Detect bottlenecks, map root causes, and rank decisions by impact and feasibility.</p>
           </div>
-          <div class="card">
+          <div class="card reveal">
             <div class="stepNum">3</div>
-            <div class="miniTitle">Get your roadmap</div>
-            <p class="miniText">Receive quick wins, KPIs, risks, and a 90-day execution plan you can run immediately.</p>
+            <div class="miniTitle">Receive your roadmap</div>
+            <p class="miniText">Get quick wins, KPIs, risks, and a 90-day execution plan you can run immediately.</p>
           </div>
         </div>
 
-        <div style="margin-top:14px">
-          <button class="btn btnPrimary" onclick="openApp('how_cta')" type="button">Generate My Report</button>
-          <div class="micro">Takes 3 minutes • Instant report</div>
+        <div style="margin-top:14px" class="reveal">
+          <button class="btn btnPrimary" onclick="openApp('how_cta')" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+            </svg>
+            Generate My Report
+          </button>
+          <div class="micro">Takes ~3 minutes • Instant report</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="section">
+      <div class="container">
+        <div class="trust reveal">
+          <h2 style="margin-bottom:6px">Built for real operators</h2>
+          <p class="sub" style="max-width:92ch">Designed around how businesses actually run — imperfect data, limited bandwidth, and constant firefighting.</p>
+
+          <div class="trustRow">
+            <p class="trustNote">Your output is a structured, consulting-grade report: clear priorities, practical next steps, and a KPI cadence that keeps execution honest.</p>
+            <ul class="trustBullets">
+              <li>Works without ERP or advanced systems</li>
+              <li>Focused on operations + cash flow + execution cadence</li>
+              <li>Marketing site only; analysis runs inside the Strata app</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:14px">
+            <button class="btn btnPrimary" onclick="openApp('trust_cta')" type="button">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+              </svg>
+              Get Free Growth Audit
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -600,39 +853,70 @@
     <!-- DELIVERABLE -->
     <section class="section" id="deliverable">
       <div class="container">
-        <h2>What you get</h2>
-        <p class="sub">A consulting-grade deliverable designed for action — with decisions, not noise.</p>
+        <div class="reveal">
+          <h2>What you get</h2>
+          <p class="sub">A consulting-grade deliverable designed for action — decisions, not noise.</p>
+        </div>
 
         <div style="height:14px"></div>
         <div class="grid2">
-          <div class="card">
-            <div class="miniTitle">Executive Summary + Key Findings</div>
-            <p class="miniText">A clear view of what’s happening and what to fix first.</p>
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M7 3h7l3 3v15H7z"/><path class="icoStroke" d="M14 3v4h4"/><path class="icoStroke" d="M9 12h6M9 16h6"/></svg>
+              </div>
+              <div><div class="miniTitle">Executive Summary + Key Findings</div><p class="miniText">A clear view of what’s happening and what to fix first.</p></div>
+            </div>
           </div>
-          <div class="card">
-            <div class="miniTitle">Bottlenecks + Root Causes</div>
-            <p class="miniText">Where execution breaks, why it breaks, and how it shows up as cost or delay.</p>
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M4 19V5"/><path class="icoStroke" d="M4 19h16"/><path class="icoStroke" d="M7 15l4-4 3 3 6-7"/></svg>
+              </div>
+              <div><div class="miniTitle">Bottlenecks + Root Causes</div><p class="miniText">Where execution breaks, why it breaks, and how it shows up as cost or delay.</p></div>
+            </div>
           </div>
-          <div class="card">
-            <div class="miniTitle">Quick Wins (7–30 days)</div>
-            <p class="miniText">Fast actions you can implement with minimal cost to create momentum.</p>
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M12 6v6l4 2"/><path class="icoStroke" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+              </div>
+              <div><div class="miniTitle">Quick Wins (7–30 days)</div><p class="miniText">Fast actions to create momentum with minimal cost.</p></div>
+            </div>
           </div>
-          <div class="card">
-            <div class="miniTitle">90-Day Execution Roadmap</div>
-            <p class="miniText">A phased plan to stabilize, optimize, and scale with discipline.</p>
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M3 7h18"/><path class="icoStroke" d="M7 3v4"/><path class="icoStroke" d="M17 3v4"/><path class="icoStroke" d="M5 11h14v10H5z"/></svg>
+              </div>
+              <div><div class="miniTitle">90-Day Execution Roadmap</div><p class="miniText">A phased plan to stabilize, optimize, and scale.</p></div>
+            </div>
           </div>
-          <div class="card">
-            <div class="miniTitle">KPI Framework</div>
-            <p class="miniText">The few KPIs that matter, suggested targets, and a weekly review rhythm.</p>
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M4 19V5"/><path class="icoStroke" d="M4 19h16"/><path class="icoStroke" d="M8 14v3"/><path class="icoStroke" d="M12 11v6"/><path class="icoStroke" d="M16 8v9"/></svg>
+              </div>
+              <div><div class="miniTitle">KPI Framework</div><p class="miniText">The few KPIs that matter, suggested targets, and a weekly review rhythm.</p></div>
+            </div>
           </div>
-          <div class="card">
-            <div class="miniTitle">Risks + Watchouts</div>
-            <p class="miniText">Common failure points — and how to prevent improvements from backsliding.</p>
+          <div class="card reveal">
+            <div class="cardTop">
+              <div class="cardIcon" aria-hidden="true">
+                <svg class="ico" viewBox="0 0 24 24"><path class="icoStroke" d="M12 9v5"/><path class="icoStroke" d="M12 17h.01"/><path class="icoStroke" d="M10.3 4.3l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-2.7l-8-14a2 2 0 0 0-3.4 0z"/></svg>
+              </div>
+              <div><div class="miniTitle">Risks + Watchouts</div><p class="miniText">Common failure points — and how to prevent backsliding.</p></div>
+            </div>
           </div>
         </div>
 
-        <div style="margin-top:14px">
-          <button class="btn btnPrimary" onclick="openApp('deliverable_cta')" type="button">Get Free Growth Audit</button>
+        <div style="margin-top:14px" class="reveal">
+          <button class="btn btnPrimary" onclick="openApp('deliverable_cta')" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+            </svg>
+            Get Free Growth Audit
+          </button>
         </div>
       </div>
     </section>
@@ -640,9 +924,9 @@
     <!-- QUOTE -->
     <section class="section">
       <div class="container">
-        <div class="quote">
+        <div class="quote reveal">
           <p class="quoteText">“Strata doesn’t just analyze — it tells you what to do next.”</p>
-          <div class="quoteMeta">Clear insights. Smart decisions. Real growth.</div>
+          <div class="quoteMeta">Clarity before automation.</div>
         </div>
       </div>
     </section>
@@ -650,28 +934,35 @@
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container">
-        <h2>FAQ</h2>
-        <p class="sub">Quick answers.</p>
+        <div class="reveal">
+          <h2>FAQ</h2>
+          <p class="sub">Quick answers.</p>
+        </div>
 
         <div style="height:12px"></div>
 
-        <details>
+        <details class="reveal">
           <summary>How long does the audit take? <span aria-hidden="true">+</span></summary>
-          <div class="faqText">Most users complete it in under 3 minutes. Your report is generated instantly.</div>
+          <div class="faqText">Most users complete it in about 3 minutes. Your report is generated instantly.</div>
         </details>
 
-        <details>
+        <details class="reveal">
           <summary>Do I need ERP or advanced systems? <span aria-hidden="true">+</span></summary>
-          <div class="faqText">No. Strata is designed to work with real-world constraints and basic operational inputs.</div>
+          <div class="faqText">No. Strata works with real-world constraints and basic operational inputs.</div>
         </details>
 
-        <details>
+        <details class="reveal">
           <summary>Is my data confidential? <span aria-hidden="true">+</span></summary>
-          <div class="faqText">Yes. Your report is intended for internal use and treated as confidential.</div>
+          <div class="faqText">Yes. Your report is intended for internal use and treated as confidential inside the Strata app.</div>
         </details>
 
-        <div style="margin-top:14px">
-          <button class="btn btnPrimary" onclick="openApp('faq_cta')" type="button">Get Free Growth Audit</button>
+        <div style="margin-top:14px" class="reveal">
+          <button class="btn btnPrimary" onclick="openApp('faq_cta')" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+            </svg>
+            Get Free Growth Audit
+          </button>
         </div>
       </div>
     </section>
@@ -679,28 +970,38 @@
     <!-- FINAL CTA -->
     <section class="section">
       <div class="container">
-        <div class="ctaBig">
+        <div class="ctaBig reveal">
           <h2>Ready to get decision clarity?</h2>
           <p class="sub" style="margin:0 auto; max-width:76ch">
             Run the Strata audit and uncover the highest-impact actions to improve margin, cash flow, and execution discipline.
           </p>
           <div class="centerRow">
-            <button class="btn btnPrimary" onclick="openApp('final_cta')" type="button">Get Free Growth Audit</button>
-            <a class="btn" href="#how">See How It Works</a>
+            <button class="btn btnPrimary" onclick="openApp('final_cta')" type="button">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+              </svg>
+              Get Free Growth Audit
+            </button>
+            <a class="btn" href="#how">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path class="icoStroke" d="M5 12h12"/>
+                <path class="icoStroke" d="M13 6l6 6-6 6"/>
+              </svg>
+              See How It Works
+            </a>
           </div>
-          <div class="micro">Takes 3 minutes • Instant report • No sign-up required</div>
+          <div class="micro">Takes ~3 minutes • Instant report • No sign-up required</div>
         </div>
       </div>
     </section>
 
     <footer>
       <div class="container">
-        <div class="footerRow">
+        <div class="footerRow reveal">
           <div>
             <div style="font-weight:950; color: var(--text)">Strata Growth Advisors</div>
             <div style="margin-top:6px">
-              <span style="color: rgba(238,243,255,0.70)">AI decision intelligence for SMEs</span>
-              <span style="color: rgba(238,243,255,0.52)"> • Marketing site only (no data stored here)</span>
+              <span style="color: rgba(245,250,255,0.74)">AI decision intelligence for SMEs</span>
             </div>
             <div class="disclaimer">
               This website is a marketing front-end only. Your analysis runs inside the Strata app.
@@ -712,13 +1013,35 @@
             <a href="mailto:hello@strataadv.com">Contact</a>
           </div>
         </div>
-        <div style="margin-top:14px">© <span id="year"></span> Strata Growth Advisors. All rights reserved.</div>
+        <div style="margin-top:14px" class="reveal">© <span id="year"></span> Strata Growth Advisors. All rights reserved.</div>
       </div>
     </footer>
   </main>
 
+  <!-- Sticky mobile CTA bar -->
+  <div class="mobileCta" role="region" aria-label="Quick actions">
+    <div class="mcText">
+      <div class="mcTitle">Free Growth Audit</div>
+      <div class="mcSub">3 minutes • Instant report</div>
+    </div>
+    <button class="mcSecondary" type="button" onclick="scrollToHow()">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path class="icoStroke" d="M5 12h12"/>
+        <path class="icoStroke" d="M13 6l6 6-6 6"/>
+      </svg>
+      How
+    </button>
+    <button class="mcBtn" type="button" onclick="openApp('mobile_sticky')">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path class="icoStroke" d="M12 2l1.2 5.2L18 8l-4.8 0.8L12 14l-1.2-5.2L6 8l4.8-0.8L12 2z"/>
+      </svg>
+      Start
+    </button>
+  </div>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    initReveal();
   </script>
 </body>
 </html>
