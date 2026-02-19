@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strata Growth Advisors | Zyntro — AI Decision Intelligence for SMEs</title>
-  <meta name="description" content="Zyntro delivers AI-powered deep business analysis and strategic decision intelligence to SMEs—automatically detecting bottlenecks and surfacing clear, actionable growth paths. Clear insights. Smart decisions. Real growth." />
+  <title>Strata Growth Advisors — AI Decision Intelligence for SMEs</title>
+  <meta name="description" content="Strata delivers AI-powered decision intelligence for SMEs—detect bottlenecks, identify root causes, and get a clear 90-day roadmap with KPIs and quick wins. Clarity before automation." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://strataadv.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Zyntro — Clear insights. Smart decisions. Real growth." />
+  <meta property="og:title" content="Strata Growth Advisors — Clarity before automation." />
   <meta property="og:description" content="AI-powered decision intelligence for SMEs: detect bottlenecks, prioritize high-impact actions, and scale with confidence." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://strataadv.com/" />
@@ -17,8 +17,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
- <!-- Favicon -->
-<link rel="icon" type="image/png" href="/favicon.png?v=2">
+  <link rel="icon" type="image/png" href="/assets/strata-favicon.png?v=2">
   <meta name="theme-color" content="#061320">
 
   <!-- Fonts -->
@@ -80,7 +79,7 @@
       padding: 12px 0;
       gap: 12px;
     }
-    .brand{display:flex; align-items:center; gap:12px; min-width: 290px}
+    .brand{display:flex; align-items:center; gap:12px; min-width: 270px}
     .logoWrap{
       background:#fff;
       padding:6px 10px;
@@ -93,20 +92,23 @@
     .brandLogo{height:34px; width:auto; display:block}
     .brandText{display:flex; flex-direction:column; line-height:1.1}
     .brandName{font-weight:900; letter-spacing:-0.2px}
-    .brandTag{font-size:12px; color: var(--muted2); display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .brandTag{
+      font-size:12px; color: var(--muted2);
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap
+    }
 
-    /* Zyntro mark */
-    .zyntroMark{
+    /* Simple badge */
+    .badge{
       display:inline-flex;
       align-items:center;
-      gap:10px;
+      gap:8px;
       padding: 6px 10px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.04);
     }
-    .zyntroLogo{height:16px; width:auto; display:block; object-fit:contain}
-    .zyntroText{font-weight:900; letter-spacing:-0.2px; color: rgba(238,243,255,0.92); font-size:12.5px}
+    .badgeDot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+    .badgeText{font-weight:850; font-size:12.5px; color: rgba(238,243,255,0.86)}
 
     .nav{display:none; gap:8px; align-items:center}
     .nav a{
@@ -198,7 +200,7 @@
       line-height: 1.6;
     }
 
-    /* Right hero panel (dense) */
+    /* Right hero panel */
     .heroPanel{
       border-radius: var(--r2);
       border: 1px solid rgba(255,255,255,0.12);
@@ -227,14 +229,12 @@
       font-size: 12px;
       white-space:nowrap;
     }
-    .panelGrid{display:grid; gap:10px; grid-template-columns: 1fr}
-    @media(min-width:980px){ .panelGrid{grid-template-columns: 1fr; } }
-
     .panelCard{
       border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.04);
       padding: 12px;
+      margin-bottom: 10px;
     }
     .pcTop{display:flex; align-items:center; justify-content:space-between; gap:10px}
     .pcTitle{font-weight:900; font-size:13px}
@@ -379,10 +379,7 @@
       max-width: 110ch;
       line-height: 1.7;
     }
-
-    /* Small helper */
     .kicker{font-weight:900; letter-spacing:-0.2px; color: rgba(238,243,255,0.92)}
-    .muted{color: var(--muted)}
   </style>
 </head>
 
@@ -400,39 +397,39 @@
   </script>
 
   <header class="header">
-  <div class="container">
-    <div class="headerInner">
-      <a class="brand" href="#top" aria-label="Strata Growth Advisors">
-        <div class="logoWrap">
-          <img class="brandLogo" src="/assets/zyntro-logo.png" alt="Zyntro logo">
-        </div>
-
-        <div class="brandText">
-          <div class="brandName">Strata Growth Advisors</div>
-          <div class="brandTag">
-            <span class="zyntroMark" title="Zyntro platform">
-              <img class="zyntroLogo" src="/assets/zyntro-logo.png" alt="Zyntro logo">
-              <span class="zyntroText">Zyntro</span>
-            </span>
-            <span>AI decision intelligence for SMEs</span>
+    <div class="container">
+      <div class="headerInner">
+        <a class="brand" href="#top" aria-label="Strata Growth Advisors">
+          <div class="logoWrap">
+            <img class="brandLogo" src="/assets/strata-logo.png" alt="Strata logo">
           </div>
+
+          <div class="brandText">
+            <div class="brandName">Strata Growth Advisors</div>
+            <div class="brandTag">
+              <span class="badge" title="Core promise">
+                <span class="badgeDot"></span>
+                <span class="badgeText">Clarity before automation</span>
+              </span>
+              <span>AI decision intelligence for SMEs</span>
+            </div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#why">Why Strata</a>
+          <a href="#how">How it Works</a>
+          <a href="#deliverable">What You Get</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="btnRow">
+          <button class="btn btnPrimary" onclick="openApp('header')" type="button">Get Free Growth Audit</button>
+          <a class="btn btnGhost" href="#how">See How It Works</a>
         </div>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#why">Why Zyntro</a>
-        <a href="#how">How it Works</a>
-        <a href="#deliverable">What You Get</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div class="btnRow">
-        <button class="btn btnPrimary" onclick="openApp('header')" type="button">Start My Analysis</button>
-        <a class="btn btnGhost" href="#how">See How It Works</a>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main id="top">
     <!-- HERO -->
@@ -443,35 +440,35 @@
             <div class="pillRow">
               <div class="pill">
                 <span class="dot"></span>
-                <span>Reach your business zenith with Zyntro.</span>
+                <span>Decision clarity in minutes.</span>
               </div>
-              <div class="pill" title="Core promise">
+              <div class="pill">
                 <span class="dot"></span>
                 <span><span class="kicker">Clear insights.</span> Smart decisions. Real growth.</span>
               </div>
             </div>
 
-            <h1>Decision clarity for operators who need to move fast.</h1>
+            <h1>Know what to fix first — before you spend on tools, people, or ads.</h1>
 
             <p class="lead">
-              <span class="kicker">Zyntro</span> delivers AI-powered deep business analysis and strategic decision intelligence to SMEs —
-              automatically detecting operational bottlenecks and surfacing clear, actionable growth paths.
+              <span class="kicker">Strata</span> runs a fast AI diagnostic to detect bottlenecks, identify root causes,
+              and generate a consulting-grade report with quick wins, KPIs, and a 90-day roadmap — built for real-world SME constraints.
             </p>
 
             <div class="heroCTA">
-              <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">Get My Strategic Analysis</button>
-              <a class="btn" href="#deliverable">What You Get</a>
+              <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">Get Free Growth Audit</button>
+              <a class="btn" href="#deliverable">See What You Get</a>
             </div>
 
             <div class="micro">Takes 3 minutes • Instant report • No sign-up required</div>
           </div>
 
-          <!-- Dense hero right panel -->
-          <aside class="heroPanel" aria-label="Zyntro preview panel">
+          <!-- Preview panel -->
+          <aside class="heroPanel" aria-label="Strata report preview">
             <div class="panelTop">
               <div>
-                <div class="panelTitle">Zyntro Preview</div>
-                <div class="pcMeta">Sample output layout (illustrative)</div>
+                <div class="panelTitle">Report Preview</div>
+                <div class="pcMeta">Example sections (illustrative)</div>
               </div>
               <div class="chip">
                 <span class="dot"></span>
@@ -479,44 +476,42 @@
               </div>
             </div>
 
-            <div class="panelGrid">
-              <div class="panelCard">
-                <div class="pcTop">
-                  <div class="pcTitle">Bottlenecks Detected</div>
-                  <div class="pcMeta">Top 3</div>
-                </div>
-                <div class="meter"><span style="width:72%"></span></div>
-                <ul class="pcList">
-                  <li>Inventory turns too low → cash trapped</li>
-                  <li>Lead-time variance → stockouts + expediting</li>
-                  <li>Decision cadence missing → priorities drift</li>
-                </ul>
+            <div class="panelCard">
+              <div class="pcTop">
+                <div class="pcTitle">Bottlenecks Detected</div>
+                <div class="pcMeta">Top 3</div>
               </div>
+              <div class="meter"><span style="width:74%"></span></div>
+              <ul class="pcList">
+                <li>Cash trapped in slow-moving inventory</li>
+                <li>Lead-time variance causing stockouts + expediting</li>
+                <li>No weekly KPI cadence → priorities drift</li>
+              </ul>
+            </div>
 
-              <div class="panelCard">
-                <div class="pcTop">
-                  <div class="pcTitle">High-Impact Decisions</div>
-                  <div class="pcMeta">Next 30 days</div>
-                </div>
-                <div class="meter"><span style="width:64%"></span></div>
-                <ul class="pcList">
-                  <li>Reset reorder logic on A-SKUs</li>
-                  <li>Standardize weekly KPI rhythm</li>
-                  <li>Cut rework loop with SOP checkpoints</li>
-                </ul>
+            <div class="panelCard">
+              <div class="pcTop">
+                <div class="pcTitle">Quick Wins</div>
+                <div class="pcMeta">7–30 days</div>
               </div>
+              <div class="meter"><span style="width:66%"></span></div>
+              <ul class="pcList">
+                <li>Reset reorder rules for A-SKUs</li>
+                <li>Standardize SOP checkpoints (reduce rework)</li>
+                <li>Launch weekly 30-min KPI review</li>
+              </ul>
+            </div>
 
-              <div class="panelCard">
-                <div class="pcTop">
-                  <div class="pcTitle">KPI Framework</div>
-                  <div class="pcMeta">Weekly</div>
-                </div>
-                <div class="meter"><span style="width:58%"></span></div>
-                <ul class="pcList">
-                  <li>OTIF • Forecast bias • Inventory turns</li>
-                  <li>Order cycle time • Fill rate • Cash conversion</li>
-                </ul>
+            <div class="panelCard" style="margin-bottom:0">
+              <div class="pcTop">
+                <div class="pcTitle">KPI Framework</div>
+                <div class="pcMeta">Weekly</div>
               </div>
+              <div class="meter"><span style="width:58%"></span></div>
+              <ul class="pcList">
+                <li>OTIF • Inventory turns • Cash conversion cycle</li>
+                <li>Order cycle time • Fill rate • Forecast bias</li>
+              </ul>
             </div>
 
             <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
@@ -524,7 +519,7 @@
               <a class="btn" href="#how">How it Works</a>
             </div>
 
-            <div class="micro">“Zyntro: AI that finds your bottlenecks and charts your growth.”</div>
+            <div class="micro">Built for SMEs • Works without ERP</div>
           </aside>
         </div>
       </div>
@@ -532,10 +527,10 @@
       <div class="proof">
         <div class="container">
           <div class="proofRow">
-            <div class="proofBadge"><span class="dot"></span>Bottleneck + root cause detection</div>
-            <div class="proofBadge"><span class="dot"></span>Prioritized growth decisions</div>
+            <div class="proofBadge"><span class="dot"></span>Bottleneck + root-cause detection</div>
+            <div class="proofBadge"><span class="dot"></span>Prioritized decisions (impact x feasibility)</div>
             <div class="proofBadge"><span class="dot"></span>Quick wins + KPI framework</div>
-            <div class="proofBadge"><span class="dot"></span>90-day execution roadmap</div>
+            <div class="proofBadge"><span class="dot"></span>90-day roadmap</div>
           </div>
         </div>
       </div>
@@ -544,28 +539,28 @@
     <!-- WHY -->
     <section class="section" id="why">
       <div class="container">
-        <h2>Why Zyntro</h2>
-        <p class="sub">Precision analysis meets intuitive guidance — removing complexity so you scale confidently.</p>
+        <h2>Why Strata</h2>
+        <p class="sub">Most businesses don’t fail from lack of effort — they fail from wrong priorities. Strata gives you decision clarity fast.</p>
 
         <div style="height:14px"></div>
         <div class="grid3">
           <div class="card">
-            <div class="miniTitle">Decision-ready clarity</div>
-            <p class="miniText">Not more dashboards — the few decisions that matter most, prioritized by impact and feasibility.</p>
+            <div class="miniTitle">Clarity before spending</div>
+            <p class="miniText">Know what to fix first — before you hire, buy software, or scale ads.</p>
           </div>
           <div class="card">
-            <div class="miniTitle">Automatic bottleneck detection</div>
-            <p class="miniText">Expose where execution breaks and why — before it drains margin and momentum.</p>
+            <div class="miniTitle">Operations-first (real-world)</div>
+            <p class="miniText">Designed around operational constraints: inventory, lead time, process, and cash flow.</p>
           </div>
           <div class="card">
-            <div class="miniTitle">Action paths that stick</div>
-            <p class="miniText">Quick wins + a 90-day plan, anchored to KPIs and cadence so execution doesn’t fade.</p>
+            <div class="miniTitle">Roadmaps that stick</div>
+            <p class="miniText">Quick wins + 90-day plan anchored to KPIs and cadence so execution doesn’t fade.</p>
           </div>
         </div>
 
         <div style="margin-top:14px">
-          <button class="btn btnPrimary" onclick="openApp('why_cta')" type="button">Get My Strategic Analysis</button>
-          <div class="micro">Instant report • Works without ERP</div>
+          <button class="btn btnPrimary" onclick="openApp('why_cta')" type="button">Get Free Growth Audit</button>
+          <div class="micro">Instant report • No sign-up required</div>
         </div>
       </div>
     </section>
@@ -581,17 +576,17 @@
           <div class="card">
             <div class="stepNum">1</div>
             <div class="miniTitle">Answer key questions</div>
-            <p class="miniText">Share high-level inputs about costs, operations, constraints, and priorities.</p>
+            <p class="miniText">Share a few details about your costs, operations, constraints, and priorities.</p>
           </div>
           <div class="card">
             <div class="stepNum">2</div>
-            <div class="miniTitle">Zyntro analysis</div>
-            <p class="miniText">Detect bottlenecks, map root causes, and surface the highest-impact decisions.</p>
+            <div class="miniTitle">Strata analysis</div>
+            <p class="miniText">We detect bottlenecks, map root causes, and rank the highest-impact decisions.</p>
           </div>
           <div class="card">
             <div class="stepNum">3</div>
-            <div class="miniTitle">Receive a growth roadmap</div>
-            <p class="miniText">Get quick wins, KPIs, risks, and a 90-day execution plan you can run immediately.</p>
+            <div class="miniTitle">Get your roadmap</div>
+            <p class="miniText">Receive quick wins, KPIs, risks, and a 90-day execution plan you can run immediately.</p>
           </div>
         </div>
 
@@ -628,16 +623,16 @@
           </div>
           <div class="card">
             <div class="miniTitle">KPI Framework</div>
-            <p class="miniText">The few KPIs that matter, suggested targets, and weekly review rhythm.</p>
+            <p class="miniText">The few KPIs that matter, suggested targets, and a weekly review rhythm.</p>
           </div>
           <div class="card">
             <div class="miniTitle">Risks + Watchouts</div>
-            <p class="miniText">Common failure points and how to prevent improvements from backsliding.</p>
+            <p class="miniText">Common failure points — and how to prevent improvements from backsliding.</p>
           </div>
         </div>
 
         <div style="margin-top:14px">
-          <button class="btn btnPrimary" onclick="openApp('deliverable_cta')" type="button">Get My Strategic Analysis</button>
+          <button class="btn btnPrimary" onclick="openApp('deliverable_cta')" type="button">Get Free Growth Audit</button>
         </div>
       </div>
     </section>
@@ -646,7 +641,7 @@
     <section class="section">
       <div class="container">
         <div class="quote">
-          <p class="quoteText">“Zyntro doesn’t just analyze — it tells you what to do next.”</p>
+          <p class="quoteText">“Strata doesn’t just analyze — it tells you what to do next.”</p>
           <div class="quoteMeta">Clear insights. Smart decisions. Real growth.</div>
         </div>
       </div>
@@ -661,22 +656,22 @@
         <div style="height:12px"></div>
 
         <details>
-          <summary>How long does the analysis take? <span aria-hidden="true">+</span></summary>
+          <summary>How long does the audit take? <span aria-hidden="true">+</span></summary>
           <div class="faqText">Most users complete it in under 3 minutes. Your report is generated instantly.</div>
         </details>
 
         <details>
           <summary>Do I need ERP or advanced systems? <span aria-hidden="true">+</span></summary>
-          <div class="faqText">No. Zyntro is designed to work with real-world constraints and basic operational inputs.</div>
+          <div class="faqText">No. Strata is designed to work with real-world constraints and basic operational inputs.</div>
         </details>
 
         <details>
-          <summary>Is my report confidential? <span aria-hidden="true">+</span></summary>
-          <div class="faqText">Yes. The report is intended for internal use and treated as confidential.</div>
+          <summary>Is my data confidential? <span aria-hidden="true">+</span></summary>
+          <div class="faqText">Yes. Your report is intended for internal use and treated as confidential.</div>
         </details>
 
         <div style="margin-top:14px">
-          <button class="btn btnPrimary" onclick="openApp('faq_cta')" type="button">Start My Analysis</button>
+          <button class="btn btnPrimary" onclick="openApp('faq_cta')" type="button">Get Free Growth Audit</button>
         </div>
       </div>
     </section>
@@ -685,12 +680,12 @@
     <section class="section">
       <div class="container">
         <div class="ctaBig">
-          <h2>Ready to reach your business zenith?</h2>
+          <h2>Ready to get decision clarity?</h2>
           <p class="sub" style="margin:0 auto; max-width:76ch">
-            Run the Zyntro-powered analysis and uncover the highest-impact growth decisions in your business.
+            Run the Strata audit and uncover the highest-impact actions to improve margin, cash flow, and execution discipline.
           </p>
           <div class="centerRow">
-            <button class="btn btnPrimary" onclick="openApp('final_cta')" type="button">Generate My Report</button>
+            <button class="btn btnPrimary" onclick="openApp('final_cta')" type="button">Get Free Growth Audit</button>
             <a class="btn" href="#how">See How It Works</a>
           </div>
           <div class="micro">Takes 3 minutes • Instant report • No sign-up required</div>
@@ -704,15 +699,11 @@
           <div>
             <div style="font-weight:950; color: var(--text)">Strata Growth Advisors</div>
             <div style="margin-top:6px">
-              Powered by
-              <span class="zyntroMark" style="vertical-align:middle;">
-                <img class="zyntroLogo" src="/assets/zyntro-logo.png" alt="Zyntro logo">
-                <span class="zyntroText">Zyntro</span>
-              </span>
-              <span class="muted">• AI decision intelligence for SMEs</span>
+              <span style="color: rgba(238,243,255,0.70)">AI decision intelligence for SMEs</span>
+              <span style="color: rgba(238,243,255,0.52)"> • Marketing site only (no data stored here)</span>
             </div>
             <div class="disclaimer">
-              Strata Growth Advisors is an independent company and is not affiliated with any other “Strata” branded organizations.
+              This website is a marketing front-end only. Your analysis runs inside the Strata app.
             </div>
           </div>
           <div class="footerLinks">
