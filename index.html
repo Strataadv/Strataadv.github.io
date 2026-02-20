@@ -80,31 +80,40 @@
     @media(min-width:980px){.heroGrid{grid-template-columns:1fr 1fr}}
 
     /* ✅ NEW HERO TYPOGRAPHY (matches your screenshot) */
-    .heroTitleTop{
-      font-size:58px;
-      line-height:1.02;
-      font-weight:900;
-      letter-spacing:-0.8px;
-      margin:0 0 10px;
-    }
-    .heroTitleBottom{
-      font-size:44px;
-      line-height:1.08;
-      font-weight:900;
-      letter-spacing:-0.6px;
-      margin:0 0 18px;
-    }
-    .heroBullets{
-  margin:28px 0 32px;   /* top 28px, bottom 32px */
-  padding-left:22px;
-    }
-    .heroBullets li{
-      margin:8px 0;
-      font-size:18px;
-      font-weight:800;
-      color:rgba(245,250,255,.90);
-    }
+   .heroTitleTop{
+  font-size:64px;
+  line-height:1.02;
+  font-weight:900;
+  letter-spacing:-0.8px;
+  margin:0 0 6px;
+  color:#ffffff;
+}
+.heroBullets{
+  margin:26px 0 32px;
+  padding-left:0;
+  list-style:none;
+}
 
+.heroBullets li{
+  margin:12px 0;
+  font-size:19px;
+  font-weight:800;
+  line-height:1.5;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  color:rgba(245,250,255,.92);
+}
+
+.heroBullets li::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-top:10px;
+  flex-shrink:0;
+}
     .heroPanel{
       background:var(--panel);
       border:1px solid var(--border);
