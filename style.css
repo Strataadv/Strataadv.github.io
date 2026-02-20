@@ -58,7 +58,13 @@ body {
 }
 
 .section {
-  padding:70px 0;
+  padding: 48px 0;   /* desktop */
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 36px 0; /* mobile tighter */
+  }
 }
 
 .section.dark {
