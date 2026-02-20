@@ -74,57 +74,110 @@
       white-space:nowrap;
     }
 
-    /* Hero */
+    /* HERO */
     .hero{padding:70px 0}
-    .heroGrid{display:grid;gap:28px;align-items:center}
-    @media(min-width:980px){.heroGrid{grid-template-columns:1fr 1fr}}
 
-    /* ✅ NEW HERO TYPOGRAPHY (matches your screenshot) */
-   .heroTitleTop{
-  font-size:64px;
-  line-height:1.02;
-  font-weight:900;
-  letter-spacing:-0.8px;
-  margin:0 0 6px;
-  color:#ffffff;
-}
-.heroBullets{
-  margin:26px 0 32px;
-  padding-left:0;
-  list-style:none;
-}
+    /* Optimized hero grid */
+    .heroGrid{
+      display:grid;
+      gap:34px;
+      align-items:center;
+    }
+    @media(min-width:980px){
+      .heroGrid{grid-template-columns:1.05fr .95fr;}
+    }
 
-.heroBullets li{
-  margin:12px 0;
-  font-size:19px;
-  font-weight:800;
-  line-height:1.5;
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-  color:rgba(245,250,255,.92);
-}
+    /* Text column: clean slide alignment + subtle glow */
+    .heroGrid > .heroTextCol{
+      position:relative;
+      padding-left:4px; /* slide-like alignment */
+    }
+    .heroGrid > .heroTextCol::before{
+      content:"";
+      position:absolute;
+      left:-20px; top:-30px;
+      width:420px; height:260px;
+      background:radial-gradient(circle at 30% 30%, rgba(31,211,198,.18), transparent 60%);
+      filter:blur(2px);
+      opacity:.9;
+      pointer-events:none;
+    }
 
-.heroBullets li::before{
-  content:"";
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:var(--accent);
-  margin-top:10px;
-  flex-shrink:0;
-}
+    /* Slide-style headline contrast */
+    .heroTitleTop{
+      font-size:64px;
+      line-height:1.02;
+      font-weight:900;
+      letter-spacing:-0.8px;
+      margin:0 0 6px;
+      color:#ffffff;
+    }
+
+    /* ✅ Align “Business Diagnostic” flush with “AI – powered”
+       (no indent + tiny optical correction to match the big A’s left edge) */
+    .heroTitleBottom{
+      font-size:48px;
+      line-height:1.08;
+      font-weight:900;
+      letter-spacing:-0.6px;
+      margin:0 0 14px;
+      color:rgba(245,250,255,.88);
+      padding-left:0;
+      text-indent:0;
+      position:relative;
+      left:-1px; /* optical alignment so it looks perfectly flush */
+    }
+
+    /* Slide bullets (accent dots) */
+    .heroBullets{
+      margin:26px 0 32px;   /* bottom spacing exactly 32px */
+      padding-left:0;
+      list-style:none;
+    }
+    .heroBullets li{
+      margin:12px 0;
+      font-size:19px;
+      font-weight:800;
+      line-height:1.5;
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      color:rgba(245,250,255,.92);
+    }
+    .heroBullets li::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--accent);
+      margin-top:10px;
+      flex-shrink:0;
+    }
+
+    /* CTA polish */
+    .hero .btn{ margin-top:2px; }
+
+    /* Hero image panel: more product-like */
     .heroPanel{
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:20px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:22px;
       padding:14px;
+      box-shadow:0 18px 55px rgba(0,0,0,.35);
     }
     .heroPanel img{
       width:100%;
       height:auto;
-      border-radius:14px;
+      border-radius:16px;
       display:block;
+    }
+
+    /* Mobile hero sizing */
+    @media(max-width:520px){
+      .heroTitleTop{font-size:46px}
+      .heroTitleBottom{font-size:34px; left:0;} /* keep clean on small screens */
+      .heroBullets li{font-size:16px}
+      .heroGrid > .heroTextCol{padding-left:0}
     }
 
     /* Sections */
@@ -203,13 +256,6 @@
       }
       footer{padding-bottom:110px;}
     }
-
-    /* Small tweaks for mobile hero sizes */
-    @media(max-width:520px){
-      .heroTitleTop{font-size:44px}
-      .heroTitleBottom{font-size:34px}
-      .heroBullets li{font-size:16px}
-    }
   </style>
 
   <script>
@@ -241,7 +287,6 @@
           <a href="#faq">FAQ</a>
         </nav>
 
-        
         <button class="btn" onclick="openApp()" type="button">Get Free Growth Analysis</button>
       </div>
     </div>
@@ -249,14 +294,14 @@
 
   <main id="top">
 
-    <!-- HERO (UPDATED) -->
+    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="heroGrid">
-          <div>
+
+          <div class="heroTextCol">
             <div class="heroTitleTop">AI – powered</div>
             <div class="heroTitleBottom">Business Diagnostic</div>
-            
 
             <ul class="heroBullets">
               <li>Identify bottlenecks</li>
@@ -264,13 +309,13 @@
               <li>Unblock growth opportunities</li>
             </ul>
 
-            
             <button class="btn" onclick="openApp()" type="button">Get Free Growth Analysis</button>
           </div>
 
           <aside class="heroPanel" aria-label="Strata preview image">
             <img src="assets/og-image.png" alt="Strata preview">
           </aside>
+
         </div>
       </div>
     </section>
@@ -335,7 +380,7 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (2 lines) -->
   <footer>
     <div class="container">
       <div class="footerTop">© Strata Growth Advisors</div>
