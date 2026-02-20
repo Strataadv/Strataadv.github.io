@@ -1,224 +1,132 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Strata Growth Advisors — AI Decision Intelligence for SMEs</title>
+<title>Strata Growth Advisors — AI Decision Intelligence for SMEs</title>
 
-  <meta name="description" content="Strata helps SMEs detect bottlenecks, understand root causes, and get a clear 90-day roadmap with KPIs and quick wins." />
+<meta name="description" content="Strata helps SMEs detect bottlenecks and build a clear 90-day roadmap.">
+<meta property="og:title" content="Strata Growth Advisors">
+<meta property="og:image" content="assets/og-image.png">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Strata Growth Advisors — Clear insights. Smart decisions. Real growth." />
-  <meta property="og:description" content="AI-powered decision intelligence for SMEs." />
-  <meta property="og:image" content="https://strataadv.com/assets/og-image.png" />
-  <meta property="og:type" content="website" />
+<link rel="icon" href="assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="assets/favicon.png" />
+<style>
+body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,#0f2233,#142d43);color:#f5faff}
+.container{max-width:1180px;margin:auto;padding:0 20px}
+.header{position:sticky;top:0;background:rgba(15,34,51,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.14)}
+.headerInner{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.logoWrap{background:#fff;padding:6px 10px;border-radius:10px}
+.brandLogo{height:32px}
+.brandName{font-weight:900}
+.brandTag{font-size:12px;color:rgba(245,250,255,.7)}
+.nav{display:none;gap:12px}
+.nav a{font-size:13px;color:rgba(245,250,255,.7)}
+@media(min-width:980px){.nav{display:flex}}
+.btn{padding:10px 14px;border-radius:12px;font-weight:800;border:none;background:#1FD3C6;color:#032026;cursor:pointer}
+.hero{padding:64px 0}
+.heroGrid{display:grid;gap:28px}
+@media(min-width:980px){.heroGrid{grid-template-columns:1fr 1fr}}
+h1{font-size:52px;line-height:1.05;margin:12px 0;font-weight:900}
+.lead{color:rgba(245,250,255,.75);max-width:560px}
+.heroPanel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:14px}
+.heroPanel img{width:100%;border-radius:14px}
+.section{padding:80px 0}
+h2{font-size:36px;margin-bottom:8px}
+.sub{color:rgba(245,250,255,.7)}
+details{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px;margin-top:10px}
+summary{cursor:pointer;font-weight:700}
+footer{border-top:1px solid rgba(255,255,255,.14);padding:28px 0;color:rgba(245,250,255,.7)}
+</style>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg1:#0f2233;
-      --bg2:#142d43;
-      --panel:rgba(255,255,255,0.08);
-      --border:rgba(255,255,255,0.14);
-      --text:rgba(245,250,255,0.96);
-      --muted:rgba(245,250,255,0.72);
-      --accent:#1FD3C6;
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui;
-      color:var(--text);
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));
-    }
-
-    .container{max-width:1180px;margin:auto;padding:0 20px}
-
-    /* HEADER */
-    .header{
-      position:sticky;top:0;z-index:99;
-      background:rgba(15,34,51,.8);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--border);
-    }
-    .headerInner{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logoWrap{background:#fff;padding:6px 10px;border-radius:10px}
-    .brandLogo{height:32px}
-    .brandName{font-weight:900}
-    .brandTag{font-size:12px;color:var(--muted)}
-
-    .nav{display:none;gap:10px}
-    .nav a{font-size:13px;color:var(--muted);padding:8px 10px;border-radius:10px}
-    .nav a:hover{background:rgba(255,255,255,.08);color:#fff}
-    @media(min-width:980px){.nav{display:flex}}
-
-    .btn{
-      border:1px solid var(--border);
-      padding:10px 14px;border-radius:12px;
-      font-weight:800;font-size:13px;cursor:pointer;
-      background:rgba(255,255,255,.06);
-      color:#fff
-    }
-    .btnPrimary{
-      background:linear-gradient(135deg,#1FD3C6,#43E7DB);
-      border:none;color:#032026
-    }
-
-    /* HERO */
-    .hero{padding:64px 0}
-    .heroGrid{display:grid;gap:28px}
-    @media(min-width:980px){.heroGrid{grid-template-columns:1fr 1fr}}
-
-    h1{font-size:52px;line-height:1.05;margin:12px 0;font-weight:900}
-    .lead{color:var(--muted);max-width:560px}
-
-    .pill{display:inline-flex;gap:10px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:var(--panel);font-size:13px}
-
-    .heroCTA{display:flex;gap:14px;margin-top:16px;align-items:center}
-
-    /* IMAGE PANEL */
-    .heroPanel{
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:20px;
-      padding:14px;
-    }
-
-    .heroPanel img{
-      width:100%;
-      border-radius:14px;
-      display:block;
-    }
-
-    /* SECTION */
-    .section{padding:80px 0}
-    h2{font-size:36px;margin-bottom:8px}
-    .sub{color:var(--muted)}
-
-    .grid3{display:grid;gap:16px}
-    @media(min-width:980px){.grid3{grid-template-columns:repeat(3,1fr)}}
-
-    .card{background:var(--panel);border:1px solid var(--border);padding:16px;border-radius:16px}
-    .miniTitle{font-weight:900;margin-bottom:6px}
-    .miniText{color:var(--muted)}
-
-    footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted)}
-  </style>
-
-  <script>
-    window.STRATA_APP_URL="https://strataadv.lovable.app";
-    function openApp(){window.open(window.STRATA_APP_URL,"_blank")}
-  </script>
+<script>
+window.STRATA_APP_URL="https://strataadv.lovable.app";
+function openApp(){window.open(window.STRATA_APP_URL,"_blank")}
+</script>
 </head>
 
 <body>
 
 <header class="header">
-  <div class="container headerInner">
-    <div class="brand">
-      <div class="logoWrap">
-        <img class="brandLogo" src="assets/strata-logo.png">
-      </div>
-      <div>
-        <div class="brandName">Strata Growth Advisors</div>
-        <div class="brandTag">AI decision intelligence for SMEs</div>
-      </div>
-    </div>
-
-    <nav class="nav">
-      <a href="#why">Why Strata</a>
-      <a href="#how">How It Works</a>
-      <a href="#deliverable">What You Get</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <button class="btn btnPrimary" onclick="openApp()">Get Free Growth Audit</button>
-  </div>
+<div class="container headerInner">
+<div class="brand">
+<div class="logoWrap"><img class="brandLogo" src="assets/strata-logo.png"></div>
+<div>
+<div class="brandName">Strata Growth Advisors</div>
+<div class="brandTag">AI decision intelligence for SMEs</div>
+</div>
+</div>
+<nav class="nav">
+<a href="#why">Why Strata</a>
+<a href="#how">How It Works</a>
+<a href="#deliverable">What You Get</a>
+<a href="#faq">FAQ</a>
+</nav>
+<button class="btn" onclick="openApp()">Get Free Growth Audit</button>
+</div>
 </header>
 
 <main>
 
 <section class="hero">
-  <div class="container heroGrid">
+<div class="container heroGrid">
+<div>
+<h1>Find the bottleneck that’s holding your business back — and what to do next.</h1>
+<p class="lead">Strata detects your biggest bottlenecks, explains root causes, and builds a clear 90-day action roadmap.</p>
+<button class="btn" onclick="openApp()">Get Free Growth Audit</button>
+</div>
 
-    <div>
-      <div class="pill">3 minutes → instant roadmap</div>
+<aside class="heroPanel">
+<img src="assets/og-image.png" alt="Strata preview">
+</aside>
 
-      <h1>Find the bottleneck that’s holding your business back — and what to do next.</h1>
-
-      <p class="lead">
-        Strata detects your biggest bottlenecks, explains root causes, and gives you a clear 90-day action roadmap with KPIs and quick wins.
-      </p>
-
-      <div class="heroCTA">
-        <button class="btn btnPrimary" onclick="openApp()">Get Free Growth Audit</button>
-        <a href="#deliverable" style="color:var(--muted);font-weight:700">See deliverables →</a>
-      </div>
-    </div>
-
-    <aside class="heroPanel">
-      <img src="assets/og-image.png" alt="Strata report preview">
-    </aside>
-
-  </div>
-</section>
-
-<section class="section" id="why">
-  <div class="container">
-    <h2>Why Strata</h2>
-    <p class="sub">Decision clarity before spending money or scaling operations.</p>
-
-    <div class="grid3" style="margin-top:18px">
-      <div class="card">
-        <div class="miniTitle">Clarity first</div>
-        <div class="miniText">Know what to fix before hiring or buying tools.</div>
-      </div>
-      <div class="card">
-        <div class="miniTitle">Operations-focused</div>
-        <div class="miniText">Built around cash flow, inventory, and execution.</div>
-      </div>
-      <div class="card">
-        <div class="miniTitle">Execution ready</div>
-        <div class="miniText">Roadmaps that turn into real actions.</div>
-      </div>
-    </div>
-  </div>
+</div>
 </section>
 
 <section class="section" id="deliverable">
-  <div class="container">
-    <h2>What you get</h2>
-    <p class="sub">A consulting-grade deliverable designed for action.</p>
-
-    <div class="grid3" style="margin-top:18px">
-      <div class="card"><div class="miniTitle">Executive summary</div><div class="miniText">What’s happening and what to fix first.</div></div>
-      <div class="card"><div class="miniTitle">Root causes</div><div class="miniText">Why problems exist.</div></div>
-      <div class="card"><div class="miniTitle">90-day roadmap</div><div class="miniText">Step-by-step execution plan.</div></div>
-    </div>
-  </div>
+<div class="container">
+<h2>What you get</h2>
+<p class="sub">A consulting-grade deliverable designed for action.</p>
+</div>
 </section>
 
+<!-- ✅ FAQ EXACTLY AS REQUESTED -->
 <section class="section" id="faq">
-  <div class="container">
-    <h2>FAQ</h2>
-    <p class="sub">Quick answers.</p>
-    <p class="miniText">Most audits take about 3 minutes and your report is generated instantly.</p>
-  </div>
-</section>
+<div class="container">
+<h2>FAQ</h2>
+<p class="sub">Quick answers.</p>
 
-<footer>
-  <div class="container">
-    <strong>Strata Growth Advisors</strong><br>
-    AI decision intelligence for SMEs • Marketing site only • Your analysis runs inside the Strata app
-  </div>
-</footer>
+<details>
+<summary>How long does the audit take?</summary>
+<p>Most users complete it in about 3 minutes and your report is generated instantly.</p>
+</details>
+
+<details>
+<summary>Do I need ERP or advanced systems?</summary>
+<p>No. Strata works with real-world constraints and basic operational inputs.</p>
+</details>
+
+<details>
+<summary>Is my data confidential?</summary>
+<p>Yes. Your analysis is processed securely and intended for internal use.</p>
+</details>
+
+</div>
+</section>
 
 </main>
+
+<!-- ✅ FOOTER EXACTLY AS REQUESTED -->
+<footer>
+<div class="container">
+<div>© Strata Growth Advisors</div>
+<div>AI Decision Intelligence for SMEs</div>
+<div>This site is for Marketing purposes only • Your analysis runs inside the Strata app</div>
+</div>
+</footer>
+
 </body>
 </html>
