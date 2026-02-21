@@ -7,11 +7,11 @@
   <meta name="description" content="Find the biggest bottleneck holding your business back — and what to do next. Get an AI-generated decision intelligence report in minutes." />
   <meta name="theme-color" content="#f6f1e6" />
 
-  <!-- Favicon (keep yours if already set) -->
-  <link rel="icon" href="assets/favicon.ico" />
+  <!-- Favicon (adjust if your favicon filename differs) -->
+  <link rel="icon" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- ✅ Keep your GA4 / GTM snippet here EXACTLY as it exists today -->
+  <!-- ✅ Keep your GA4 / GTM snippet here EXACTLY as it exists today (paste it here) -->
   <!-- GA4 HERE -->
 
   <!-- ✅ PostHog (Website Analytics + Events) -->
@@ -39,11 +39,13 @@
   <!--
     IMPORTANT:
     Replace LOVEABLE_APP_URL below with your Loveable app link (the URL your CTAs should open).
+    Example: https://yourapp.loveable.app/...
   -->
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/">
+        <!-- Use your Strata logo file. If yours is different, update the src. -->
         <img src="assets/strata-logo.png" alt="Strata Growth Advisors" class="brand-mark" />
       </a>
 
@@ -56,7 +58,7 @@
 
       <div class="header-cta">
         <a class="btn btn-primary" href="LOVEABLE_APP_URL"
-           onclick="posthog.capture('cta_clicked', { location: 'header', label: 'Find My Biggest Bottleneck' });">
+           onclick="try{posthog.capture('cta_clicked', { location: 'header', label: 'Find My Biggest Bottleneck' });}catch(e){}">
           Find My Biggest Bottleneck
         </a>
       </div>
@@ -82,11 +84,11 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL"
-               onclick="posthog.capture('cta_clicked', { location: 'hero', label: 'Find My Biggest Bottleneck' });">
+               onclick="try{posthog.capture('cta_clicked', { location: 'hero', label: 'Find My Biggest Bottleneck' });}catch(e){}">
               Find My Biggest Bottleneck
             </a>
             <a class="btn btn-ghost btn-lg" href="#how"
-               onclick="posthog.capture('secondary_clicked', { location: 'hero', label: 'See how it works' });">
+               onclick="try{posthog.capture('secondary_clicked', { location: 'hero', label: 'See how it works' });}catch(e){}">
               See how it works
             </a>
           </div>
@@ -113,12 +115,16 @@
               <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
               <span class="mock-title">Sample Strata Report</span>
             </div>
-            <img src="assets/og-image.png"
+
+            <!-- ✅ Your actual image file in /assets -->
+            <img
+              src="assets/og-image.png"
               alt="Sample Strata report preview"
               class="mock-image"
               loading="lazy"
-              onclick="posthog.capture('mock_clicked', { location: 'hero' });"
+              onclick="try{posthog.capture('mock_clicked', { location: 'hero' });}catch(e){}"
             />
+
             <div class="mock-foot">
               <span>Executive Summary</span>
               <span>Key Findings</span>
@@ -198,7 +204,7 @@
 
         <div class="dark-cta">
           <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL"
-             onclick="posthog.capture('cta_clicked', { location: 'what_you_get', label: 'Find My Biggest Bottleneck' });">
+             onclick="try{posthog.capture('cta_clicked', { location: 'what_you_get', label: 'Find My Biggest Bottleneck' });}catch(e){}">
             Find My Biggest Bottleneck
           </a>
           <p class="reassurance reassurance-dark">You’ll see the report on screen + download options.</p>
@@ -283,7 +289,7 @@
             <summary>How do you handle my data?</summary>
             <div class="faq-content">
               We keep things minimal and purpose-driven. Read our <a href="privacy.html"
-                onclick="posthog.capture('privacy_clicked', { location: 'faq' });">Privacy Policy</a>.
+                onclick="try{posthog.capture('privacy_clicked', { location: 'faq' });}catch(e){}">Privacy Policy</a>.
             </div>
           </details>
         </div>
@@ -298,7 +304,7 @@
           A calm, practical report — designed to help you decide what matters next.
         </p>
         <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL"
-           onclick="posthog.capture('cta_clicked', { location: 'closing', label: 'Find My Biggest Bottleneck' });">
+           onclick="try{posthog.capture('cta_clicked', { location: 'closing', label: 'Find My Biggest Bottleneck' });}catch(e){}">
           Find My Biggest Bottleneck
         </a>
         <p class="closing-signoff">— Strata Growth Advisors</p>
@@ -320,14 +326,11 @@
   </footer>
 
   <script>
-    // Year
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Basic pageview capture (PostHog will auto-capture pageviews in many setups,
-    // but this is safe and explicit)
-    try {
-      posthog.capture('$pageview');
-    } catch (e) {}
+    // Explicit pageview capture (safe; PostHog often auto-captures pageviews too)
+    try { posthog.capture('$pageview'); } catch (e) {}
   </script>
 </body>
 </html>
