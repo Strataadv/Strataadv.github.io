@@ -3,319 +3,130 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Strata Growth Advisors — AI Decision Intelligence for SMEs</title>
-  <meta name="description" content="Strata helps SMEs detect bottlenecks and build a clear 90-day roadmap." />
+  <meta name="description" content="Find the biggest bottleneck holding your business back — and what to do next. Get an AI-generated decision intelligence report in minutes." />
+  <meta name="theme-color" content="#f6f1e6" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Strata Growth Advisors" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og-image.png" />
+  <!-- Favicon (keep yours if already set) -->
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- ✅ Keep your GA4 / GTM snippet here EXACTLY as it exists today -->
+  <!-- GA4 HERE -->
 
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg1:#0f2233;
-      --bg2:#142d43;
-      --panel:rgba(255,255,255,.08);
-      --border:rgba(255,255,255,.14);
-      --text:#f5faff;
-      --muted:rgba(245,250,255,.74);
-      --accent:#1FD3C6;
-      --accentText:#032026;
-      --max:1180px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));
-      color:var(--text);
-    }
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
-
-    /* Header */
-    .header{
-      position:sticky;top:0;z-index:50;
-      background:rgba(15,34,51,.85);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--border);
-    }
-    .headerInner{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:12px 0;gap:14px;
-    }
-    .brand{display:flex;align-items:center;gap:12px;min-width:260px}
-    .logoWrap{background:#fff;padding:6px 10px;border-radius:10px}
-    .brandLogo{height:32px;display:block}
-    .brandName{font-weight:900;line-height:1.05}
-    .brandTag{font-size:12px;color:rgba(245,250,255,.70)}
-    .nav{display:none;gap:18px;align-items:center}
-    .nav a{font-size:13px;color:rgba(245,250,255,.72)}
-    .nav a:hover{color:var(--text)}
-    @media(min-width:980px){.nav{display:flex}}
-
-    .btn{
-      padding:10px 14px;border-radius:12px;
-      font-weight:800;border:none;
-      background:var(--accent);
-      color:var(--accentText);
-      cursor:pointer;
-      white-space:nowrap;
-    }
-
-    /* HERO */
-    .hero{padding:70px 0}
-
-    /* Optimized hero grid */
-    .heroGrid{
-      display:grid;
-      gap:34px;
-      align-items:center;
-    }
-    @media(min-width:980px){
-      .heroGrid{grid-template-columns:1.05fr .95fr;}
-    }
-
-    /* Text column: clean slide alignment + subtle glow */
-    .heroGrid > .heroTextCol{
-      position:relative;
-      padding-left:4px; /* slide-like alignment */
-    }
-    .heroGrid > .heroTextCol::before{
-      content:"";
-      position:absolute;
-      left:-20px; top:-30px;
-      width:420px; height:260px;
-      background:radial-gradient(circle at 30% 30%, rgba(31,211,198,.18), transparent 60%);
-      filter:blur(2px);
-      opacity:.9;
-      pointer-events:none;
-    }
-
-    /* Slide-style headline contrast */
-    .heroTitleTop{
-      font-size:64px;
-      line-height:1.02;
-      font-weight:900;
-      letter-spacing:-0.8px;
-      margin:0 0 6px;
-      color:#ffffff;
-    }
-
-    /* ✅ Align “Business Diagnostic” flush with “AI – powered”
-       (no indent + tiny optical correction to match the big A’s left edge) */
-    .heroTitleBottom{
-      font-size:48px;
-      line-height:1.08;
-      font-weight:900;
-      letter-spacing:-0.6px;
-      margin:0 0 14px;
-      color:rgba(245,250,255,.88);
-      padding-left:0;
-      text-indent:0;
-      position:relative;
-      left:-1px; /* optical alignment so it looks perfectly flush */
-    }
-
-    /* Slide bullets (accent dots) */
-    .heroBullets{
-      margin:26px 0 32px;   /* bottom spacing exactly 32px */
-      padding-left:0;
-      list-style:none;
-    }
-    .heroBullets li{
-      margin:12px 0;
-      font-size:19px;
-      font-weight:800;
-      line-height:1.5;
-      display:flex;
-      align-items:flex-start;
-      gap:10px;
-      color:rgba(245,250,255,.92);
-    }
-    .heroBullets li::before{
-      content:"";
-      width:8px;
-      height:8px;
-      border-radius:50%;
-      background:var(--accent);
-      margin-top:10px;
-      flex-shrink:0;
-    }
-
-    /* CTA polish */
-    .hero .btn{ margin-top:2px; }
-
-    /* Hero image panel: more product-like */
-    .heroPanel{
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.18);
-      border-radius:22px;
-      padding:14px;
-      box-shadow:0 18px 55px rgba(0,0,0,.35);
-    }
-    .heroPanel img{
-      width:100%;
-      height:auto;
-      border-radius:16px;
-      display:block;
-    }
-
-    /* Mobile hero sizing */
-    @media(max-width:520px){
-      .heroTitleTop{font-size:46px}
-      .heroTitleBottom{font-size:34px; left:0;} /* keep clean on small screens */
-      .heroBullets li{font-size:16px}
-      .heroGrid > .heroTextCol{padding-left:0}
-    }
-
-    /* Sections */
-    .section{padding:72px 0}
-    @media(max-width:768px){.section{padding:54px 0}}
-    h2{font-size:36px;margin:0 0 10px}
-    .sub{color:var(--muted);margin:0;line-height:1.7;max-width:920px}
-
-    /* Why cards */
-    .cards{
-      display:grid;gap:16px;margin-top:22px;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    }
-    .card{
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:16px;
-      line-height:1.5;
-    }
-
-    /* FAQ */
-    details{
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:14px;
-      margin-top:10px;
-    }
-    summary{cursor:pointer;font-weight:700}
-    details p{margin:10px 0 0;color:var(--muted);line-height:1.6}
-
-    /* Footer (2 lines, aligned as requested) */
-    footer{
-      border-top:1px solid var(--border);
-      padding:26px 0;
-      color:rgba(245,250,255,.72);
-    }
-    .footerTop{
-      font-size:13px;
-      font-weight:700;
-      color:rgba(245,250,255,.80);
-      margin-bottom:8px;
-    }
-    .footerBottom{
-      display:flex;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
-      align-items:baseline;
-      font-size:12px;
-      color:rgba(245,250,255,.66);
-    }
-    .footerRight{white-space:nowrap}
-    @media(max-width:640px){ .footerRight{white-space:normal} }
-
-    /* MOBILE STICKY CTA */
-    .mobileCTA{display:none;}
-    @media(max-width:768px){
-      .mobileCTA{
-        display:block;
-        position:fixed;
-        left:16px; right:16px; bottom:16px;
-        z-index:999;
-      }
-      .mobileCTA button{
-        width:100%;
-        padding:16px 18px;
-        border-radius:14px;
-        border:none;
-        font-weight:900;
-        font-size:16px;
-        background:var(--accent);
-        color:var(--accentText);
-        box-shadow:0 12px 30px rgba(0,0,0,.35);
-      }
-      footer{padding-bottom:110px;}
-    }
-  </style>
-
+  <!-- ✅ PostHog (Website Analytics + Events) -->
   <script>
-    window.STRATA_APP_URL = "https://strataadv.lovable.app";
-    function openApp(){
-      window.open(window.STRATA_APP_URL, "_blank", "noopener,noreferrer");
-    }
+    !function(t,e){var o,n,p,r;e.__SV=1;window.posthog=e;e._i=[];
+    e.init=function(i,s,a){function g(t,e){var o=e.split(".");
+    2==o.length&&(t=t[o[0]],e=o[1]);
+    t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}
+    (p=t.createElement("script")).type="text/javascript";
+    p.async=!0;p.src=s.api_host+"/static/array.js";
+    (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
+    var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",
+    u.people=u.people||[],u.toString=function(t){
+    var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},
+    u.people.toString=function(){return u.toString(1)+".people (stub)"},
+    o="capture identify alias people.set people.set_once".split(" ");
+    for(n=0;n<o.length;n++)g(u,o[n]);
+    e._i.push([i,s,a])};
+    e.init("phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT",{api_host:"https://app.posthog.com"})
+    }(document,window.posthog||[]);
   </script>
 </head>
 
 <body>
+  <!--
+    IMPORTANT:
+    Replace LOVEABLE_APP_URL below with your Loveable app link (the URL your CTAs should open).
+  -->
 
-  <header class="header">
-    <div class="container">
-      <div class="headerInner">
-        <a class="brand" href="#top" aria-label="Strata Growth Advisors">
-          <div class="logoWrap">
-            <img class="brandLogo" src="assets/strata-logo.png" alt="Strata logo">
-          </div>
-          <div>
-            <div class="brandName">Strata Growth Advisors</div>
-            <div class="brandTag">AI decision intelligence for SMEs</div>
-          </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="assets/strata-logo.png" alt="Strata Growth Advisors" class="brand-mark" />
+      </a>
+
+      <nav class="nav">
+        <a href="#why">Why Strata</a>
+        <a href="#deliverable">What You Get</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="LOVEABLE_APP_URL"
+           onclick="posthog.capture('cta_clicked', { location: 'header', label: 'Find My Biggest Bottleneck' });">
+          Find My Biggest Bottleneck
         </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#why">Why Strata</a>
-          <a href="#deliverable">What You Get</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-
-        <button class="btn" onclick="openApp()" type="button">Get Free Growth Analysis</button>
       </div>
     </div>
   </header>
 
-  <main id="top">
-
+  <main>
     <!-- HERO -->
     <section class="hero">
-      <div class="container">
-        <div class="heroGrid">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">AI Decision Intelligence for startups & SMEs</p>
 
-          <div class="heroTextCol">
-            <div class="heroTitleTop">AI – powered</div>
-            <div class="heroTitleBottom">Business Diagnostic</div>
+          <h1 class="display">
+            Most business owners know something’s off —
+            <span class="accent">but not exactly where it’s leaking.</span>
+          </h1>
 
-            <ul class="heroBullets">
-              <li>Identify bottlenecks</li>
-              <li>Take the right strategic call</li>
-              <li>Unblock growth opportunities</li>
-            </ul>
+          <p class="lead">
+            Strata runs a fast, structured diagnostic and gives you a clear, practical report:
+            the bottleneck, the root cause, and the top actions to take next.
+          </p>
 
-            <button class="btn" onclick="openApp()" type="button">Get Free Growth Analysis</button>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL"
+               onclick="posthog.capture('cta_clicked', { location: 'hero', label: 'Find My Biggest Bottleneck' });">
+              Find My Biggest Bottleneck
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#how"
+               onclick="posthog.capture('secondary_clicked', { location: 'hero', label: 'See how it works' });">
+              See how it works
+            </a>
           </div>
 
-          <aside class="heroPanel" aria-label="Strata preview image">
-            <img src="assets/og-image.png" alt="Strata preview">
-          </aside>
+          <p class="reassurance">
+            Free to start • No calls • You get a downloadable report in minutes.
+          </p>
 
+          <div class="trust-row">
+            <div class="trust-item">
+              <span class="trust-label">Built for</span>
+              <span class="trust-value">Retail • Logistics • Manufacturing • Services</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-label">Output</span>
+              <span class="trust-value">Practical actions + KPI framework</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-mock">
+          <div class="mock-card">
+            <div class="mock-top">
+              <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+              <span class="mock-title">Sample Strata Report</span>
+            </div>
+            <img
+              src="assets/dashboard-mock-light.png"
+              alt="Sample Strata report preview"
+              class="mock-image"
+              loading="lazy"
+              onclick="posthog.capture('mock_clicked', { location: 'hero' });"
+            />
+            <div class="mock-foot">
+              <span>Executive Summary</span>
+              <span>Key Findings</span>
+              <span>Quick Wins</span>
+              <span>KPI Framework</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -323,78 +134,201 @@
     <!-- WHY STRATA -->
     <section class="section" id="why">
       <div class="container">
-        <h2>Why Strata</h2>
-        <p class="sub">Most businesses don’t need more tools. They need decision clarity — the smallest set of actions with the biggest impact.</p>
+        <h2 class="section-title">Why Strata</h2>
+        <p class="section-intro">
+          You don’t need another dashboard. You need decision clarity.
+          Strata helps you see what’s really blocking growth — and what to do next —
+          without weeks of consulting or complicated tooling.
+        </p>
 
-        <div class="cards">
-          <div class="card">
-            <strong>Clarity first</strong><br>
-            Know what to fix before hiring or scaling.
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-num">1</div>
+            <h3 class="pillar-title">Clarity on what’s broken</h3>
+            <p class="pillar-text">A direct view of the biggest bottleneck and where the leakage is happening.</p>
           </div>
-          <div class="card">
-            <strong>Operations-focused</strong><br>
-            Built around cash flow, inventory, and execution.
+
+          <div class="pillar">
+            <div class="pillar-num">2</div>
+            <h3 class="pillar-title">Practical actions you can actually execute</h3>
+            <p class="pillar-text">A short list of high-leverage moves — not a 40-page strategy lecture.</p>
           </div>
-          <div class="card">
-            <strong>Execution ready</strong><br>
-            Roadmaps that turn insight into action.
+
+          <div class="pillar">
+            <div class="pillar-num">3</div>
+            <h3 class="pillar-title">A roadmap with KPI discipline</h3>
+            <p class="pillar-text">Clear priorities, risk notes, and KPIs to track progress week by week.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHAT YOU GET -->
-    <section class="section" id="deliverable">
+    <!-- WHAT YOU GET (DARK SECTION) -->
+    <section class="section section-dark" id="deliverable">
       <div class="container">
-        <h2>What you get</h2>
-        <p class="sub">A consulting-grade deliverable designed for action.</p>
-        <p class="sub" style="margin-top:12px;">
-          You receive a structured report that highlights your biggest bottlenecks, explains the root causes, and lays out the most impactful decisions to make next.
-          Each recommendation is prioritized for speed and feasibility, so you can move from insight to execution without guesswork.
+        <h2 class="section-title section-title-dark">What You Get</h2>
+        <p class="section-intro section-intro-dark">
+          A report you can use immediately — written for operators and founders.
         </p>
+
+        <div class="deliverable-grid">
+          <div class="deliverable-item">
+            <div class="deliverable-icon">01</div>
+            <h3>Bottleneck</h3>
+            <p>The #1 constraint slowing output, growth, or cash.</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-icon">02</div>
+            <h3>Root Cause</h3>
+            <p>Why it’s happening — and what’s reinforcing it.</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-icon">03</div>
+            <h3>Top 3 Actions</h3>
+            <p>The highest-leverage next moves, in plain language.</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-icon">04</div>
+            <h3>Roadmap</h3>
+            <p>30–90 day plan + KPI framework to measure progress.</p>
+          </div>
+        </div>
+
+        <div class="dark-cta">
+          <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL"
+             onclick="posthog.capture('cta_clicked', { location: 'what_you_get', label: 'Find My Biggest Bottleneck' });">
+            Find My Biggest Bottleneck
+          </a>
+          <p class="reassurance reassurance-dark">You’ll see the report on screen + download options.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-intro">
+          Three steps. No calls. No messy setup.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-badge">1</div>
+            <h3>Answer a few focused questions</h3>
+            <p>About your business, operations, and goals — designed for speed and clarity.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-badge">2</div>
+            <h3>Strata runs the diagnostic</h3>
+            <p>We detect constraints, root causes, and the best next actions based on your context.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-badge">3</div>
+            <h3>Get a clear report</h3>
+            <p>View it instantly, download it, and use the KPI framework to track improvements.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container">
-        <h2>FAQ</h2>
-        <p class="sub">Quick answers.</p>
+        <h2 class="section-title">FAQ</h2>
 
-        <details>
-          <summary>How long does the audit take?</summary>
-          <p>Most users complete it in about 3 minutes and your report is generated instantly.</p>
-        </details>
+        <div class="faq">
+          <details>
+            <summary>Is this actually free?</summary>
+            <div class="faq-content">
+              Yes. You can start free and generate your first analysis report without any calls.
+            </div>
+          </details>
 
-        <details>
-          <summary>Do I need ERP or advanced systems?</summary>
-          <p>No. Strata works with real-world constraints and basic operational inputs.</p>
-        </details>
+          <details>
+            <summary>What happens after I click the button?</summary>
+            <div class="faq-content">
+              You’ll answer a short diagnostic, Strata generates your report, and you can view it on-screen.
+              Download and email options are available inside the app.
+            </div>
+          </details>
 
-        <details>
-          <summary>Is my data confidential?</summary>
-          <p>Yes. Your analysis is processed securely and intended for internal use.</p>
-        </details>
+          <details>
+            <summary>Who is this for?</summary>
+            <div class="faq-content">
+              Startups and SMEs in retail, logistics, manufacturing, and service businesses who need
+              decision clarity fast — especially around bottlenecks, leakage, and execution priorities.
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need to install anything?</summary>
+            <div class="faq-content">
+              No. It runs in the browser. No complex setup.
+            </div>
+          </details>
+
+          <details>
+            <summary>Will someone call me?</summary>
+            <div class="faq-content">
+              No. Strata is self-serve. You control the pace.
+            </div>
+          </details>
+
+          <details>
+            <summary>How do you handle my data?</summary>
+            <div class="faq-content">
+              We keep things minimal and purpose-driven. Read our <a href="privacy.html"
+                onclick="posthog.capture('privacy_clicked', { location: 'faq' });">Privacy Policy</a>.
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
+    <!-- CLOSING CTA -->
+    <section class="closing">
+      <div class="container closing-inner">
+        <h2 class="closing-title">If you’re running hard but not moving fast — let’s find the constraint.</h2>
+        <p class="closing-text">
+          A calm, practical report — designed to help you decide what matters next.
+        </p>
+        <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL"
+           onclick="posthog.capture('cta_clicked', { location: 'closing', label: 'Find My Biggest Bottleneck' });">
+          Find My Biggest Bottleneck
+        </a>
+        <p class="closing-signoff">— Strata Growth Advisors</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer (2 lines) -->
-  <footer>
-    <div class="container">
-      <div class="footerTop">© Strata Growth Advisors</div>
-      <div class="footerBottom">
-        <div>AI Decision Intelligence for SMEs</div>
-        <div class="footerRight">This site is for Marketing purposes only • Your analysis runs inside the Strata app</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Strata Growth Advisors</div>
+        <div class="footer-muted">Strategy built. Growth delivered.</div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-muted small">AI Decision Intelligence for SMEs</div>
+        <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors</div>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile-only sticky CTA -->
-  <div class="mobileCTA">
-    <button onclick="openApp()" type="button">Get Free Growth Analysis</button>
-  </div>
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Basic pageview capture (PostHog will auto-capture pageviews in many setups,
+    // but this is safe and explicit)
+    try {
+      posthog.capture('$pageview');
+    } catch (e) {}
+  </script>
 </body>
 </html>
