@@ -7,10 +7,23 @@
   <meta name="description" content="Find the biggest bottleneck holding your business back — and what to do next. Get an AI-generated decision intelligence report in minutes." />
   <meta name="theme-color" content="#f6f1e6" />
 
+  <!-- ✅ Favicon -->
   <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- PostHog -->
+  <!-- ✅ GA4 / GTM: paste your existing GA snippet right below this line (do NOT paste inside another <script>) -->
+  <!-- GA4 HERE -->
+
+  <!-- ✅ Force header logo size (so you don't need to touch style.css) -->
+  <style>
+    /* Bigger logo in header */
+    .brand-mark { height: 52px !important; width: auto !important; }
+    @media (max-width: 520px){
+      .brand-mark { height: 46px !important; }
+    }
+  </style>
+
+  <!-- ✅ PostHog -->
   <script>
     !function(t,e){var o,n,p,r;e.__SV=1;window.posthog=e;e._i=[];
     e.init=function(i,s,a){function g(t,e){var o=e.split(".");
@@ -32,127 +45,297 @@
 </head>
 
 <body>
+  <!-- ✅ Single source of truth -->
+  <!-- Loveable app URL -->
+  <!-- (Used everywhere so CTAs never break) -->
+  <script>
+    window.STRATA_LOVABLE_URL = "https://strataadv.lovable.app";
+  </script>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="/">
-      <img src="assets/strata-logo.png" alt="Strata Growth Advisors" class="brand-mark" />
-    </a>
-
-    <nav class="nav">
-      <a href="#why">Why Strata</a>
-      <a href="#deliverable">What You Get</a>
-      <a href="#how">How It Works</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <div class="header-cta">
-      <a class="btn btn-primary" href="https://strataadv.lovable.app" target="_blank"
-         onclick="posthog.capture('cta_clicked',{location:'header'});">
-         Find My Biggest Bottleneck
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Strata home">
+        <img src="assets/strata-logo.png" alt="Strata Growth Advisors" class="brand-mark" />
       </a>
-    </div>
-  </div>
-</header>
 
-<main>
+      <nav class="nav" aria-label="Primary">
+        <a href="#why">Why Strata</a>
+        <a href="#deliverable">What You Get</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-<section class="hero">
-  <div class="container hero-grid">
-
-    <div class="hero-copy">
-      <p class="kicker">AI Decision Intelligence for startups & SMEs</p>
-
-      <h1 class="display">
-        Most business owners know something’s off —
-        <span class="accent">but not exactly where it’s leaking.</span>
-      </h1>
-
-      <p class="lead">
-        Strata runs a fast, structured diagnostic and gives you a clear report:
-        the bottleneck, the root cause, and the top actions to take next.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank"
-           onclick="posthog.capture('cta_clicked',{location:'hero'});">
-           Find My Biggest Bottleneck
-        </a>
-
-        <a class="btn btn-ghost btn-lg" href="#how">
-          See how it works
+      <div class="header-cta">
+        <a class="btn btn-primary" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
+           onclick="try{posthog.capture('cta_clicked',{location:'header',label:'Find My Biggest Bottleneck'});}catch(e){}">
+          Find My Biggest Bottleneck
         </a>
       </div>
-
-      <p class="reassurance">
-        Free to start • No calls • Get your report in minutes
-      </p>
     </div>
+  </header>
 
-    <div class="hero-mock">
-      <div class="mock-card">
-        <div class="mock-top">
-          <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-          <span class="mock-title">Sample Strata Report</span>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">AI Decision Intelligence for startups & SMEs</p>
+
+          <h1 class="display">
+            Most business owners know something’s off —
+            <span class="accent">but not exactly where it’s leaking.</span>
+          </h1>
+
+          <p class="lead">
+            Strata runs a fast, structured diagnostic and gives you a clear, practical report:
+            the bottleneck, the root cause, and the top actions to take next.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
+               onclick="try{posthog.capture('cta_clicked',{location:'hero',label:'Find My Biggest Bottleneck'});}catch(e){}">
+              Find My Biggest Bottleneck
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#how"
+               onclick="try{posthog.capture('secondary_clicked',{location:'hero',label:'See how it works'});}catch(e){}">
+              See how it works
+            </a>
+          </div>
+
+          <p class="reassurance">
+            Free to start • No calls • Get your report in minutes
+          </p>
+
+          <div class="trust-row">
+            <div class="trust-item">
+              <span class="trust-label">Built for</span>
+              <span class="trust-value">Retail • Logistics • Manufacturing • Services</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-label">Output</span>
+              <span class="trust-value">Practical actions + KPI framework</span>
+            </div>
+          </div>
         </div>
 
-        <img src="assets/og-image.png" alt="Sample Strata report preview" class="mock-image" />
+        <div class="hero-mock">
+          <div class="mock-card">
+            <div class="mock-top">
+              <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+              <span class="mock-title">Sample Strata Report</span>
+            </div>
 
-        <div class="mock-foot">
-          <span>Executive Summary</span>
-          <span>Key Findings</span>
-          <span>Quick Wins</span>
-          <span>KPI Framework</span>
+            <img
+              src="assets/og-image.png"
+              alt="Sample Strata report preview"
+              class="mock-image"
+              loading="lazy"
+              onclick="try{posthog.capture('mock_clicked',{location:'hero'});}catch(e){}"
+            />
+
+            <div class="mock-foot">
+              <span>Executive Summary</span>
+              <span>Key Findings</span>
+              <span>Quick Wins</span>
+              <span>KPI Framework</span>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- WHY STRATA -->
+    <section class="section" id="why">
+      <div class="container">
+        <h2 class="section-title">Why Strata</h2>
+        <p class="section-intro">
+          You don’t need another dashboard. You need decision clarity.
+          Strata helps you see what’s really blocking growth — and what to do next —
+          without weeks of consulting or complicated tooling.
+        </p>
+
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-num">1</div>
+            <h3 class="pillar-title">Clarity on what’s broken</h3>
+            <p class="pillar-text">A direct view of the biggest bottleneck and where the leakage is happening.</p>
+          </div>
+
+          <div class="pillar">
+            <div class="pillar-num">2</div>
+            <h3 class="pillar-title">Practical actions you can execute</h3>
+            <p class="pillar-text">A short list of high-leverage moves — not a 40-page strategy lecture.</p>
+          </div>
+
+          <div class="pillar">
+            <div class="pillar-num">3</div>
+            <h3 class="pillar-title">A roadmap with KPI discipline</h3>
+            <p class="pillar-text">Clear priorities, risk notes, and KPIs to track progress week by week.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET (DARK SECTION) -->
+    <section class="section section-dark" id="deliverable">
+      <div class="container">
+        <h2 class="section-title section-title-dark">What You Get</h2>
+        <p class="section-intro section-intro-dark">
+          A report you can use immediately — written for operators and founders.
+        </p>
+
+        <div class="deliverable-grid">
+          <div class="deliverable-item">
+            <div class="deliverable-icon">01</div>
+            <h3>Bottleneck</h3>
+            <p>The #1 constraint slowing output, growth, or cash.</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-icon">02</div>
+            <h3>Root Cause</h3>
+            <p>Why it’s happening — and what’s reinforcing it.</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-icon">03</div>
+            <h3>Top 3 Actions</h3>
+            <p>The highest-leverage next moves, in plain language.</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-icon">04</div>
+            <h3>Roadmap</h3>
+            <p>30–90 day plan + KPI framework to measure progress.</p>
+          </div>
+        </div>
+
+        <div class="dark-cta">
+          <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
+             onclick="try{posthog.capture('cta_clicked',{location:'what_you_get',label:'Find My Biggest Bottleneck'});}catch(e){}">
+            Find My Biggest Bottleneck
+          </a>
+          <p class="reassurance reassurance-dark">You’ll see the report on screen + download options.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-intro">
+          Three steps. No calls. No messy setup.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-badge">1</div>
+            <h3>Answer a few focused questions</h3>
+            <p>About your business, operations, and goals — designed for speed and clarity.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-badge">2</div>
+            <h3>Strata runs the diagnostic</h3>
+            <p>We detect constraints, root causes, and the best next actions based on your context.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-badge">3</div>
+            <h3>Get a clear report</h3>
+            <p>View it instantly, download it, and use the KPI framework to track improvements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+
+        <div class="faq">
+          <details>
+            <summary>Is this actually free?</summary>
+            <div class="faq-content">
+              Yes. You can start free and generate your first analysis report without any calls.
+            </div>
+          </details>
+
+          <details>
+            <summary>What happens after I click the button?</summary>
+            <div class="faq-content">
+              You’ll answer a short diagnostic, Strata generates your report, and you can view it on-screen.
+              Download and email options are available inside the app.
+            </div>
+          </details>
+
+          <details>
+            <summary>Who is this for?</summary>
+            <div class="faq-content">
+              Startups and SMEs in retail, logistics, manufacturing, and service businesses who need
+              decision clarity fast — especially around bottlenecks, leakage, and execution priorities.
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need to install anything?</summary>
+            <div class="faq-content">
+              No. It runs in the browser. No complex setup.
+            </div>
+          </details>
+
+          <details>
+            <summary>Will someone call me?</summary>
+            <div class="faq-content">
+              No. Strata is self-serve. You control the pace.
+            </div>
+          </details>
+
+          <details>
+            <summary>How do you handle my data?</summary>
+            <div class="faq-content">
+              We keep things minimal and purpose-driven. Read our
+              <a href="privacy.html" onclick="try{posthog.capture('privacy_clicked',{location:'faq'});}catch(e){}">Privacy Policy</a>.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="closing">
+      <div class="container closing-inner">
+        <h2 class="closing-title">If you’re running hard but not moving fast — let’s find the constraint.</h2>
+        <p class="closing-text">
+          A calm, practical report — designed to help you decide what matters next.
+        </p>
+        <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
+           onclick="try{posthog.capture('cta_clicked',{location:'closing',label:'Find My Biggest Bottleneck'});}catch(e){}">
+          Find My Biggest Bottleneck
+        </a>
+        <p class="closing-signoff">— Strata Growth Advisors</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Strata Growth Advisors</div>
+        <div class="footer-muted">Strategy built. Growth delivered.</div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-muted small">AI Decision Intelligence for SMEs</div>
+        <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors</div>
+      </div>
     </div>
+  </footer>
 
-  </div>
-</section>
-
-<section class="section" id="why">
-  <div class="container">
-    <h2 class="section-title">Why Strata</h2>
-    <p class="section-intro">
-      You don’t need another dashboard. You need decision clarity.
-      Strata shows what’s really blocking growth — and what to do next.
-    </p>
-  </div>
-</section>
-
-<section class="section" id="how">
-  <div class="container">
-    <h2 class="section-title">How It Works</h2>
-    <div class="steps">
-      <div class="step"><div class="step-badge">1</div><h3>Answer questions</h3></div>
-      <div class="step"><div class="step-badge">2</div><h3>AI analysis</h3></div>
-      <div class="step"><div class="step-badge">3</div><h3>Get report</h3></div>
-    </div>
-  </div>
-</section>
-
-<section class="closing">
-  <div class="container closing-inner">
-    <h2 class="closing-title">Let’s find the constraint.</h2>
-    <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank"
-       onclick="posthog.capture('cta_clicked',{location:'closing'});">
-       Find My Biggest Bottleneck
-    </a>
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>Strata Growth Advisors</div>
-    <div>© <span id="year"></span></div>
-  </div>
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    try { posthog.capture('$pageview'); } catch(e) {}
+  </script>
 </body>
 </html>
