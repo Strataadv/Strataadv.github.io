@@ -7,83 +7,39 @@
   <meta name="description" content="Find the biggest bottleneck holding your business back — and what to do next. Get an AI-generated decision intelligence report in minutes." />
   <meta name="theme-color" content="#f6f1e6" />
 
-  <!-- ✅ Favicon -->
-  <link rel="icon" href="assets/favicon.png" />
- <link rel="stylesheet" href="style.css?v=20260226-3">
+  <!-- Favicon (keep yours if already set) -->
+  <link rel="icon" href="assets/favicon.ico" />
 
-  <!-- ✅ GA4 / GTM: paste your existing GA snippet right below this line (do NOT paste inside another <script>) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Keep your GA4 / GTM snippet here EXACTLY as it exists today -->
+  <!-- (Paste your current GA code below this line if it's not already in your repo) -->
   <!-- GA4 HERE -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-13ENVQTEC4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-13ENVQTEC4');
-</script>
-  <!-- ✅ Force header logo size (so you don't need to touch style.css) -->
-  <style>
-    /* Bigger logo in header */
-    .brand-mark { height: 84px !important; width: auto !important; }
-    @media (max-width: 520px){
-      .brand-mark { height: 46px !important; }
-    }
-  </style>
-
-  <!-- ✅ PostHog -->
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV=1;window.posthog=e;e._i=[];
-    e.init=function(i,s,a){function g(t,e){var o=e.split(".");
-    2==o.length&&(t=t[o[0]],e=o[1]);
-    t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}
-    (p=t.createElement("script")).type="text/javascript";
-    p.async=!0;p.src=s.api_host+"/static/array.js";
-    (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
-    var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",
-    u.people=u.people||[],u.toString=function(t){
-    var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},
-    u.people.toString=function(){return u.toString(1)+".people (stub)"},
-    o="capture identify alias people.set people.set_once".split(" ");
-    for(n=0;n<o.length;n++)g(u,o[n]);
-    e._i.push([i,s,a])};
-    e.init("phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT",{api_host:"https://app.posthog.com"})
-    }(document,window.posthog||[]);
-  </script>
 </head>
 
 <body>
-  <!-- ✅ Single source of truth -->
-  <!-- Loveable app URL -->
-  <!-- (Used everywhere so CTAs never break) -->
-  <script>
-    window.STRATA_LOVABLE_URL = "https://strataadv.lovable.app";
-  </script>
-
- <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="/" aria-label="Strata home">
-      <img src="assets/strata-logo.png" alt="Strata Growth Advisors" class="brand-mark" />
-    </a>
-
-    <nav class="nav" aria-label="Primary">
-      <a href="#why">Why Strata</a>
-      <a href="#deliverable">What You Get</a>
-      <a href="#how">How It Works</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <div class="header-cta">
-      <a class="btn btn-primary" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
-         onclick="try{posthog.capture('cta_clicked',{location:'header',label:'Find My Biggest Bottleneck'})}catch(e){}">
-        Find My Biggest Bottleneck
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="assets/strata-logo.png" alt="Strata Growth Advisors" class="brand-mark" />
       </a>
+
+      <nav class="nav">
+        <a href="#why">Why Strata</a>
+        <a href="#deliverable">What You Get</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="LOVEABLE_APP_URL">Find My Biggest Bottleneck</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
+
   <main>
     <!-- HERO -->
-    <section class="hero" id="top">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="kicker">AI Decision Intelligence for startups & SMEs</p>
@@ -99,20 +55,12 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
-               onclick="try{posthog.capture('cta_clicked',{location:'hero',label:'Find My Biggest Bottleneck'});}catch(e){}">
-              Find My Biggest Bottleneck
-            </a>
-            <a class="btn btn-ghost btn-lg" href="#how"
-               onclick="try{posthog.capture('secondary_clicked',{location:'hero',label:'See how it works'});}catch(e){}">
-              See how it works
-            </a>
+            <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL">Find My Biggest Bottleneck</a>
+            <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
           </div>
- <p class="cta-subnote">Takes ~7 minutes • No credit card required</p>
 
           <p class="reassurance">
-            Free to start • No calls • Get your report in minutes.
-            Built by operators with 25+ years of experience in operations, supply chain, and growth strategy.
+            Free to start • No calls • You get a downloadable report in minutes.
           </p>
 
           <div class="trust-row">
@@ -128,20 +76,18 @@
         </div>
 
         <div class="hero-mock">
+          <!-- Use your existing mock image name here -->
           <div class="mock-card">
             <div class="mock-top">
               <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
               <span class="mock-title">Sample Strata Report</span>
             </div>
-
             <img
-              src="assets/og-image.png"
+              src="assets/dashboard-mock-light.png"
               alt="Sample Strata report preview"
               class="mock-image"
               loading="lazy"
-              onclick="try{posthog.capture('mock_clicked',{location:'hero'});}catch(e){}"
             />
-
             <div class="mock-foot">
               <span>Executive Summary</span>
               <span>Key Findings</span>
@@ -172,7 +118,7 @@
 
           <div class="pillar">
             <div class="pillar-num">2</div>
-            <h3 class="pillar-title">Practical actions you can execute</h3>
+            <h3 class="pillar-title">Practical actions you can actually execute</h3>
             <p class="pillar-text">A short list of high-leverage moves — not a 40-page strategy lecture.</p>
           </div>
 
@@ -220,10 +166,7 @@
         </div>
 
         <div class="dark-cta">
-          <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
-             onclick="try{posthog.capture('cta_clicked',{location:'what_you_get',label:'Find My Biggest Bottleneck'});}catch(e){}">
-            Find My Biggest Bottleneck
-          </a>
+          <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL">Find My Biggest Bottleneck</a>
           <p class="reassurance reassurance-dark">You’ll see the report on screen + download options.</p>
         </div>
       </div>
@@ -305,8 +248,7 @@
           <details>
             <summary>How do you handle my data?</summary>
             <div class="faq-content">
-              We keep things minimal and purpose-driven. Read our
-              <a href="privacy.html" onclick="try{posthog.capture('privacy_clicked',{location:'faq'});}catch(e){}">Privacy Policy</a>.
+              We keep things minimal and purpose-driven. Read our <a href="privacy.html">Privacy Policy</a>.
             </div>
           </details>
         </div>
@@ -319,12 +261,8 @@
         <h2 class="closing-title">If you’re running hard but not moving fast — let’s find the constraint.</h2>
         <p class="closing-text">
           A calm, practical report — designed to help you decide what matters next.
-          After your report, you can implement the recommendations yourself — entirely at your discretion. No upselling
         </p>
-        <a class="btn btn-primary btn-lg" href="https://strataadv.lovable.app" target="_blank" rel="noopener"
-           onclick="try{posthog.capture('cta_clicked',{location:'closing',label:'Find My Biggest Bottleneck'});}catch(e){}">
-          Find My Biggest Bottleneck
-        </a>
+        <a class="btn btn-primary btn-lg" href="LOVEABLE_APP_URL">Find My Biggest Bottleneck</a>
         <p class="closing-signoff">— Strata Growth Advisors</p>
       </div>
     </section>
@@ -337,7 +275,7 @@
         <div class="footer-muted">Strategy built. Growth delivered.</div>
       </div>
       <div class="footer-right">
-        <div class="footer-muted small">AI Decision Intelligence for startups & SMEs</div>
+        <div class="footer-muted small">AI Decision Intelligence for SMEs</div>
         <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors</div>
       </div>
     </div>
@@ -345,7 +283,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    try { posthog.capture('$pageview'); } catch(e) {}
   </script>
 </body>
 </html>
