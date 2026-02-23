@@ -419,16 +419,24 @@ summary{
   .container{ width: calc(100% - 28px); }
   .hero{ padding-top: 42px; }
 }
-/* Tighten HERO width only (keeps rest of site same) */
+/* ===== HERO WIDTH: tighten & center ===== */
 .hero .container{
-  max-width: 980px–1060px */
+  max-width: 980px;      /* tighter */
+  margin: 0 auto;        /* ensure centered */
 }
 
-/* Optional: bring columns slightly closer */
+/* bring columns closer */
 .hero-grid{
-  column-gap: 40px;
+  gap: 32px;             /* works for grid/flex */
+}
+
+/* Optional: slightly shrink mock card so it fits nicer */
+.hero-mock{
+  max-width: 460px;
+  justify-self: end;
 }
 
 @media (max-width: 1024px){
-  .hero .container{ max-width: 960px; }
+  .hero .container{ max-width: 940px; }
+  .hero-grid{ gap: 24px; }
 }
