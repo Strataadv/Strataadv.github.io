@@ -421,7 +421,7 @@ summary{
 }
 /* Tighten HERO width only (keeps rest of site same) */
 .hero .container{
-  max-width: 1020px;   /* try 980px–1060px if you want */
+  max-width: 980px–1060px */
 }
 
 /* Optional: bring columns slightly closer */
