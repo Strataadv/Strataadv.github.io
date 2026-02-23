@@ -419,24 +419,39 @@ summary{
   .container{ width: calc(100% - 28px); }
   .hero{ padding-top: 42px; }
 }
-/* ===== HERO WIDTH: tighten & center ===== */
+/* ===== HERO: make it visually narrower + controlled columns ===== */
+
+/* give hero section some breathing room so it doesn't feel edge-to-edge */
+.hero{
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* hard limit hero content width (stronger than before) */
 .hero .container{
-  max-width: 980px;      /* tighter */
-  margin: 0 auto;        /* ensure centered */
+  max-width: 920px;
+  margin: 0 auto;
 }
 
-/* bring columns closer */
+/* control the 2-column layout explicitly */
 .hero-grid{
-  gap: 32px;             /* works for grid/flex */
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr; /* text slightly larger than image */
+  align-items: center;
+  gap: 28px;
 }
 
-/* Optional: slightly shrink mock card so it fits nicer */
+/* prevent the mock area from stretching */
 .hero-mock{
-  max-width: 460px;
+  max-width: 420px;
   justify-self: end;
 }
 
 @media (max-width: 1024px){
-  .hero .container{ max-width: 940px; }
-  .hero-grid{ gap: 24px; }
+  .hero .container{ max-width: 880px; }
+}
+
+@media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-mock{ max-width: 520px; justify-self: start; }
 }
