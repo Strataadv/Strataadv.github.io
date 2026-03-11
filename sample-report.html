@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sample Report — Strata Growth Advisors</title>
-  <meta name="description" content="See a real Strata Growth Analysis report before you start." />
+  <title>Sample Report — Keldron</title>
+  <meta name="description" content="See a real Keldron diagnostic report before you start." />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-13ENVQTEC4"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-13ENVQTEC4');
+    gtag('config', 'G-3YVBEJL4B2');
   </script>
 
   <!-- PostHog -->
@@ -35,8 +35,8 @@
     for(n=0;n<o.length;n++)g(u,o[n]);
     e._i.push([i,s,a])},e.__SV=1)}
     (document,window.posthog||[]);
-    posthog.init('UDE4IHDTSXNqkBcgqoumVZiRlIWVwX7wAPFgsEkgT',{
-      api_host:'https://app.posthog.com'
+    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT',{
+      api_host:'https://us.i.posthog.com'
     });
   </script>
 
@@ -117,19 +117,22 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/">
-        <img src="assets/strata-logo.png" alt="Strata Growth Advisors" class="brand-mark" />
+        <img src="assets/keldron_with_tagline.png" alt="Keldron" class="brand-mark"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='inline';" />
+        <span style="display:none;font-weight:700;font-size:20px;">Keldron</span>
       </a>
       <nav class="nav">
-        <a href="/#why">Why Strata</a>
+        <a href="/#why">Why Keldron</a>
         <a href="/#deliverable">What You Get</a>
         <a href="/#how">How It Works</a>
         <a href="/#faq">FAQ</a>
+        <a href="/contact.html">Contact</a>
       </nav>
       <div class="header-cta">
         <a class="btn btn-primary"
-           href="https://strataadv.lovable.app"
+           href="https://app.keldron.io"
            onclick="posthog.capture('cta_clicked', {button: 'find_my_bottleneck', location: 'sample_report_header'})">
-          Find My Biggest Bottleneck
+          Find My Bottleneck — It's Free
         </a>
       </div>
     </div>
@@ -140,15 +143,15 @@
       <div class="container">
 
         <div class="report-intro">
-          <h1>See a real Strata report — before you start.</h1>
+          <h1>See a real Keldron report — before you start.</h1>
           <p>
-            This is an actual output from Strata's diagnostic — generated for a manufacturing business
-            with 51–100 employees. Your report will be tailored to your business, industry, and inputs.
+            This is an actual output from Keldron's diagnostic. Your report will be tailored to your
+            business, industry, and inputs.
             Names and identifying details have been removed.
           </p>
           <div class="report-actions">
             <a class="btn btn-primary btn-lg"
-               href="https://strataadv.lovable.app"
+               href="https://app.keldron.io"
                onclick="posthog.capture('cta_clicked', {button: 'find_my_bottleneck', location: 'sample_report_top'})">
               Get My Free Report →
             </a>
@@ -164,7 +167,7 @@
         <div class="report-embed">
           <iframe
             src="assets/sample-report.pdf"
-            title="Sample Strata Growth Analysis Report">
+            title="Sample Keldron Diagnostic Report">
           </iframe>
         </div>
 
@@ -174,9 +177,9 @@
             <p>3 minutes. Free. Instant report tailored to your business.</p>
           </div>
           <a class="btn btn-primary btn-lg"
-             href="https://strataadv.lovable.app"
+             href="https://app.keldron.io"
              onclick="posthog.capture('cta_clicked', {button: 'find_my_bottleneck', location: 'sample_report_bottom'})">
-            Find My Biggest Bottleneck →
+            Find My Bottleneck — It's Free →
           </a>
         </div>
 
@@ -187,12 +190,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <div class="footer-brand">Strata Growth Advisors</div>
-        <div class="footer-muted">Strategy built. Growth delivered.</div>
+        <img src="assets/keldron_with_tagline.png" alt="Keldron" style="height:36px;"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <span style="display:none;font-weight:700;">Keldron</span>
       </div>
       <div class="footer-right">
-        <div class="footer-muted small">AI Decision Intelligence for Startups &amp; SMEs</div>
-        <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors</div>
+        <div class="footer-muted small">AI Decision Intelligence for Entrepreneurs &amp; SMBs</div>
+        <div class="footer-muted small">© <span id="year"></span> Keldron</div>
       </div>
     </div>
   </footer>
