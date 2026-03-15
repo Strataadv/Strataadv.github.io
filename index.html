@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Google tag (GA4) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -36,9 +36,75 @@
     for(n=0;n<o.length;n++)g(u,o[n]);
     e._i.push([i,s,a])},e.__SV=1)}
     (document,window.posthog||[]);
-    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT',
+    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT',{
       api_host:'https://us.i.posthog.com'
     });
+  </script>
+
+  <!-- FAQ Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this actually free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can start free and generate your first analysis report without any calls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after I click the button?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You'll answer a short diagnostic, Keldron generates your report, and you can view it on-screen. Download and email options are available inside the app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is this for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entrepreneurs and SMBs in retail, logistics, manufacturing, and service businesses who need decision clarity fast — especially around bottlenecks, leakage, and execution priorities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to upload sensitive financial data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Keldron works from a few top-line inputs — no sensitive data, no spreadsheet uploads, no accounting integrations required. Just what you already know about your business."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see a sample report before I start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. View a real sample report at https://keldron.io/sample-report.html — generated for a retail business, with identifying details removed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will someone call me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Keldron is fully self-serve. You control the pace."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We keep things minimal and purpose-driven. Read the Privacy Policy at https://keldron.io/privacy.html."
+        }
+      }
+    ]
+  }
   </script>
 
 </head>
