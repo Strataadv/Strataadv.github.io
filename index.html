@@ -192,29 +192,32 @@
           </div>
         </div>
 
-        <div class="hero-mock">
+       <div class="hero-mock">
           <div class="mock-card">
             <div class="mock-top">
               <span class="mock-dot"></span>
               <span class="mock-dot"></span>
               <span class="mock-dot"></span>
-              <span class="mock-title">Sample Keldron Report</span>
+              <span class="mock-title">Keldron — 45 Second Overview</span>
             </div>
-            <img
-              src="assets/og-image.png"
-              alt="Sample Keldron report preview"
-              class="mock-image"
-              loading="lazy"
-            />
+            <div style="position:relative; overflow:hidden; aspect-ratio:1920/1080; border-radius:8px;">
+              <iframe
+                src="https://share.synthesia.io/embeds/videos/dbdabe3f-1d3c-4bf3-8dc3-3fba12c166be"
+                loading="lazy"
+                title="Keldron — Find Your Biggest Profit Leak"
+                allowfullscreen
+                allow="encrypted-media; fullscreen;"
+                style="position:absolute; width:100%; height:100%; top:0; left:0; border:none; padding:0; margin:0; overflow:hidden;">
+              </iframe>
+            </div>
             <div class="mock-foot">
-              <span>Executive Summary</span>
-              <span>Root Causes</span>
-              <span>Quick Wins</span>
-              <span>KPI Framework</span>
-              <a href="/sample-report.html"
+              <span>45 seconds</span>
+              <span>No sound needed</span>
+              <span>Captions on</span>
+              <a href="https://app.keldron.io"
                  style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
-                 onclick="posthog.capture('sample_report_viewed', {location: 'hero_mock'})">
-                View full sample →
+                 onclick="posthog.capture('cta_clicked', {button: 'hero_video', location: 'hero_mock'})">
+                Try it free →
               </a>
             </div>
           </div>
