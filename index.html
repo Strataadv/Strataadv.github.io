@@ -182,6 +182,83 @@
       .proof-strip-inner { gap: 16px; padding: 0 16px; }
       .proof-strip-item { font-size: 12px; }
     }
+    .testimonial-section {
+      padding: 56px 0;
+      background: var(--surface-2, #f0ece0);
+    }
+    .testimonial-card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--white, #ffffff);
+      border: 1px solid rgba(200, 148, 42, 0.2);
+      border-left: 4px solid var(--gold, #c8942a);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 1rem;
+    }
+    .testimonial-stars span {
+      color: var(--gold, #c8942a);
+      font-size: 16px;
+    }
+    .testimonial-quote {
+      font-size: clamp(15px, 2vw, 17px);
+      line-height: 1.75;
+      color: var(--ink, #0f0e0c);
+      font-style: italic;
+      margin: 0 0 1.5rem;
+    }
+    .testimonial-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(200, 148, 42, 0.15);
+      border: 1px solid rgba(200, 148, 42, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold, #c8942a);
+      flex-shrink: 0;
+      font-style: normal;
+    }
+    .testimonial-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .testimonial-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink, #0f0e0c);
+      font-style: normal;
+    }
+    .testimonial-role {
+      font-size: 12px;
+      color: var(--ink-muted, #6b6b5e);
+      font-style: normal;
+    }
+    .testimonial-verified {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--ink-muted, #6b6b5e);
+      font-style: normal;
+    }
+    .testimonial-verified svg {
+      color: var(--gold, #c8942a);
+    }
   </style>
 
 </head>
@@ -607,6 +684,34 @@
             </div>
           </details>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL — before closing CTA -->
+    <section class="testimonial-section">
+      <div class="container">
+        <p style="text-align:center; font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color: var(--ink-muted, #6b6b5e); margin:0 0 24px;">Practitioners are already seeing results</p>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            "Keldron is a great platform for small and medium-sized businesses or solopreneurs like me.
+            The action plan it gave me was absolutely to the point. In just a little more than a week since
+            I have started following it, I am already feeling some positive outcomes."
+          </p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar">K.A.</div>
+            <div class="testimonial-meta">
+              <span class="testimonial-name">K.A.</span>
+              <span class="testimonial-role">SAP Implementation Consultant &nbsp;·&nbsp; Solopreneur</span>
+            </div>
+            <div class="testimonial-verified">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Verified user
+            </div>
+          </div>
         </div>
       </div>
     </section>
