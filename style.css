@@ -1,5 +1,5 @@
 /* =====================================================
-   STRATA GLOBAL STYLESHEET
+   KELDRON GLOBAL STYLESHEET
    ===================================================== */
 
 /* ---------- CSS VARIABLES ---------- */
@@ -66,7 +66,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   align-items: center;
   justify-content: flex-start;
   gap: 22px;
-  padding: 10px 0;   /* tighter vertical padding */
+  padding: 10px 0;
 }
 
 .brand {
@@ -76,7 +76,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
 }
 
 .brand-mark {
-  height: 84px;      /* as requested */
+  height: 84px;
   width: auto;
 }
 
@@ -162,6 +162,37 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   gap: 36px;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(176,138,45,0.12);
+  border: 1px solid rgba(176,138,45,0.3);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+  width: fit-content;
+}
+
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: badgepulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes badgepulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
 .kicker {
   display: inline-flex;
   align-items: center;
@@ -176,7 +207,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
 }
 
 .display {
-  margin: 18px 0 24px;   /* increased bottom margin: extra space below headline */
+  margin: 18px 0 24px;
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: clamp(32px, 4.4vw, 54px);
@@ -193,6 +224,28 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   margin: 0 0 18px;
 }
 
+.hero-micro-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background: rgba(176,138,45,0.1);
+  border: 1px solid rgba(176,138,45,0.22);
+  border-radius: 999px;
+  padding: 10px 14px;
+  margin: 6px 0 18px;
+  line-height: 1.4;
+}
+
+.hero-micro-proof .star {
+  color: var(--gold);
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
 .hero-actions {
   display: flex;
   align-items: center;
@@ -201,9 +254,31 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   margin-top: 10px;
 }
 
-/* "Takes ~7 minutes…" line */
+.hero-bridge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(17,17,17,0.65);
+  margin-top: 10px;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(17,17,17,0.25);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.hero-bridge:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+  text-decoration: none;
+}
+
+.hero-bridge-arrow {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
 .cta-subnote {
-  margin: 18px 0 0;    /* increased top margin: extra space above subnote */
+  margin: 18px 0 0;
   font-size: 14px;
   color: rgba(17,17,17,0.70);
 }
@@ -247,6 +322,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
 }
 
 /* Hero mock */
+
 .hero-mock {
   justify-self: end;
   max-width: 520px;
@@ -302,6 +378,70 @@ a:hover { text-decoration: underline; opacity: 0.96; }
 }
 
 /* =====================================================
+   PROOF / TESTIMONIAL MICRO BLOCKS
+   ===================================================== */
+
+.mini-proof-row {
+  padding: 22px 0;
+  background: rgba(255,255,255,0.12);
+  border-top: 1px solid rgba(15,14,12,0.06);
+  border-bottom: 1px solid rgba(15,14,12,0.06);
+}
+
+.mini-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mini-proof-card {
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(176,138,45,0.16);
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+}
+
+.mini-proof-quote {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.mini-proof-name {
+  font-size: 12px;
+  color: rgba(17,17,17,0.62);
+}
+
+.proof-strip {
+  background: var(--dark2);
+  padding: 18px 0;
+}
+
+.proof-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.proof-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  white-space: nowrap;
+}
+
+.proof-strip-item svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+/* =====================================================
    SECTIONS
    ===================================================== */
 
@@ -325,7 +465,84 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   line-height: 1.65;
 }
 
-/* ---------- WHY PILLARS ---------- */
+/* ---------- CONVERSATION SECTION ---------- */
+
+.conversation-section {
+  background: #fff;
+  padding: 56px 0;
+}
+
+.conversation-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.conversation-wrap .section-title,
+.conversation-wrap .section-intro {
+  text-align: left;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.conversation-copy {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.conversation-copy p {
+  margin: 0;
+}
+
+.conversation-highlight {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ---------- COMPARISON SECTION ---------- */
+
+.comparison-strip {
+  background: rgba(255,255,255,0.12);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 52px 0;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.comparison-card {
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.comparison-card h3 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.comparison-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* ---------- WHY / CONTENT PILLARS ---------- */
 
 .pillars {
   display: grid;
@@ -464,6 +681,110 @@ summary::-webkit-details-marker { display: none; }
   line-height: 1.65;
 }
 
+/* ---------- TESTIMONIALS ---------- */
+
+.testimonial-section {
+  padding: 56px 0;
+  background: rgba(255,255,255,0.12);
+}
+
+.testimonial-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(176,138,45,0.2);
+  border-left: 4px solid var(--gold);
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+}
+
+.testimonial-card.featured {
+  grid-column: 1 / -1;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+
+.testimonial-stars span {
+  color: var(--gold);
+  font-size: 16px;
+}
+
+.testimonial-quote {
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.75;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0 0 1.5rem;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(176,138,45,0.15);
+  border: 1px solid rgba(176,138,45,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  font-style: normal;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  font-style: normal;
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: rgba(17,17,17,0.62);
+  font-style: normal;
+}
+
+.testimonial-verified {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: rgba(17,17,17,0.62);
+  font-style: normal;
+}
+
+.testimonial-verified svg {
+  color: var(--gold);
+}
+
 /* ---------- CLOSING CTA ---------- */
 
 .closing {
@@ -532,6 +853,23 @@ summary::-webkit-details-marker { display: none; }
   .trust-row { flex-wrap: wrap; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
   .footer-muted.small { text-align: left; }
+}
+
+@media (max-width: 760px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+  .mini-proof-grid { grid-template-columns: 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial-card,
+  .testimonial-card.featured { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .proof-strip-inner { gap: 16px; padding: 0 16px; }
+  .proof-strip-item { font-size: 12px; }
+  .hero-micro-proof {
+    display: flex;
+    border-radius: 14px;
+  }
 }
 
 @media (max-width: 520px) {
