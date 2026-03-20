@@ -235,7 +235,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   border: 1px solid rgba(176,138,45,0.22);
   border-radius: 999px;
   padding: 10px 14px;
-  margin: 6px 0 18px;
+  margin: 20px 0 18px;
   line-height: 1.4;
 }
 
@@ -328,8 +328,8 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   align-self: start;
   max-width: 520px;
   width: 100%;
+  margin-top: 60px;
 }
-
 .mock-card {
   background: rgba(255,255,255,0.35);
   border: 1px solid rgba(0,0,0,0.10);
