@@ -152,7 +152,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
    ===================================================== */
 
 .hero {
-  padding: 56px 0 40px;
+  padding: 72px 0 56px;
 }
 
 .hero-grid {
@@ -328,7 +328,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
   align-self: start;
   max-width: 520px;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 0;
 }
 .mock-card {
   background: rgba(255,255,255,0.35);
