@@ -71,22 +71,29 @@
       api_host:'https://us.i.posthog.com'
     });
 
-    function trackAndGo(event, el, eventName, props) {
-      if (event) event.preventDefault();
-      const href = el.getAttribute('href');
+    <script>
+  function trackAndGo(event, el, eventName, props) {
+    if (event) event.preventDefault();
+    const href = el.getAttribute('href');
 
-      try {
-        posthog.capture(eventName, props || {});
-      } catch (e) {}
+    try {
+      posthog.capture(eventName, props || {}, function () {
+        window.location.href = href;
+      });
 
+      // fallback if callback fails
       setTimeout(function () {
         window.location.href = href;
-      }, 180);
+      }, 1000);
 
-      return false;
+    } catch (e) {
+      window.location.href = href;
     }
-  </script>
 
+    return false;
+  }
+</script>
+  
   <!-- FAQ Schema Markup -->
   <script type="application/ld+json">
   {
