@@ -67,33 +67,39 @@
     for(n=0;n<o.length;n++)g(u,o[n]);
     e._i.push([i,s,a])},e.__SV=1)}
     (document,window.posthog||[]);
-    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT',{
-      api_host:'https://us.i.posthog.com'
+
+    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT', {
+      api_host: 'https://us.i.posthog.com'
     });
 
-    <script>
-  function trackAndGo(event, el, eventName, props) {
-    if (event) event.preventDefault();
-    const href = el.getAttribute('href');
-
-    try {
-      posthog.capture(eventName, props || {}, function () {
-        window.location.href = href;
+    setTimeout(function () {
+      posthog.capture('debug_test_event', {
+        source: 'homepage_load_test'
       });
+      console.log('debug_test_event sent');
+    }, 3000);
+  </script>
 
-      // fallback if callback fails
+  <script>
+    function trackAndGo(event, el, eventName, props) {
+      if (event) event.preventDefault();
+      const href = el.getAttribute('href');
+
+      try {
+        posthog.capture(eventName, props || {});
+        console.log('Sent event:', eventName, props || {});
+      } catch (e) {
+        console.error('PostHog capture failed:', e);
+      }
+
       setTimeout(function () {
         window.location.href = href;
-      }, 1000);
+      }, 1200);
 
-    } catch (e) {
-      window.location.href = href;
+      return false;
     }
+  </script>
 
-    return false;
-  }
-</script>
-  
   <!-- FAQ Schema Markup -->
   <script type="application/ld+json">
   {
