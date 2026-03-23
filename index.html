@@ -186,6 +186,34 @@
         </div>
 
         <div class="hero-mock">
+
+          <!-- REPORT PREVIEW IMAGE -->
+          <div class="mock-card" style="margin-bottom: 16px;">
+            <div class="mock-top">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-title">Sample Diagnostic Report</span>
+            </div>
+            <a href="/sample-report.html"
+               onclick="posthog.capture('sample_report_viewed', {location: 'hero_image'})">
+              <img
+                src="/assets/report-preview.jpg"
+                alt="Sample Keldron diagnostic report"
+                style="width:100%; height:auto; display:block;"
+              />
+            </a>
+            <div class="mock-foot">
+              <span style="color: rgba(17,17,17,0.55);">Real report output — identifying details removed</span>
+              <a href="/sample-report.html"
+                 style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
+                 onclick="posthog.capture('sample_report_viewed', {location: 'hero_image_foot'})">
+                View full sample →
+              </a>
+            </div>
+          </div>
+
+          <!-- VIDEO -->
           <div class="mock-card">
             <div class="mock-top">
               <span class="mock-dot"></span>
@@ -220,8 +248,8 @@
               </a>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
 
