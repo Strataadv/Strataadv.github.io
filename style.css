@@ -152,7 +152,7 @@ a:hover { text-decoration: underline; opacity: 0.96; }
    ===================================================== */
 
 .hero {
-  padding: 72px 0 56px;
+  padding: 72px 0 0;
 }
 
 .hero-grid {
