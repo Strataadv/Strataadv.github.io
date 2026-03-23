@@ -70,6 +70,21 @@
     posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT',{
       api_host:'https://us.i.posthog.com'
     });
+
+    function trackAndGo(event, el, eventName, props) {
+      if (event) event.preventDefault();
+      const href = el.getAttribute('href');
+
+      try {
+        posthog.capture(eventName, props || {});
+      } catch (e) {}
+
+      setTimeout(function () {
+        window.location.href = href;
+      }, 180);
+
+      return false;
+    }
   </script>
 
   <!-- FAQ Schema Markup -->
@@ -164,7 +179,7 @@
       <div class="header-cta">
         <a class="btn btn-primary"
            href="https://app.keldron.io"
-           onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'header'})">
+           onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'find_my_biggest_leak', location: 'header'})">
           Start Free Diagnostic
         </a>
       </div>
@@ -197,12 +212,12 @@
           <div class="hero-actions">
             <a class="btn btn-primary btn-lg"
                href="https://app.keldron.io"
-               onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'hero'})">
+               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'find_my_biggest_leak', location: 'hero'})">
               Start Free Diagnostic
             </a>
             <a class="btn btn-ghost btn-lg"
                href="/sample-report.html"
-               onclick="posthog.capture('sample_report_viewed', {location: 'hero'})">
+               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero'})">
               See a sample report
             </a>
           </div>
@@ -219,7 +234,7 @@
               <span class="mock-title">Sample Diagnostic Report</span>
             </div>
             <a href="/sample-report.html"
-               onclick="posthog.capture('sample_report_viewed', {location: 'hero_image'})">
+               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image'})">
               <img
                 src="/assets/report-preview.jpg"
                 alt="Sample Keldron diagnostic report"
@@ -230,7 +245,7 @@
               <span style="color: rgba(17,17,17,0.50);">Real report output — identifying details removed</span>
               <a href="/sample-report.html"
                  style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
-                 onclick="posthog.capture('sample_report_viewed', {location: 'hero_image_foot'})">
+                 onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image_foot'})">
                 View full sample →
               </a>
             </div>
@@ -413,7 +428,7 @@
         <div class="dark-cta">
           <a class="btn btn-primary btn-lg"
              href="https://app.keldron.io"
-             onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'stats'})">
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'find_my_biggest_leak', location: 'stats'})">
             Start Free Diagnostic
           </a>
         </div>
@@ -500,7 +515,7 @@
         <div class="dark-cta">
           <a class="btn btn-ghost btn-lg"
              href="/sample-report.html"
-             onclick="posthog.capture('sample_report_viewed', {location: 'deliverable'})">
+             onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'deliverable'})">
             View Sample Report →
           </a>
           <p class="reassurance reassurance-dark" style="margin-top:10px;">See the real report structure before you start — no signup required.</p>
@@ -542,7 +557,7 @@
             <p>No sign-up required to watch. No sound needed — captions are on. See exactly what the diagnostic process looks like before you start.</p>
             <a class="btn btn-primary btn-lg"
                href="https://app.keldron.io"
-               onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'video_section'})">
+               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'find_my_biggest_leak', location: 'video_section'})">
               Start Free Diagnostic
             </a>
           </div>
@@ -575,7 +590,7 @@
               <span>Captions on</span>
               <a href="https://app.keldron.io"
                  style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
-                 onclick="posthog.capture('cta_clicked', {button: 'hero_video', location: 'video_section'})">
+                 onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'hero_video', location: 'video_section'})">
                 Try it free →
               </a>
             </div>
@@ -709,7 +724,7 @@
           </p>
           <a class="btn btn-primary btn-lg"
              href="https://app.keldron.io"
-             onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'closing'})">
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'find_my_biggest_leak', location: 'closing'})">
             Start Free Diagnostic
           </a>
           <p style="font-size:12px; opacity:0.40; margin-top:14px;">No credit card. No calls. Takes 3 minutes.</p>
