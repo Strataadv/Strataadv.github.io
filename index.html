@@ -178,7 +178,6 @@
 
           <p class="cta-subnote">3 minutes &nbsp;·&nbsp; No calls &nbsp;·&nbsp; No spreadsheets &nbsp;·&nbsp; Instant report &nbsp;·&nbsp; No credit card</p>
 
-          
           <div class="hero-micro-proof">
             <span class="star">★</span>
             <span>Early users identified an average of <strong>4+ overlooked performance gaps</strong> in their first diagnostic — issues they were not actively tracking.</span>
@@ -186,9 +185,7 @@
         </div>
 
         <div class="hero-mock">
-
-          <!-- REPORT PREVIEW IMAGE -->
-          <div class="mock-card" style="margin-bottom: 16px;">
+          <div class="mock-card">
             <div class="mock-top">
               <span class="mock-dot"></span>
               <span class="mock-dot"></span>
@@ -204,7 +201,7 @@
               />
             </a>
             <div class="mock-foot">
-              <span style="color: rgba(17,17,17,0.55);">Real report output — identifying details removed</span>
+              <span style="color: rgba(17,17,17,0.50);">Real report output — identifying details removed</span>
               <a href="/sample-report.html"
                  style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
                  onclick="posthog.capture('sample_report_viewed', {location: 'hero_image_foot'})">
@@ -212,44 +209,8 @@
               </a>
             </div>
           </div>
-
-          <!-- VIDEO -->
-          <div class="mock-card">
-            <div class="mock-top">
-              <span class="mock-dot"></span>
-              <span class="mock-dot"></span>
-              <span class="mock-dot"></span>
-              <span class="mock-title">Keldron — 45 Second Overview</span>
-            </div>
-            <div style="position:relative; overflow:hidden; aspect-ratio:1920/1080; border-radius:8px; background: linear-gradient(135deg, #1a1a18 0%, #2a2820 100%);">
-              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; pointer-events:none; z-index:0;">
-                <div style="width:56px; height:56px; border-radius:50%; background:rgba(196,160,80,0.15); border:2px solid rgba(196,160,80,0.4); display:flex; align-items:center; justify-content:center;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(196,160,80,0.8)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                </div>
-                <span style="font-size:12px; color:rgba(255,255,255,0.35); letter-spacing:0.04em;">Loading video…</span>
-              </div>
-              <iframe
-                src="https://share.synthesia.io/embeds/videos/dbdabe3f-1d3c-4bf3-8dc3-3fba12c166be"
-                loading="lazy"
-                title="Keldron — Identify Your Primary Constraint"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowfullscreen
-                style="position:absolute; width:100%; height:100%; top:0; left:0; border:none; z-index:1;">
-              </iframe>
-            </div>
-            <div class="mock-foot">
-              <span>45 seconds</span>
-              <span>No sound needed</span>
-              <span>Captions on</span>
-              <a href="https://app.keldron.io"
-                 style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
-                 onclick="posthog.capture('cta_clicked', {button: 'hero_video', location: 'hero_mock'})">
-                Try it free →
-              </a>
-            </div>
-          </div>
-
         </div>
+
       </div>
     </section>
 
@@ -297,7 +258,6 @@
         <div class="conversation-wrap">
           <h2 class="section-title">Most businesses do not struggle because of effort.</h2>
           <p class="section-intro">They struggle because management attention is focused on the wrong issue.</p>
-
           <div class="conversation-copy">
             <p>When performance feels off, the natural response is to act.</p>
             <p>Increase sales activity. Adjust pricing. Tighten operations. Add more tracking. Introduce another system.</p>
@@ -314,41 +274,40 @@
     <section class="comparison-strip">
       <div class="container">
         <h2 class="section-title">Dashboards show what is happening. Keldron helps you understand what is causing it.</h2>
-        <p class="section-intro" style="max-width:760px;">
-          Software can help you manage operations. But before you add more systems, more process, or more pressure,
-          you need clarity on the underlying issue affecting performance.
+        <p class="section-intro" style="max-width:680px;">
+          Before you add more systems, more process, or more pressure — you need clarity on the underlying issue.
         </p>
 
         <div class="comparison-grid" style="display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:stretch; max-width:860px; margin:0 auto;">
-          <div class="comparison-card" style="background:rgba(17,17,17,0.04); border-radius:12px 0 0 12px; padding:32px 28px;">
-            <h3 style="font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(17,17,17,0.45); margin:0 0 20px;">What most businesses do</h3>
-            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px;">
-              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.7);">
+          <div class="comparison-card" style="background:rgba(17,17,17,0.04); border-radius:12px 0 0 12px; padding:28px 24px;">
+            <h3 style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(17,17,17,0.40); margin:0 0 18px;">What most businesses do</h3>
+            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.65);">
                 <span style="color:#c0392b; margin-top:2px; flex-shrink:0;">✗</span> Track more numbers
               </li>
-              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.7);">
+              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.65);">
                 <span style="color:#c0392b; margin-top:2px; flex-shrink:0;">✗</span> Push teams harder
               </li>
-              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.7);">
+              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.65);">
                 <span style="color:#c0392b; margin-top:2px; flex-shrink:0;">✗</span> Add more tools or process
               </li>
-              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.7);">
+              <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:rgba(17,17,17,0.65);">
                 <span style="color:#c0392b; margin-top:2px; flex-shrink:0;">✗</span> Respond to visible symptoms
               </li>
             </ul>
           </div>
 
-          <div style="display:flex; align-items:center; justify-content:center; padding:0 16px; background:transparent;">
-            <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
-              <div style="width:1px; flex:1; background:rgba(17,17,17,0.12);"></div>
-              <span style="font-size:11px; font-weight:800; letter-spacing:0.1em; color:rgba(17,17,17,0.3); white-space:nowrap;">VS</span>
-              <div style="width:1px; flex:1; background:rgba(17,17,17,0.12);"></div>
+          <div style="display:flex; align-items:center; justify-content:center; padding:0 14px; background:transparent;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:6px; height:100%;">
+              <div style="width:1px; flex:1; background:rgba(17,17,17,0.10);"></div>
+              <span style="font-size:11px; font-weight:800; letter-spacing:0.1em; color:rgba(17,17,17,0.25); white-space:nowrap;">VS</span>
+              <div style="width:1px; flex:1; background:rgba(17,17,17,0.10);"></div>
             </div>
           </div>
 
-          <div class="comparison-card" style="background:rgba(196,160,80,0.08); border:1px solid rgba(196,160,80,0.25); border-radius:0 12px 12px 0; padding:32px 28px;">
-            <h3 style="font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin:0 0 20px;">What Keldron helps you do</h3>
-            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px;">
+          <div class="comparison-card" style="background:rgba(196,160,80,0.07); border:1px solid rgba(196,160,80,0.22); border-radius:0 12px 12px 0; padding:28px 24px;">
+            <h3 style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin:0 0 18px;">What Keldron helps you do</h3>
+            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
               <li style="display:flex; align-items:flex-start; gap:10px; font-size:15px; color:var(--ink);">
                 <span style="color:#2e7d32; margin-top:2px; flex-shrink:0;">✓</span> Identify the primary constraint
               </li>
@@ -368,22 +327,22 @@
     </section>
 
     <!-- PAIN STRIP -->
-    <section class="section" id="pain" style="padding-top:40px; padding-bottom:40px; background: rgba(255,255,255,0.12);">
+    <section class="section" id="pain" style="padding-top:44px; padding-bottom:44px; background: rgba(255,255,255,0.12);">
       <div class="container">
-        <p style="text-align:center; font-size:15px; color: rgba(17,17,17,0.62); margin:0 0 28px; font-style:italic;">
+        <p style="text-align:center; font-size:14px; color: rgba(17,17,17,0.55); margin:0 0 24px; font-style:italic;">
           If any of this sounds familiar, Keldron is built for you:
         </p>
         <div class="pillars" style="grid-template-columns: repeat(2, 1fr);">
-          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 20px;">
+          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 18px;">
             <p class="pillar-text" style="margin:0;">Sales are coming in, but profit is not improving the way it should</p>
           </div>
-          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 20px;">
+          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 18px;">
             <p class="pillar-text" style="margin:0;">The team is busy, but output still feels underpowered</p>
           </div>
-          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 20px;">
+          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 18px;">
             <p class="pillar-text" style="margin:0;">Problems keep repeating, but the root cause is still unclear</p>
           </div>
-          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 20px;">
+          <div class="pillar" style="border-left: 3px solid var(--gold); padding-left: 18px;">
             <p class="pillar-text" style="margin:0;">You do not need more dashboards — you need clarity on what to address first</p>
           </div>
         </div>
@@ -393,35 +352,33 @@
     <!-- STATS STRIP -->
     <section class="section section-dark">
       <div class="container">
-        <p class="kicker" style="text-align:center; margin-bottom:36px;">The reality for most owner-led businesses</p>
-
+        <p class="kicker" style="text-align:center; margin-bottom:32px; color:rgba(246,241,230,0.55);">The reality for most owner-led businesses</p>
         <div class="deliverable-grid">
           <div class="deliverable-item">
-            <div class="deliverable-icon" style="font-size:32px; font-weight:800;">51%</div>
+            <div class="deliverable-icon" style="font-size:28px; font-weight:800;">51%</div>
             <h3>Cash flow struggles</h3>
             <p>of small businesses struggle with uneven cash flow</p>
-            <p style="font-size:11px; opacity:0.4; margin-top:8px;">
+            <p style="font-size:11px; opacity:0.35; margin-top:8px;">
               <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">2025 Small Business Credit Survey</a>
             </p>
           </div>
           <div class="deliverable-item">
-            <div class="deliverable-icon" style="font-size:32px; font-weight:800;">75%</div>
+            <div class="deliverable-icon" style="font-size:28px; font-weight:800;">75%</div>
             <h3>Rising costs</h3>
             <p>cite rising costs as their top financial challenge in 2025</p>
-            <p style="font-size:11px; opacity:0.4; margin-top:8px;">
+            <p style="font-size:11px; opacity:0.35; margin-top:8px;">
               <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Federal Reserve Small Business Credit Survey, 2025</a>
             </p>
           </div>
           <div class="deliverable-item">
-            <div class="deliverable-icon" style="font-size:32px; font-weight:800;">3 in 4</div>
+            <div class="deliverable-icon" style="font-size:28px; font-weight:800;">3 in 4</div>
             <h3>Not using AI yet</h3>
             <p>small businesses haven't adopted AI for operations — the gap is closing fast</p>
-            <p style="font-size:11px; opacity:0.4; margin-top:8px;">
+            <p style="font-size:11px; opacity:0.35; margin-top:8px;">
               <a href="https://www.reimaginemainstreet.org/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Reimagine Main Street / SBA, 2025</a>
             </p>
           </div>
         </div>
-
         <div class="dark-cta">
           <a class="btn btn-primary btn-lg"
              href="https://app.keldron.io"
@@ -433,20 +390,20 @@
     </section>
 
     <!-- FOUNDER QUOTE -->
-    <section class="section" style="padding-top:56px; padding-bottom:56px; background: rgba(255,255,255,0.12);">
-      <div class="container" style="max-width:680px; text-align:center;">
-        <div style="font-size:56px; color: var(--gold); line-height:1; margin-bottom:8px;">"</div>
-        <blockquote style="margin:0 0 28px; font-size:clamp(16px,2.5vw,20px); color: var(--ink); line-height:1.75; font-style:italic;">
+    <section class="section" style="padding-top:48px; padding-bottom:48px; background: rgba(255,255,255,0.12);">
+      <div class="container" style="max-width:640px; text-align:center;">
+        <div style="font-size:48px; color: var(--gold); line-height:1; margin-bottom:6px;">"</div>
+        <blockquote style="margin:0 0 24px; font-size:clamp(15px,2.2vw,18px); color: var(--ink); line-height:1.8; font-style:italic;">
           In 27 years running operations and supply chains across manufacturing, retail, and distribution,
           I watched smart business owners make expensive decisions with incomplete visibility — not because
           they lacked capability, but because they had no fast way to identify the primary constraint underneath
           visible symptoms. Keldron is what I wished they had.
         </blockquote>
-        <div style="display:flex; align-items:center; justify-content:center; gap:14px;">
-          <img src="/assets/taufiq.jpg" alt="Taufiqur Rahman" style="width:48px; height:48px; border-radius:50%; object-fit:cover; flex-shrink:0;" />
+        <div style="display:flex; align-items:center; justify-content:center; gap:12px;">
+          <img src="/assets/taufiq.jpg" alt="Taufiqur Rahman" style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0;" />
           <div style="text-align:left;">
             <p style="margin:0; font-size:14px; font-weight:700; color: var(--ink);">Taufiqur Rahman</p>
-            <p style="margin:0; font-size:12px; color: rgba(17,17,17,0.62);">Founder &amp; CEO, Keldron.io &nbsp;·&nbsp; 27 years in operations, supply chain &amp; growth</p>
+            <p style="margin:0; font-size:12px; color: rgba(17,17,17,0.55);">Founder &amp; CEO, Keldron.io &nbsp;·&nbsp; 27 years in operations, supply chain &amp; growth</p>
           </div>
         </div>
       </div>
@@ -456,9 +413,7 @@
     <section class="section" id="why">
       <div class="container">
         <h2 class="section-title">What Keldron helps you identify first</h2>
-        <p class="section-intro">
-          No jargon. No complex setup. Just clarity on what is actually affecting performance — and where to focus first.
-        </p>
+        <p class="section-intro">No jargon. No complex setup. Just clarity on what is actually affecting performance — and where to focus first.</p>
         <div class="pillars" style="grid-template-columns: repeat(2, 1fr);">
           <div class="pillar">
             <div class="pillar-num">🎯</div>
@@ -488,9 +443,7 @@
     <section class="section section-dark" id="deliverable">
       <div class="container">
         <h2 class="section-title section-title-dark">What the diagnostic reveals</h2>
-        <p class="section-intro section-intro-dark">
-          A plain-English decision diagnostic that shows what is likely going wrong, why it matters, and where management attention should go first.
-        </p>
+        <p class="section-intro section-intro-dark">A plain-English decision diagnostic that shows what is likely going wrong, why it matters, and where management attention should go first.</p>
         <div class="deliverable-grid">
           <div class="deliverable-item">
             <div class="deliverable-icon">01</div>
@@ -519,7 +472,7 @@
              onclick="posthog.capture('sample_report_viewed', {location: 'deliverable'})">
             View Sample Report →
           </a>
-          <p class="reassurance reassurance-dark" style="margin-top:12px;">See the real report structure before you start — no signup required.</p>
+          <p class="reassurance reassurance-dark" style="margin-top:10px;">See the real report structure before you start — no signup required.</p>
         </div>
       </div>
     </section>
@@ -549,32 +502,81 @@
       </div>
     </section>
 
+    <!-- VIDEO SECTION -->
+    <section class="video-section">
+      <div class="container">
+        <div class="video-wrap">
+          <div class="video-copy">
+            <h2>See how it works in 45 seconds</h2>
+            <p>No sign-up required to watch. No sound needed — captions are on. See exactly what the diagnostic process looks like before you start.</p>
+            <a class="btn btn-primary btn-lg"
+               href="https://app.keldron.io"
+               onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'video_section'})">
+              Start Free Diagnostic
+            </a>
+          </div>
+          <div class="mock-card">
+            <div class="mock-top">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-title">Keldron — 45 Second Overview</span>
+            </div>
+            <div style="position:relative; overflow:hidden; aspect-ratio:1920/1080; background: linear-gradient(135deg, #1a1a18 0%, #2a2820 100%);">
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; pointer-events:none; z-index:0;">
+                <div style="width:52px; height:52px; border-radius:50%; background:rgba(196,160,80,0.15); border:2px solid rgba(196,160,80,0.4); display:flex; align-items:center; justify-content:center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(196,160,80,0.8)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <span style="font-size:12px; color:rgba(255,255,255,0.35); letter-spacing:0.04em;">Loading video…</span>
+              </div>
+              <iframe
+                src="https://share.synthesia.io/embeds/videos/dbdabe3f-1d3c-4bf3-8dc3-3fba12c166be"
+                loading="lazy"
+                title="Keldron — Identify Your Primary Constraint"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowfullscreen
+                style="position:absolute; width:100%; height:100%; top:0; left:0; border:none; z-index:1;">
+              </iframe>
+            </div>
+            <div class="mock-foot">
+              <span>45 seconds</span>
+              <span>No sound needed</span>
+              <span>Captions on</span>
+              <a href="https://app.keldron.io"
+                 style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
+                 onclick="posthog.capture('cta_clicked', {button: 'hero_video', location: 'video_section'})">
+                Try it free →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- WHO THIS IS FOR -->
-    <section class="section" style="padding-top:56px; padding-bottom:56px; background: rgba(255,255,255,0.12);">
+    <section class="section" style="padding-top:48px; padding-bottom:48px; background: rgba(255,255,255,0.12);">
       <div class="container">
         <h2 class="section-title">Built for owner-led businesses that need clarity fast</h2>
-        <p class="section-intro">
-          Best fit if your business feels underpowered — and you need clarity on the underlying issue before making the next move.
-        </p>
+        <p class="section-intro">Best fit if your business feels underpowered — and you need clarity on the underlying issue before making the next move.</p>
         <div class="pillars" style="grid-template-columns: repeat(4, 1fr);">
           <div class="pillar" style="text-align:center;">
-            <div class="pillar-num">🏪</div>
+            <div class="pillar-num" style="margin:0 auto 12px;">🏪</div>
             <h3 class="pillar-title">Retail</h3>
           </div>
           <div class="pillar" style="text-align:center;">
-            <div class="pillar-num">📦</div>
+            <div class="pillar-num" style="margin:0 auto 12px;">📦</div>
             <h3 class="pillar-title">Wholesale &amp; Distribution</h3>
           </div>
           <div class="pillar" style="text-align:center;">
-            <div class="pillar-num">🏭</div>
+            <div class="pillar-num" style="margin:0 auto 12px;">🏭</div>
             <h3 class="pillar-title">Light Manufacturing</h3>
           </div>
           <div class="pillar" style="text-align:center;">
-            <div class="pillar-num">🛠️</div>
+            <div class="pillar-num" style="margin:0 auto 12px;">🛠️</div>
             <h3 class="pillar-title">Local Services</h3>
           </div>
         </div>
-        <p style="text-align:center; color: rgba(17,17,17,0.62); font-size:14px; margin-top:28px; line-height:1.8;">
+        <p style="text-align:center; color: rgba(17,17,17,0.55); font-size:13.5px; margin-top:24px; line-height:1.8;">
           And especially if: margins feel tighter than they should &nbsp;·&nbsp;
           operations feel busier than the results justify &nbsp;·&nbsp; the team is stretched but growth feels flat &nbsp;·&nbsp;
           you need a clear plan without hiring a consultant
@@ -587,61 +589,34 @@
       <div class="container">
         <h2 class="section-title">Common questions</h2>
         <div class="faq">
-
           <details>
             <summary>Who gets the most value from Keldron?</summary>
-            <div class="faq-content">
-              Owner-led businesses that know profit, growth, or operations are underperforming —
-              but do not yet know the primary reason. If you're busy but results feel flat, Keldron is built for you.
-            </div>
+            <div class="faq-content">Owner-led businesses that know profit, growth, or operations are underperforming — but do not yet know the primary reason. If you're busy but results feel flat, Keldron is built for you.</div>
           </details>
-
           <details>
             <summary>How fast do I get the report?</summary>
-            <div class="faq-content">
-              Usually within minutes. You answer a short diagnostic and Keldron generates a structured
-              report you can read immediately — no waiting, no back-and-forth calls.
-            </div>
+            <div class="faq-content">Usually within minutes. You answer a short diagnostic and Keldron generates a structured report you can read immediately — no waiting, no back-and-forth calls.</div>
           </details>
-
           <details>
             <summary>Is this accounting software?</summary>
-            <div class="faq-content">
-              No. Keldron is not a dashboard or bookkeeping tool. It helps you identify the primary constraint
-              affecting performance, uncover sources of margin erosion, and clarify where management attention should go first.
-            </div>
+            <div class="faq-content">No. Keldron is not a dashboard or bookkeeping tool. It helps you identify the primary constraint affecting performance, uncover sources of margin erosion, and clarify where management attention should go first.</div>
           </details>
-
           <details>
             <summary>Do I need to upload sensitive financial data?</summary>
-            <div class="faq-content">
-              No. Keldron works from top-line business context — the kind of things you already know
-              about your business. No spreadsheets, no sensitive numbers, no integrations required.
-            </div>
+            <div class="faq-content">No. Keldron works from top-line business context — the kind of things you already know about your business. No spreadsheets, no sensitive numbers, no integrations required.</div>
           </details>
-
           <details>
             <summary>Can I see a sample report before I start?</summary>
-            <div class="faq-content">
-              Yes. <a href="/sample-report.html" style="border-bottom:1px solid currentColor;">View a real sample report here</a>
-              — generated for a retail business, with identifying details removed.
-            </div>
+            <div class="faq-content">Yes. <a href="/sample-report.html" style="border-bottom:1px solid currentColor;">View a real sample report here</a> — generated for a retail business, with identifying details removed.</div>
           </details>
-
           <details>
             <summary>Will someone call me?</summary>
-            <div class="faq-content">
-              No. Keldron is fully self-serve. You control the pace.
-            </div>
+            <div class="faq-content">No. Keldron is fully self-serve. You control the pace.</div>
           </details>
-
           <details>
             <summary>How do you handle my data?</summary>
-            <div class="faq-content">
-              We keep things minimal and purpose-driven. Read our <a href="privacy.html" style="border-bottom:1px solid currentColor;">Privacy Policy</a>.
-            </div>
+            <div class="faq-content">We keep things minimal and purpose-driven. Read our <a href="privacy.html" style="border-bottom:1px solid currentColor;">Privacy Policy</a>.</div>
           </details>
-
         </div>
       </div>
     </section>
@@ -649,17 +624,13 @@
     <!-- TESTIMONIAL -->
     <section class="testimonial-section">
       <div class="container">
-        <p style="text-align:center; font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color: rgba(17,17,17,0.62); margin:0 0 24px;">Practitioners are already seeing results</p>
-
+        <p style="text-align:center; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color: rgba(17,17,17,0.45); margin:0 0 24px;">Practitioners are already seeing results</p>
         <div class="testimonial-grid">
           <div class="testimonial-card featured">
             <div class="testimonial-stars">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-            <p class="testimonial-quote">
-              "Keldron surfaced 5 issues we had completely missed.
-              The action plan was simple and immediately useful."
-            </p>
+            <p class="testimonial-quote">"Keldron surfaced 5 issues we had completely missed. The action plan was simple and immediately useful."</p>
             <div class="testimonial-footer">
               <div class="testimonial-avatar">K.A.</div>
               <div class="testimonial-meta">
@@ -672,11 +643,8 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
-            <p class="testimonial-quote">
-              "It showed exactly where performance was being held back."
-            </p>
+            <p class="testimonial-quote">"It showed exactly where performance was being held back."</p>
             <div class="testimonial-footer">
               <div class="testimonial-avatar">R.O.</div>
               <div class="testimonial-meta">
@@ -685,11 +653,8 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
-            <p class="testimonial-quote">
-              "Finally something that explains operational issues in plain English."
-            </p>
+            <p class="testimonial-quote">"Finally something that explains operational issues in plain English."</p>
             <div class="testimonial-footer">
               <div class="testimonial-avatar">S.M.</div>
               <div class="testimonial-meta">
@@ -704,19 +669,21 @@
 
     <!-- CLOSING CTA -->
     <section class="closing">
-      <div class="container closing-inner">
-        <h2 class="closing-title">Before you make the next move, make sure it addresses the right issue.</h2>
-        <p class="closing-text">Identify the primary constraint affecting performance, uncover sources of margin erosion, and clarify where to focus first. Start free.</p>
-        <p style="font-size:14px; font-weight:600; color: var(--ink); margin: 0 0 14px;">
-          Most users identify their <span style="color: var(--gold);">primary constraint</span> in their first diagnostic session.
-        </p>
-        <a class="btn btn-primary btn-lg"
-           href="https://app.keldron.io"
-           onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'closing'})">
-          Start Free Diagnostic
-        </a>
-        <p style="font-size:13px; opacity:0.5; margin-top:16px;">No credit card. No calls. Takes 3 minutes.</p>
-        <p class="closing-signoff">— Keldron</p>
+      <div class="container">
+        <div class="closing-inner">
+          <h2 class="closing-title">Before you make the next move, make sure it addresses the right issue.</h2>
+          <p class="closing-text">Identify the primary constraint affecting performance, uncover sources of margin erosion, and clarify where to focus first. Start free.</p>
+          <p style="font-size:14px; font-weight:600; color: var(--ink); margin: 0 0 20px;">
+            Most users identify their <span style="color: var(--gold);">primary constraint</span> in their first diagnostic session.
+          </p>
+          <a class="btn btn-primary btn-lg"
+             href="https://app.keldron.io"
+             onclick="posthog.capture('cta_clicked', {button: 'find_my_biggest_leak', location: 'closing'})">
+            Start Free Diagnostic
+          </a>
+          <p style="font-size:12px; opacity:0.40; margin-top:14px;">No credit card. No calls. Takes 3 minutes.</p>
+          <p class="closing-signoff">— Keldron</p>
+        </div>
       </div>
     </section>
 
@@ -726,11 +693,7 @@
     <div class="container footer-inner">
       <div class="footer-left">
         <a href="/">
-          <img
-            src="assets/keldron_with_tagline.png"
-            alt="Keldron"
-            style="height:48px; width:auto; display:block;"
-          />
+          <img src="assets/keldron_with_tagline.png" alt="Keldron" style="height:48px; width:auto; display:block;" />
         </a>
       </div>
       <div class="footer-right">
