@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Why Your Profit Is Not Increasing (Even When Sales Are Up) | Keldron</title>
+  <meta name="description" content="Sales are up but profit is not increasing? Learn the common reasons profit stays flat and how to identify the bottleneck, margin erosion, or operational issue causing it." />
+  <link rel="canonical" href="https://keldron.io/profit-not-increasing.html" />
+
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <meta property="og:title" content="Why Your Profit Is Not Increasing (Even When Sales Are Up) | Keldron" />
+  <meta property="og:description" content="Find out why sales growth is not turning into profit growth — and what to fix first." />
+  <meta property="og:image" content="https://keldron.io/assets/og-image.png" />
+  <meta property="og:url" content="https://keldron.io/profit-not-increasing.html" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why Your Profit Is Not Increasing (Even When Sales Are Up) | Keldron" />
+  <meta name="twitter:description" content="Sales are rising but profit is not? Learn the real reasons and what to fix first." />
+  <meta name="twitter:image" content="https://keldron.io/assets/og-image.png" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3YVBEJL4B2');
+  </script>
+
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){
+    function g(t,e){var o=e.split(".");
+    2==o.length&&(t=t[o[0]],e=o[1]),
+    t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}
+    (p=t.createElement("script")).type="text/javascript",
+    p.async=!0,p.src=s.api_host+"/static/array.js",
+    (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
+    var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",
+    u.people=u.people||[],u.toString=function(t){
+    var e="posthog";return"posthog"!==a&&(e+="."+a),
+    t||(e+=" (stub)"),e},
+    u.people.toString=function(){return u.toString(1)+".people (stub)"},
+    o="capture identify alias people.set people.set_once".split(" ");
+    for(n=0;n<o.length;n++)g(u,o[n]);
+    e._i.push([i,s,a])},e.__SV=1)}
+    (document,window.posthog||[]);
+    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT',{
+      api_host:'https://us.i.posthog.com'
+    });
+  </script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <img src="assets/keldron_with_tagline.png" alt="Keldron" class="brand-mark" />
+    </a>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/sample-report.html">Sample Report</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-primary"
+         href="https://app.keldron.io"
+         onclick="posthog.capture('cta_clicked',{location:'profit_page_header'})">
+        Start Free Diagnostic
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+
+      <h1 style="font-size:34px; margin-bottom:16px;">
+        Why Your Profit Is Not Increasing (Even When Sales Are Up)
+      </h1>
+
+      <p style="font-size:18px; color:rgba(17,17,17,0.7); margin-bottom:28px;">
+        One of the most frustrating business problems is seeing sales rise while profit stays flat. On the surface, growth appears to be happening. But underneath, something is weakening the financial benefit of that growth.
+      </p>
+
+      <h2>Why this happens</h2>
+      <p>
+        Higher sales do not automatically create higher profit. In many businesses, sales growth can actually expose existing weaknesses that were less visible at a smaller scale.
+      </p>
+
+      <ul>
+        <li>Costs rise faster than revenue</li>
+        <li>Discounting eats into margin</li>
+        <li>Operational inefficiencies increase with volume</li>
+        <li>Inventory, fulfillment, or staffing costs expand quietly</li>
+      </ul>
+
+      <p>
+        The result is a business that looks busier, but not stronger.
+      </p>
+
+      <h2>Common reasons profit stays flat</h2>
+      <p>
+        Profit usually gets squeezed by a combination of issues rather than one obvious mistake.
+      </p>
+
+      <ul>
+        <li>Input costs increased but pricing did not adjust</li>
+        <li>Too much time, labor, or rework is hidden in delivery</li>
+        <li>Slow-moving inventory ties up cash and reduces flexibility</li>
+        <li>Customer acquisition is growing, but order quality is weak</li>
+        <li>Management attention is spread across symptoms instead of causes</li>
+      </ul>
+
+      <h2>Why most businesses misdiagnose the issue</h2>
+      <p>
+        When profit disappoints, many owners assume they need more sales, lower overhead, or tighter budgeting. Sometimes that helps. But often the real issue sits deeper in the operating model.
+      </p>
+
+      <p>
+        If pricing, workflow, supplier performance, team execution, and demand patterns are not aligned, more revenue can create more strain instead of more profit.
+      </p>
+
+      <h2>What to look at first</h2>
+      <p>
+        Before making another pricing change, marketing push, or hiring decision, ask:
+      </p>
+
+      <ul>
+        <li>Where is margin being eroded?</li>
+        <li>Which operational activity is absorbing too much cost?</li>
+        <li>What part of the business gets busier without creating real return?</li>
+      </ul>
+
+      <p>
+        These questions usually reveal whether the problem is commercial, operational, or structural.
+      </p>
+
+      <h2>How to fix profit problems more effectively</h2>
+      <p>
+        The first step is to identify the primary constraint affecting profitability. Once that becomes clear, decisions get sharper. You stop reacting to symptoms and start correcting the issue that is actually weakening results.
+      </p>
+
+      <h2>Find what is weakening your margins</h2>
+      <p>
+        Keldron helps you identify where profit is being diluted, what may be causing it, and where management attention should go first — without dashboards, data integrations, or consultants.
+      </p>
+
+      <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn btn-primary btn-lg"
+           href="https://app.keldron.io"
+           onclick="posthog.capture('cta_clicked',{location:'profit_page_bottom'})">
+          Get Your Free Diagnostic →
+        </a>
+        <a class="btn btn-ghost btn-lg"
+           href="/why-business-not-growing.html"
+           onclick="posthog.capture('internal_link_clicked',{location:'profit_page_to_growth_page'})">
+          Read: Why your business is not growing →
+        </a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <img src="assets/keldron_with_tagline.png" alt="Keldron" style="height:36px;" />
+    </div>
+    <div class="footer-right">
+      <div class="footer-muted small">AI Business Diagnostic for Entrepreneurs &amp; SMBs</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
