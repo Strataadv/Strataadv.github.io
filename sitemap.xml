@@ -23,6 +23,15 @@
   <priority>0.8</priority>
 </url>
   <url>
+  <loc>https://keldron.io/operational-inefficiencies.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://keldron.io/slow-business-growth.html</loc>
+  <priority>0.8</priority>
+</url>
+  <url>
     <loc>https://keldron.io/contact.html</loc>
     <lastmod>2026-03-15</lastmod>
     <priority>0.5</priority>
