@@ -239,6 +239,7 @@
 </head>
 
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Keldron homepage">
@@ -252,7 +253,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#what-you-get">What You Get</a>
+        <a href="#why">What You Get</a>
         <a href="#report">Inside the Report</a>
         <a href="#how">How It Works</a>
         <a href="#faq">FAQ</a>
@@ -270,9 +271,11 @@
   </header>
 
   <main>
+
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
+
         <div class="hero-copy">
           <div class="hero-badge">
             <span class="hero-badge-dot"></span>
@@ -303,7 +306,7 @@
             </a>
           </div>
 
-          <p class="cta-subnote">3 minutes · No calls · No spreadsheets · Instant report · No credit card</p>
+          <p class="cta-subnote">3 minutes &nbsp;·&nbsp; No calls &nbsp;·&nbsp; No spreadsheets &nbsp;·&nbsp; Instant report &nbsp;·&nbsp; No credit card</p>
         </div>
 
         <div class="hero-mock">
@@ -319,45 +322,55 @@
               <img
                 src="/assets/report-preview.jpg"
                 alt="Preview of a Keldron business diagnostic report"
-                class="report-preview"
+                style="width:100%; height:auto; display:block;"
               />
             </a>
             <div class="mock-foot">
-              <span class="mock-note">Real report output — identifying details removed</span>
+              <span style="color: rgba(17,17,17,0.50);">Real report output — identifying details removed</span>
               <a href="/sample-report.html"
-                 class="mock-link"
+                 style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
                  onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image_foot'})">
                 View full sample →
               </a>
             </div>
           </div>
 
-          <div class="hero-micro-proof">
+          <div class="hero-micro-proof" style="margin-top:12px; border-radius:12px;">
             <span class="star">★</span>
             <span>Built to identify the bottleneck, clarify the risks, and show what to do over the next <strong>90 days</strong>.</span>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- PROOF STRIP -->
     <div class="proof-strip">
       <div class="container proof-strip-inner">
-        <div class="proof-strip-item">No credit card required</div>
-        <div class="proof-strip-item">Report ready in minutes</div>
-        <div class="proof-strip-item">No sensitive data uploaded</div>
-        <div class="proof-strip-item">27+ years of operator expertise</div>
+        <div class="proof-strip-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          No credit card required
+        </div>
+        <div class="proof-strip-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Report ready in minutes
+        </div>
+        <div class="proof-strip-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          No sensitive data uploaded
+        </div>
+        <div class="proof-strip-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          27+ years of operator expertise
+        </div>
       </div>
     </div>
 
     <!-- WHAT YOU GET -->
-    <section class="section section-dark" id="what-you-get">
+    <section class="section section-dark" id="why">
       <div class="container">
         <h2 class="section-title section-title-dark">What you get in minutes</h2>
-        <p class="section-intro section-intro-dark">
-          A structured business diagnostic built to show what is slowing performance, where risk is building, and what to do next.
-        </p>
-
+        <p class="section-intro section-intro-dark">A structured business diagnostic built to show what is slowing performance, why it matters, and what to do next.</p>
         <div class="deliverable-grid">
           <div class="deliverable-item">
             <div class="deliverable-icon">01</div>
@@ -367,12 +380,12 @@
           <div class="deliverable-item">
             <div class="deliverable-icon">02</div>
             <h3>Risk Assessment</h3>
-            <p>Early warning signs and practical actions to reduce exposure before problems compound.</p>
+            <p>Early warning signs and practical steps to reduce exposure before problems compound.</p>
           </div>
           <div class="deliverable-item">
             <div class="deliverable-icon">03</div>
             <h3>KPI Priorities</h3>
-            <p>The numbers, owners, and review cadence needed to track improvement with discipline.</p>
+            <p>The numbers, owners, and review rhythm needed to track improvement with discipline.</p>
           </div>
           <div class="deliverable-item">
             <div class="deliverable-icon">04</div>
@@ -387,11 +400,9 @@
     <section class="section" id="report">
       <div class="container">
         <h2 class="section-title">Inside the report</h2>
-        <p class="section-intro">
-          Keldron generates a structured business report built for action, not a generic AI summary.
-        </p>
+        <p class="section-intro">Keldron generates a structured business report built for action, not a generic AI summary.</p>
 
-        <div class="pillars pillars-2">
+        <div class="pillars" style="grid-template-columns: repeat(2, 1fr);">
           <div class="pillar">
             <div class="pillar-num">📌</div>
             <h3 class="pillar-title">Executive snapshot</h3>
@@ -424,13 +435,13 @@
           </div>
         </div>
 
-        <div class="section-cta-row">
+        <div class="dark-cta" style="margin-top:28px;">
           <a class="btn btn-ghost btn-lg"
              href="/sample-report.html"
              onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'report_section'})">
             View Sample Report →
           </a>
-          <p class="reassurance">Generated in minutes. No signup required to preview the output.</p>
+          <p class="reassurance" style="margin-top:10px;">Generated in minutes. No signup required to preview the output.</p>
         </div>
       </div>
     </section>
@@ -440,7 +451,6 @@
       <div class="container">
         <h2 class="section-title">How it works</h2>
         <p class="section-intro">Three steps. No technical setup. No consultants needed.</p>
-
         <div class="steps">
           <div class="step">
             <div class="step-badge">1</div>
@@ -464,36 +474,34 @@
     <!-- WHY THIS MATTERS -->
     <section class="section section-dark">
       <div class="container">
-        <p class="kicker kicker-center kicker-dark">Why this matters now</p>
-
-        <div class="deliverable-grid stats-grid">
-          <div class="deliverable-item stat-card">
-            <div class="deliverable-icon stat-number">51%</div>
+        <p class="kicker" style="text-align:center; margin-bottom:32px; color:rgba(246,241,230,0.55);">Why this matters now</p>
+        <div class="deliverable-grid">
+          <div class="deliverable-item">
+            <div class="deliverable-icon" style="font-size:28px; font-weight:800;">51%</div>
             <h3>Cash flow struggles</h3>
             <p>of small businesses struggle with uneven cash flow</p>
-            <p class="stat-source">
-              <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener">2025 Small Business Credit Survey</a>
+            <p style="font-size:11px; opacity:0.35; margin-top:8px;">
+              <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">2025 Small Business Credit Survey</a>
             </p>
           </div>
-          <div class="deliverable-item stat-card">
-            <div class="deliverable-icon stat-number">75%</div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon" style="font-size:28px; font-weight:800;">75%</div>
             <h3>Rising costs</h3>
             <p>cite rising costs as their top financial challenge</p>
-            <p class="stat-source">
-              <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener">Federal Reserve, 2025</a>
+            <p style="font-size:11px; opacity:0.35; margin-top:8px;">
+              <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Federal Reserve, 2025</a>
             </p>
           </div>
-          <div class="deliverable-item stat-card">
-            <div class="deliverable-icon stat-number">3 in 4</div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon" style="font-size:28px; font-weight:800;">3 in 4</div>
             <h3>Not using AI yet</h3>
             <p>small businesses have not adopted AI for operations</p>
-            <p class="stat-source">
-              <a href="https://www.reimaginemainstreet.org/" target="_blank" rel="noopener">Reimagine Main Street / SBA</a>
+            <p style="font-size:11px; opacity:0.35; margin-top:8px;">
+              <a href="https://www.reimaginemainstreet.org/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Reimagine Main Street / SBA</a>
             </p>
           </div>
         </div>
-
-        <div class="section-cta-row center">
+        <div class="dark-cta">
           <a class="btn btn-primary btn-lg"
              href="https://app.keldron.io"
              onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'stats'})">
@@ -516,7 +524,6 @@
               Start Free Diagnostic
             </a>
           </div>
-
           <div class="mock-card">
             <div class="mock-top">
               <span class="mock-dot"></span>
@@ -524,27 +531,28 @@
               <span class="mock-dot"></span>
               <span class="mock-title">Keldron — 45 Second Overview</span>
             </div>
-
-            <div class="video-frame">
-              <div class="video-loader">
-                <div class="video-loader-circle">▶</div>
-                <span>Loading video…</span>
+            <div style="position:relative; overflow:hidden; aspect-ratio:1920/1080; background: linear-gradient(135deg, #1a1a18 0%, #2a2820 100%);">
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; pointer-events:none; z-index:0;">
+                <div style="width:52px; height:52px; border-radius:50%; background:rgba(196,160,80,0.15); border:2px solid rgba(196,160,80,0.4); display:flex; align-items:center; justify-content:center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(196,160,80,0.8)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <span style="font-size:12px; color:rgba(255,255,255,0.35); letter-spacing:0.04em;">Loading video…</span>
               </div>
               <iframe
                 src="https://share.synthesia.io/embeds/videos/dbdabe3f-1d3c-4bf3-8dc3-3fba12c166be"
                 loading="lazy"
                 title="Keldron business bottleneck diagnostic overview"
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowfullscreen>
+                allowfullscreen
+                style="position:absolute; width:100%; height:100%; top:0; left:0; border:none; z-index:1;">
               </iframe>
             </div>
-
             <div class="mock-foot">
               <span>45 seconds</span>
               <span>No sound needed</span>
               <span>Captions on</span>
               <a href="https://app.keldron.io"
-                 class="mock-link"
+                 style="margin-left:auto; color: var(--gold); font-weight:600; text-decoration:none;"
                  onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'hero_video', location: 'video_section'})">
                 Try it free →
               </a>
@@ -555,34 +563,33 @@
     </section>
 
     <!-- WHO IT IS FOR -->
-    <section class="section soft-section">
+    <section class="section" style="padding-top:40px; padding-bottom:32px; background: rgba(255,255,255,0.12);">
       <div class="container">
         <h2 class="section-title">Built for businesses that need clarity fast</h2>
-        <p class="section-intro">
-          Best for teams that know something is off, but do not know what to fix first.
-        </p>
-
-        <div class="pillars pillars-4">
-          <div class="pillar pillar-center">
-            <div class="pillar-num">🏪</div>
+        <p class="section-intro">Best for teams that know something is off, but do not know what to fix first.</p>
+        <div class="pillars" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="pillar" style="text-align:center;">
+            <div class="pillar-num" style="margin:0 auto 12px;">🏪</div>
             <h3 class="pillar-title">Retail</h3>
           </div>
-          <div class="pillar pillar-center">
-            <div class="pillar-num">📦</div>
+          <div class="pillar" style="text-align:center;">
+            <div class="pillar-num" style="margin:0 auto 12px;">📦</div>
             <h3 class="pillar-title">Wholesale &amp; Distribution</h3>
           </div>
-          <div class="pillar pillar-center">
-            <div class="pillar-num">🏭</div>
+          <div class="pillar" style="text-align:center;">
+            <div class="pillar-num" style="margin:0 auto 12px;">🏭</div>
             <h3 class="pillar-title">Light Manufacturing</h3>
           </div>
-          <div class="pillar pillar-center">
-            <div class="pillar-num">🛠️</div>
+          <div class="pillar" style="text-align:center;">
+            <div class="pillar-num" style="margin:0 auto 12px;">🛠️</div>
             <h3 class="pillar-title">Local Services</h3>
           </div>
         </div>
-
-        <p class="fit-line">
-          Especially useful when margins feel tighter than they should · operations feel busier than results justify · problems keep repeating · management needs a clearer next move
+        <p style="text-align:center; color: rgba(17,17,17,0.55); font-size:13.5px; margin-top:24px; line-height:1.8;">
+          Especially useful when margins feel tighter than they should &nbsp;·&nbsp;
+          operations feel busier than results justify &nbsp;·&nbsp;
+          problems keep repeating &nbsp;·&nbsp;
+          management needs a clearer next move
         </p>
       </div>
     </section>
@@ -590,8 +597,7 @@
     <!-- TESTIMONIALS -->
     <section class="testimonial-section">
       <div class="container">
-        <p class="eyebrow">Practitioners are already seeing results</p>
-
+        <p style="text-align:center; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color: rgba(17,17,17,0.45); margin:0 0 24px;">Practitioners are already seeing results</p>
         <div class="testimonial-grid">
           <div class="testimonial-card featured">
             <div class="testimonial-stars">
@@ -602,12 +608,14 @@
               <div class="testimonial-avatar">K.A.</div>
               <div class="testimonial-meta">
                 <span class="testimonial-name">K.A.</span>
-                <span class="testimonial-role">SAP Implementation Consultant · Solopreneur</span>
+                <span class="testimonial-role">SAP Implementation Consultant &nbsp;·&nbsp; Solopreneur</span>
               </div>
-              <div class="testimonial-verified">Verified user</div>
+              <div class="testimonial-verified">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Verified user
+              </div>
             </div>
           </div>
-
           <div class="testimonial-card">
             <p class="testimonial-quote">"It showed exactly where performance was being held back."</p>
             <div class="testimonial-footer">
@@ -618,7 +626,6 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
             <p class="testimonial-quote">"Finally something that explains operational issues in plain English."</p>
             <div class="testimonial-footer">
@@ -633,53 +640,61 @@
       </div>
     </section>
 
-    <!-- FOUNDER -->
-    <section class="section section-founder soft-section">
-      <div class="container">
-        <div class="founder-shell">
-          <div class="founder-mark">"</div>
-          <blockquote>
-            In 27 years running operations and supply chains across manufacturing, retail, and distribution,
-            I watched smart business owners make expensive decisions with incomplete visibility. Keldron is built
-            to surface the real constraint faster, so the next move is informed by what actually matters.
-          </blockquote>
-
-          <div class="founder-meta">
-            <img src="/assets/taufiq.jpg" alt="Taufiqur Rahman" />
-            <div class="founder-text">
-              <p class="founder-name">Taufiqur Rahman</p>
-              <p class="founder-role">Founder &amp; CEO, Keldron.io · 27 years in operations, supply chain &amp; growth</p>
-            </div>
+    <!-- FOUNDER QUOTE -->
+    <section class="section" style="padding-top:48px; padding-bottom:48px; background: rgba(255,255,255,0.12);">
+      <div class="container" style="max-width:640px; text-align:center;">
+        <div style="font-size:48px; color: var(--gold); line-height:1; margin-bottom:6px;">"</div>
+        <blockquote style="margin:0 0 24px; font-size:clamp(15px,2.2vw,18px); color: var(--ink); line-height:1.8; font-style:italic;">
+          In 27 years running operations and supply chains across manufacturing, retail, and distribution,
+          I watched smart business owners make expensive decisions with incomplete visibility. Keldron is built
+          to surface the real constraint faster, so the next move is informed by what actually matters.
+        </blockquote>
+        <div style="display:flex; align-items:center; justify-content:center; gap:12px;">
+          <img src="/assets/taufiq.jpg" alt="Taufiqur Rahman" style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0;" />
+          <div style="text-align:left;">
+            <p style="margin:0; font-size:14px; font-weight:700; color: var(--ink);">Taufiqur Rahman</p>
+            <p style="margin:0; font-size:12px; color: rgba(17,17,17,0.55);">Founder &amp; CEO, Keldron.io &nbsp;·&nbsp; 27 years in operations, supply chain &amp; growth</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INTERNAL LINKS -->
-    <section class="section section-links soft-section">
-      <div class="container">
-        <div class="links-block">
-          <h2 class="section-title links-title">Explore common business issues</h2>
-          <p class="section-intro links-intro">
-            These guides help explain the most common causes of slow growth, weak margins, and operational inefficiency in owner-led businesses.
-          </p>
+    <!-- INTERNAL TOPIC LINKS -->
+    <section class="section" style="padding-top:32px; padding-bottom:24px;">
+      <div class="container" style="max-width:980px;">
+        <h2 class="section-title" style="font-size:clamp(20px,2.5vw,28px); margin-bottom:10px;">Explore common business issues</h2>
+        <p class="section-intro" style="margin-bottom:22px;">
+          These guides help explain the most common causes of slow growth, weak margins, and operational inefficiency in owner-led businesses.
+        </p>
 
-          <div class="topic-links">
-            <a href="/why-business-not-growing.html">Why your business is not growing →</a>
-            <a href="/profit-not-increasing.html">Why profit is not increasing →</a>
-            <a href="/business-bottlenecks.html">Business bottlenecks explained →</a>
-            <a href="/operational-inefficiencies.html">Operational inefficiencies →</a>
-            <a href="/slow-business-growth.html">Why business growth is slowing →</a>
-          </div>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+          <a href="/why-business-not-growing.html" style="color:var(--gold); font-weight:600;">
+            Why your business is not growing →
+          </a>
+
+          <a href="/profit-not-increasing.html" style="color:var(--gold); font-weight:600;">
+            Why profit is not increasing →
+          </a>
+
+          <a href="/business-bottlenecks.html" style="color:var(--gold); font-weight:600;">
+            Business bottlenecks explained →
+          </a>
+
+          <a href="/operational-inefficiencies.html" style="color:var(--gold); font-weight:600;">
+            Operational inefficiencies →
+          </a>
+
+          <a href="/slow-business-growth.html" style="color:var(--gold); font-weight:600;">
+            Why business growth is slowing →
+          </a>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section faq-section" id="faq">
+    <section class="section" id="faq" style="padding-top:24px;">
       <div class="container">
         <h2 class="section-title">Common questions</h2>
-
         <div class="faq">
           <details>
             <summary>What does Keldron actually identify?</summary>
@@ -707,7 +722,7 @@
           </details>
           <details>
             <summary>Can I see a sample report before I start?</summary>
-            <div class="faq-content">Yes. <a href="/sample-report.html">View a real sample report here</a>.</div>
+            <div class="faq-content">Yes. <a href="/sample-report.html" style="border-bottom:1px solid currentColor;">View a real sample report here</a>.</div>
           </details>
           <details>
             <summary>Will someone call me?</summary>
@@ -715,7 +730,7 @@
           </details>
           <details>
             <summary>How do you handle my data?</summary>
-            <div class="faq-content">We keep things minimal and purpose-driven. Read our <a href="privacy.html">Privacy Policy</a>.</div>
+            <div class="faq-content">We keep things minimal and purpose-driven. Read our <a href="privacy.html" style="border-bottom:1px solid currentColor;">Privacy Policy</a>.</div>
           </details>
         </div>
       </div>
@@ -727,7 +742,7 @@
         <div class="closing-inner">
           <h2 class="closing-title">Something is slowing your business down. See exactly what it is.</h2>
           <p class="closing-text">Get a plain-English diagnostic with bottlenecks, risks, KPIs, and a 90-day action plan in minutes.</p>
-          <p class="closing-subtext">
+          <p style="font-size:14px; font-weight:600; color: var(--ink); margin: 0 0 20px;">
             Know what to fix first before you invest in more tools, more people, or more pressure.
           </p>
           <a class="btn btn-primary btn-lg"
@@ -735,23 +750,24 @@
              onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'closing'})">
             Start Free Diagnostic
           </a>
-          <p class="closing-note">No credit card. No calls. Takes 3 minutes.</p>
+          <p style="font-size:12px; opacity:0.40; margin-top:14px;">No credit card. No calls. Takes 3 minutes.</p>
           <p class="closing-signoff">— Keldron</p>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
         <a href="/" aria-label="Keldron home">
-          <img src="assets/keldron_with_tagline.png" alt="Keldron footer logo" class="footer-logo" />
+          <img src="assets/keldron_with_tagline.png" alt="Keldron footer logo" style="height:72px; width:auto; display:block;" />
         </a>
       </div>
       <div class="footer-right">
         <div class="footer-muted small">AI Business Diagnostic for Entrepreneurs &amp; SMBs</div>
-        <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors · Operating as Keldron.io</div>
+        <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors &nbsp;·&nbsp; Operating as Keldron.io</div>
       </div>
     </div>
   </footer>
@@ -759,5 +775,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
