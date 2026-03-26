@@ -1013,3 +1013,12 @@ summary::-webkit-details-marker { display: none; }
 .topic-links {
   justify-content: flex-start !important;
 }
+
+/* Hide hero sub-CTA line */
+.hero .cta-subnote {
+  display: none !important;
+}
+/* Maintain spacing after removing sub-CTA */
+.hero .hero-actions {
+  margin-bottom: 22px;
+}
