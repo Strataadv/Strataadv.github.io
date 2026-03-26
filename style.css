@@ -957,3 +957,59 @@ summary::-webkit-details-marker { display: none; }
   .btn { width: 100%; justify-content: center; }
   .display { font-size: clamp(30px, 8vw, 44px); }
 }
+
+/* =====================================================
+   TARGETED SPACING / ALIGNMENT FIXES ONLY
+   1) Reduce gap between "Inside the report" and "How it works"
+   2) Align "Explore common business issues" with "Common questions"
+   ===================================================== */
+
+/* 1) Reduce gap between Inside the report section and How it works */
+#report {
+  padding-bottom: 32px;
+}
+
+#how {
+  padding-top: 32px;
+}
+
+/* 2) Align Explore common business issues section with Common questions */
+#faq .container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+#faq {
+  padding-top: 44px;
+}
+
+#faq .section-title,
+#faq .section-intro,
+#faq .faq {
+  max-width: 980px;
+}
+
+.section:has(.links-title) .container,
+.section:has(.links-block) .container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.section:has(.links-block) {
+  padding-top: 44px;
+  padding-bottom: 36px;
+}
+
+.links-block {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.links-title,
+.links-intro {
+  max-width: 980px;
+}
+
+.topic-links {
+  justify-content: flex-start !important;
+}
