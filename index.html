@@ -1,959 +1,763 @@
-/* =====================================================
-   KELDRON GLOBAL STYLESHEET
-   ===================================================== */
-
-/* ---------- CSS VARIABLES ---------- */
-
-:root {
-  --paper: #f6f1e6;
-  --ink: #111111;
-  --muted: #5a5a5a;
-  --line: rgba(0,0,0,0.12);
-  --card: rgba(255,255,255,0.65);
-  --dark: #1a1816;
-  --dark2: #111009;
-  --gold: #b08a2d;
-  --brand: #b38b2d;
-  --border: rgba(0,0,0,.08);
-
-  --radius: 18px;
-  --shadow: 0 18px 50px rgba(0,0,0,0.08);
-  --shadow2: 0 18px 45px rgba(0,0,0,0.12);
-  --max: 1120px;
-}
-
-/* ---------- RESET ---------- */
-
-*, *::before, *::after { box-sizing: border-box; }
-html, body { height: 100%; }
-
-body {
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-  background: var(--paper);
-  color: var(--ink);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; opacity: 0.96; }
-
-/* ---------- LAYOUT ---------- */
-
-.container {
-  width: min(var(--max), calc(100% - 48px));
-  margin: 0 auto;
-}
-
-/* =====================================================
-   HEADER
-   ===================================================== */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: rgba(246,241,230,0.98);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 22px;
-  padding: 8px 0;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  flex: 0 0 auto;
-}
-
-.brand-mark {
-  height: 90px;
-  width: auto;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(17,17,17,0.75);
-}
-
-.nav a {
-  padding: 7px 12px;
-  border-radius: 8px;
-  transition: background 0.15s;
-}
-
-.nav a:hover {
-  background: rgba(0,0,0,0.05);
-  text-decoration: none;
-}
-
-.header-cta {
-  margin-left: auto;
-  flex: 0 0 auto;
-}
-
-/* ---------- BUTTONS ---------- */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 11px 20px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.42);
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
-  cursor: pointer;
-  text-decoration: none;
-  user-select: none;
-  transition: transform 0.15s, filter 0.15s, box-shadow 0.15s;
-}
-
-.btn:hover {
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-.btn-lg { padding: 14px 24px; font-size: 15px; }
-
-.btn-primary {
-  background: linear-gradient(180deg, #c49a32, #a67c28);
-  color: #fff;
-  border: 1px solid rgba(0,0,0,0.18);
-  box-shadow: 0 4px 14px rgba(176,138,45,0.35);
-}
-
-.btn-primary:hover {
-  filter: brightness(1.06);
-  box-shadow: 0 6px 20px rgba(176,138,45,0.45);
-}
-
-.btn-ghost {
-  background: transparent;
-  border-color: rgba(0,0,0,0.18);
-  color: var(--ink);
-}
-
-.btn-ghost:hover { background: rgba(0,0,0,0.04); }
-
-/* =====================================================
-   HERO
-   ===================================================== */
-
-.hero {
-  padding: 64px 0 0;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: start;
-  gap: 48px;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(176,138,45,0.10);
-  border: 1px solid rgba(176,138,45,0.28);
-  color: var(--gold);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 100px;
-  margin-bottom: 20px;
-  width: fit-content;
-}
-
-.hero-badge-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-  animation: badgepulse 2s ease-in-out infinite;
-  flex-shrink: 0;
-}
-
-@keyframes badgepulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-.kicker {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 14px;
-  border: 1px solid rgba(0,0,0,0.10);
-  background: rgba(255,255,255,0.5);
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 600;
-  color: rgba(17,17,17,0.60);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.display {
-  margin: 20px 0 24px;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-weight: 800;
-  font-size: clamp(28px, 3.8vw, 48px);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-  color: var(--ink);
-}
-
-.accent { color: var(--gold); }
-
-.lead {
-  font-size: 17px;
-  color: rgba(17,17,17,0.75);
-  max-width: 52ch;
-  margin: 0 0 24px;
-  line-height: 1.7;
-}
-
-.hero-micro-proof {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(17,17,17,0.80);
-  background: rgba(176,138,45,0.08);
-  border: 1px solid rgba(176,138,45,0.18);
-  border-radius: 12px;
-  padding: 12px 16px;
-  margin: 12px 0 0;
-  line-height: 1.5;
-  width: 100%;
-}
-
-.hero-micro-proof .star {
-  color: var(--gold);
-  font-size: 14px;
-  line-height: 1.5;
-  flex-shrink: 0;
-}
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.cta-subnote {
-  margin: 12px 0 0;
-  font-size: 12.5px;
-  color: rgba(17,17,17,0.45);
-  letter-spacing: 0.01em;
-}
-
-.reassurance {
-  margin: 14px 0 0;
-  font-size: 13.5px;
-  color: rgba(17,17,17,0.55);
-  line-height: 1.6;
-  max-width: 70ch;
-}
-
-.trust-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: nowrap;
-  margin-top: 20px;
-}
-
-.trust-item {
-  flex: 1 1 0;
-  min-width: 0;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(255,255,255,0.40);
-  border-radius: 12px;
-  padding: 12px 14px;
-}
-
-.trust-label {
-  display: block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: rgba(17,17,17,0.45);
-  margin-bottom: 4px;
-}
-
-.trust-value {
-  display: block;
-  font-size: 13px;
-  color: rgba(17,17,17,0.80);
-  font-weight: 600;
-}
-
-/* Hero mock */
-
-.hero-mock {
-  justify-self: end;
-  align-self: start;
-  max-width: 500px;
-  width: 100%;
-  margin-top: 108px;
-}
-
-.mock-card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.09);
-  border-radius: 14px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
-  overflow: hidden;
-}
-
-.mock-top {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  background: #f9f9f9;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-}
-
-.mock-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.14);
-}
-
-.mock-title {
-  margin-left: 6px;
-  font-size: 12px;
-  color: rgba(0,0,0,0.55);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-.mock-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.mock-foot {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  padding: 10px 14px;
-  border-top: 1px solid rgba(0,0,0,0.07);
-  background: #f9f9f9;
-  color: rgba(0,0,0,0.50);
-  font-size: 12px;
-}
-
-/* Video section */
-
-.video-section {
-  padding: 56px 0;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.06);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.video-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.video-copy h2 {
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-weight: 800;
-  font-size: clamp(24px, 2.8vw, 34px);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 12px;
-  color: var(--ink);
-}
-
-.video-copy p {
-  font-size: 16px;
-  color: rgba(17,17,17,0.65);
-  line-height: 1.7;
-  margin: 0 0 20px;
-}
-
-/* =====================================================
-   PROOF / TESTIMONIAL MICRO BLOCKS
-   ===================================================== */
-
-.mini-proof-row {
-  padding: 24px 0;
-  margin-top: 40px;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.07);
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-}
-
-.mini-proof-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.mini-proof-card {
-  background: var(--paper);
-  border: 1px solid rgba(176,138,45,0.14);
-  border-radius: 12px;
-  padding: 18px 20px;
-}
-
-.mini-proof-quote {
-  margin: 0 0 8px;
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.mini-proof-name {
-  font-size: 12px;
-  color: rgba(17,17,17,0.50);
-  font-weight: 500;
-}
-
-.proof-strip {
-  background: var(--dark2);
-  padding: 18px 0;
-}
-
-.proof-strip-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-
-.proof-strip-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.60);
-  white-space: nowrap;
-}
-
-.proof-strip-item svg {
-  flex-shrink: 0;
-  color: var(--gold);
-}
-
-/* =====================================================
-   SECTIONS
-   ===================================================== */
-
-.section {
-  padding: 56px 0;
-}
-
-.section-title {
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-weight: 800;
-  font-size: clamp(26px, 3vw, 36px);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 12px;
-  color: var(--ink);
-}
-
-.section-intro {
-  margin: 0 0 28px;
-  max-width: 68ch;
-  color: rgba(17,17,17,0.65);
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* ---------- CONVERSATION SECTION ---------- */
-
-.conversation-section {
-  background: #fff;
-  padding: 56px 0;
-  border-top: 1px solid rgba(0,0,0,0.06);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.conversation-wrap {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.conversation-wrap .section-title,
-.conversation-wrap .section-intro {
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.conversation-copy {
-  display: grid;
-  gap: 16px;
-  margin-top: 24px;
-  color: rgba(17,17,17,0.75);
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.conversation-copy p { margin: 0; }
-
-.conversation-highlight {
-  font-weight: 700;
-  color: var(--ink);
-  font-size: 17px;
-}
-
-/* ---------- COMPARISON SECTION ---------- */
-
-.comparison-strip {
-  background: var(--paper);
-  border-top: 1px solid rgba(0,0,0,0.06);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  padding: 56px 0;
-}
-
-.comparison-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-.comparison-card {
-  background: rgba(255,255,255,0.70);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 28px;
-}
-
-.comparison-card h3 {
-  margin: 0 0 16px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: rgba(17,17,17,0.45);
-}
-
-.comparison-card ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--ink);
-  line-height: 1.9;
-  font-size: 15px;
-}
-
-/* ---------- WHY / CONTENT PILLARS ---------- */
-
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.pillar {
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #fff;
-  border-radius: 14px;
-  padding: 20px 20px 22px;
-  transition: box-shadow 0.2s;
-}
-
-.pillar:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-}
-
-.pillar-num {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  background: rgba(176,138,45,0.10);
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 17px;
-  margin-bottom: 12px;
-}
-
-.pillar-title { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: var(--ink); }
-.pillar-text { margin: 0; color: rgba(17,17,17,0.62); font-size: 14px; line-height: 1.6; }
-
-/* ---------- DARK SECTION ---------- */
-
-.section-dark {
-  background: radial-gradient(1400px 700px at 20% 0%, rgba(176,138,45,0.15), transparent 55%),
-              linear-gradient(160deg, #1e1b16 0%, var(--dark2) 100%);
-  color: #f6f1e6;
-}
-
-.section-title-dark { color: #f6f1e6; }
-.section-intro-dark { color: rgba(246,241,230,0.65); }
-
-.deliverable-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.deliverable-item {
-  border: 1px solid rgba(246,241,230,0.12);
-  background: rgba(255,255,255,0.05);
-  border-radius: 14px;
-  padding: 18px;
-  transition: background 0.2s;
-}
-
-.deliverable-item:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-.deliverable-icon {
-  display: inline-block;
-  font-weight: 800;
-  font-size: 12px;
-  color: var(--gold);
-  border: 1px solid rgba(176,138,45,0.30);
-  border-radius: 8px;
-  padding: 4px 10px;
-  margin-bottom: 12px;
-  letter-spacing: 0.04em;
-}
-
-.deliverable-item h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: #f6f1e6; }
-.deliverable-item p { margin: 0; color: rgba(246,241,230,0.62); font-size: 13.5px; line-height: 1.6; }
-
-.dark-cta {
-  margin-top: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-}
-
-.reassurance-dark { color: rgba(246,241,230,0.60); font-size: 14px; }
-
-/* ---------- HOW IT WORKS ---------- */
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.step {
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #fff;
-  border-radius: 14px;
-  padding: 22px;
-  transition: box-shadow 0.2s;
-}
-
-.step:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-}
-
-.step-badge {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  background: rgba(176,138,45,0.10);
-  color: var(--gold);
-  font-weight: 800;
-  font-size: 15px;
-  margin-bottom: 12px;
-}
-
-.step h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
-.step p { margin: 0; color: rgba(17,17,17,0.62); font-size: 13.5px; line-height: 1.6; }
-
-/* ---------- FAQ ---------- */
-
-.faq {
-  display: grid;
-  gap: 8px;
-  max-width: 860px;
-}
-
-details {
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  background: #fff;
-  padding: 14px 18px;
-  transition: box-shadow 0.2s;
-}
-
-details[open] {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 15px;
-  list-style: none;
-  color: var(--ink);
-}
-
-summary::-webkit-details-marker { display: none; }
-
-.faq-content {
-  margin-top: 10px;
-  color: rgba(17,17,17,0.65);
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-/* ---------- TESTIMONIALS ---------- */
-
-.testimonial-section {
-  padding: 56px 0;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.06);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.testimonial-grid {
-  max-width: 860px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.testimonial-card {
-  background: var(--paper);
-  border: 1px solid rgba(176,138,45,0.15);
-  border-left: 3px solid var(--gold);
-  border-radius: 12px;
-  padding: 24px 24px 20px;
-}
-
-.testimonial-card.featured {
-  grid-column: 1 / -1;
-  max-width: 680px;
-  margin: 0 auto;
-  width: 100%;
-  background: #fff;
-  border-left: 3px solid var(--gold);
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-}
-
-.testimonial-stars {
-  display: flex;
-  gap: 3px;
-  margin-bottom: 12px;
-}
-
-.testimonial-stars span {
-  color: var(--gold);
-  font-size: 14px;
-}
-
-.testimonial-quote {
-  font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.75;
-  color: var(--ink);
-  font-style: italic;
-  margin: 0 0 16px;
-}
-
-.testimonial-footer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.testimonial-avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(176,138,45,0.12);
-  border: 1px solid rgba(176,138,45,0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--gold);
-  flex-shrink: 0;
-  font-style: normal;
-}
-
-.testimonial-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.testimonial-name {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink);
-  font-style: normal;
-}
-
-.testimonial-role {
-  font-size: 12px;
-  color: rgba(17,17,17,0.50);
-  font-style: normal;
-}
-
-.testimonial-verified {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 11px;
-  color: rgba(17,17,17,0.50);
-  font-style: normal;
-}
-
-.testimonial-verified svg { color: var(--gold); }
-
-/* ---------- CLOSING CTA ---------- */
-
-.closing {
-  padding: 64px 0 72px;
-  background: var(--paper);
-}
-
-.closing-inner {
-  border: 1px solid rgba(176,138,45,0.18);
-  border-radius: 20px;
-  background: linear-gradient(135deg, #fff 0%, rgba(246,241,230,0.6) 100%);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.06);
-  padding: 48px 40px;
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.closing-title {
-  margin: 0 0 12px;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-weight: 800;
-  font-size: clamp(26px, 3vw, 36px);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  color: var(--ink);
-}
-
-.closing-text {
-  margin: 0 0 20px;
-  color: rgba(17,17,17,0.65);
-  font-size: 15px;
-  line-height: 1.7;
-  max-width: 50ch;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.closing-signoff {
-  margin: 16px 0 0;
-  color: rgba(17,17,17,0.40);
-  font-size: 13px;
-}
-
-/* ---------- FOOTER ---------- */
-
-.site-footer {
-  border-top: 1px solid rgba(0,0,0,0.08);
-  padding: 24px 0;
-  background: #fff;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-}
-
-.footer-brand { font-weight: 700; }
-.footer-muted { color: rgba(17,17,17,0.55); }
-.footer-muted.small { font-size: 13px; text-align: right; }
-
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
-
-@media (max-width: 980px) {
-  .nav { display: none; }
-  .hero-grid { grid-template-columns: 1fr; align-items: start; gap: 28px; }
-  .hero-mock { justify-self: start; align-self: start; max-width: 560px; margin-top: 0; }
-  .video-wrap { grid-template-columns: 1fr; gap: 28px; }
-  .deliverable-grid { grid-template-columns: repeat(2, 1fr); }
-  .pillars { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; }
-  .trust-row { flex-wrap: wrap; }
-  .footer-inner { flex-direction: column; align-items: flex-start; }
-  .footer-muted.small { text-align: left; }
-}
-
-@media (max-width: 760px) {
-  .comparison-grid { grid-template-columns: 1fr; }
-  .mini-proof-grid { grid-template-columns: 1fr; }
-  .testimonial-grid { grid-template-columns: 1fr; }
-  .testimonial-card,
-  .testimonial-card.featured { max-width: 100%; }
-  .closing-inner { padding: 36px 24px; }
-}
-
-@media (max-width: 600px) {
-  .proof-strip-inner { gap: 16px; padding: 0 16px; }
-  .proof-strip-item { font-size: 12px; }
-  .hero-micro-proof { border-radius: 12px; }
-  .section { padding: 44px 0; }
-  .conversation-section,
-  .testimonial-section,
-  .video-section { padding: 44px 0; }
-}
-
-@media (max-width: 520px) {
-  .container { width: calc(100% - 32px); }
-  .brand-mark { height: 60px; }
-  .hero { padding-top: 40px; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .btn { width: 100%; justify-content: center; }
-  .display { font-size: clamp(30px, 8vw, 44px); }
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Bottleneck Diagnostic & 90-Day Action Plan | Keldron</title>
+  <meta name="description" content="Keldron helps owner-led businesses identify bottlenecks across operations, inventory, finance, and sales — then generates a clear 90-day action plan with risks, KPIs, and quick wins in minutes." />
+  <meta name="theme-color" content="#f6f1e6" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Keldron" />
+  <meta name="keywords" content="business bottleneck diagnostic, business diagnostic report, 90-day action plan, operational bottlenecks, small business diagnostic, business growth problems, operational inefficiencies, business risk assessment, KPI framework, owner-led business" />
+  <link rel="canonical" href="https://keldron.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Business Bottleneck Diagnostic & 90-Day Action Plan | Keldron" />
+  <meta property="og:description" content="Identify the bottleneck, assess the risks, and get a clear 90-day action plan — in minutes." />
+  <meta property="og:image" content="https://keldron.io/assets/og-image.png" />
+  <meta property="og:image:alt" content="Keldron homepage showing a business bottleneck diagnostic and 90-day action plan." />
+  <meta property="og:url" content="https://keldron.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Keldron" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Business Bottleneck Diagnostic & 90-Day Action Plan | Keldron" />
+  <meta name="twitter:description" content="Free business diagnostic for owner-led businesses. Find the bottleneck and get a 90-day action plan in minutes." />
+  <meta name="twitter:image" content="https://keldron.io/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="Keldron business bottleneck diagnostic homepage preview." />
+
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3YVBEJL4B2');
+  </script>
+
+  <!-- PostHog -->
+  <script>
+    !function(t,e){
+      var o,n,p,r;
+      e.__SV || (
+        window.posthog = e,
+        e._i = [],
+        e.init = function(i,s,a){
+          function g(t,e){
+            var o=e.split(".");
+            2==o.length && (t=t[o[0]], e=o[1]);
+            t[e] = function(){
+              t.push([e].concat(Array.prototype.slice.call(arguments,0)));
+            };
+          }
+          (p=t.createElement("script")).type="text/javascript";
+          p.async=!0;
+          p.src=s.api_host+"/static/array.js";
+          (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
+
+          var u=e;
+          void 0!==a ? u=e[a]=[] : a="posthog";
+          u.people=u.people||[];
+          u.toString=function(t){
+            var e="posthog";
+            "posthog"!==a && (e+="."+a);
+            t || (e+=" (stub)");
+            return e;
+          };
+          u.people.toString=function(){
+            return u.toString(1)+".people (stub)";
+          };
+
+          o="capture identify alias people.set people.set_once".split(" ");
+          for(n=0;n<o.length;n++) g(u,o[n]);
+
+          e._i.push([i,s,a]);
+        },
+        e.__SV=1
+      );
+    }(document,window.posthog||[]);
+
+    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT', {
+      api_host: 'https://us.i.posthog.com'
+    });
+
+    setTimeout(function () {
+      posthog.capture('debug_test_event', {
+        source: 'homepage_load_test'
+      });
+      console.log('debug_test_event sent');
+    }, 3000);
+  </script>
+
+  <script>
+    function trackAndGo(event, el, eventName, props) {
+      if (event) event.preventDefault();
+      const href = el.getAttribute('href');
+
+      try {
+        posthog.capture(eventName, props || {});
+        console.log('Sent event:', eventName, props || {});
+      } catch (e) {
+        console.error('PostHog capture failed:', e);
+      }
+
+      setTimeout(function () {
+        window.location.href = href;
+      }, 1200);
+
+      return false;
+    }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Keldron",
+    "url": "https://keldron.io",
+    "logo": "https://keldron.io/assets/keldron_with_tagline.png",
+    "description": "AI-powered business bottleneck diagnostic for owner-led businesses.",
+    "founder": {
+      "@type": "Person",
+      "name": "Taufiqur Rahman"
+    }
+  }
+  </script>
+
+  <!-- Website Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Keldron",
+    "url": "https://keldron.io/",
+    "description": "Business bottleneck diagnostic and 90-day action planning for owner-led businesses."
+  }
+  </script>
+
+  <!-- SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Keldron",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://keldron.io/",
+    "description": "Keldron helps owner-led businesses identify bottlenecks across operations, inventory, finance, and sales, assess risks, and generate a clear 90-day action plan.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "Keldron"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Keldron actually identify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Keldron helps identify the bottleneck slowing business performance across areas like operations, inventory, finance, and sales. It also highlights likely root causes, risk factors, KPI priorities, and first-priority actions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who gets the most value from Keldron?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Owner-led businesses that know something is underperforming but do not yet know what to fix first. If margins feel tight, operations feel heavy, or growth feels slower than expected, Keldron is built for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast do I get the report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually within minutes. You answer a short diagnostic and Keldron generates a structured report you can read immediately, including key findings, risks, KPIs, quick wins, and a 90-day action plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this accounting software or a dashboard?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Keldron is not bookkeeping software or another dashboard. It is a self-serve business diagnostic that helps clarify the issue most likely slowing performance and what to do next."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to upload sensitive financial data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Keldron works from top-line business context. No spreadsheets, no sensitive numbers, and no integrations are required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is included in the report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical report includes an executive snapshot, key findings, root causes, strategic recommendations, quick wins, KPI framework, risks and mitigations, and a structured 90-day action plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see a sample report before I start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. View a real sample report at https://keldron.io/sample-report.html."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will someone call me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Keldron is fully self-serve. You control the pace."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Keldron homepage">
+        <img
+          src="assets/keldron_with_tagline.png"
+          alt="Keldron logo"
+          class="brand-mark"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <span style="display:none; font-size:20px; font-weight:800; color:var(--ink,#0f0e0c);">Keldron</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#what-you-get">What You Get</a>
+        <a href="#report">Inside the Report</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary"
+           href="https://app.keldron.io"
+           onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'header'})">
+          Start Free Diagnostic
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Free access — open now
+          </div>
+
+          <p class="kicker">AI-powered business bottleneck diagnostic for owner-led businesses</p>
+
+          <h1 class="display">
+            Find what’s slowing your business down
+            <span class="accent">— and get a clear 90-day action plan.</span>
+          </h1>
+
+          <p class="lead">
+            Keldron analyzes your operations, inventory, finance, and sales to identify bottlenecks, evaluate risk factors, and generate clear next steps in plain English.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg"
+               href="https://app.keldron.io"
+               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'hero'})">
+              Start Free Diagnostic
+            </a>
+            <a class="btn btn-ghost btn-lg"
+               href="/sample-report.html"
+               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero'})">
+              See Sample Report
+            </a>
+          </div>
+
+          <p class="cta-subnote">3 minutes · No calls · No spreadsheets · Instant report · No credit card</p>
+        </div>
+
+        <div class="hero-mock">
+          <div class="mock-card">
+            <div class="mock-top">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-title">Sample Diagnostic Report</span>
+            </div>
+            <a href="/sample-report.html"
+               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image'})">
+              <img
+                src="/assets/report-preview.jpg"
+                alt="Preview of a Keldron business diagnostic report"
+                class="report-preview"
+              />
+            </a>
+            <div class="mock-foot">
+              <span class="mock-note">Real report output — identifying details removed</span>
+              <a href="/sample-report.html"
+                 class="mock-link"
+                 onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image_foot'})">
+                View full sample →
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-micro-proof">
+            <span class="star">★</span>
+            <span>Built to identify the bottleneck, clarify the risks, and show what to do over the next <strong>90 days</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF STRIP -->
+    <div class="proof-strip">
+      <div class="container proof-strip-inner">
+        <div class="proof-strip-item">No credit card required</div>
+        <div class="proof-strip-item">Report ready in minutes</div>
+        <div class="proof-strip-item">No sensitive data uploaded</div>
+        <div class="proof-strip-item">27+ years of operator expertise</div>
+      </div>
+    </div>
+
+    <!-- WHAT YOU GET -->
+    <section class="section section-dark" id="what-you-get">
+      <div class="container">
+        <h2 class="section-title section-title-dark">What you get in minutes</h2>
+        <p class="section-intro section-intro-dark">
+          A structured business diagnostic built to show what is slowing performance, where risk is building, and what to do next.
+        </p>
+
+        <div class="deliverable-grid">
+          <div class="deliverable-item">
+            <div class="deliverable-icon">01</div>
+            <h3>Bottleneck Diagnosis</h3>
+            <p>The issue most likely slowing performance across operations, inventory, finance, or sales.</p>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">02</div>
+            <h3>Risk Assessment</h3>
+            <p>Early warning signs and practical actions to reduce exposure before problems compound.</p>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">03</div>
+            <h3>KPI Priorities</h3>
+            <p>The numbers, owners, and review cadence needed to track improvement with discipline.</p>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">04</div>
+            <h3>90-Day Action Plan</h3>
+            <p>Quick wins and sequenced next steps so management attention goes in the right order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIDE THE REPORT -->
+    <section class="section" id="report">
+      <div class="container">
+        <h2 class="section-title">Inside the report</h2>
+        <p class="section-intro">
+          Keldron generates a structured business report built for action, not a generic AI summary.
+        </p>
+
+        <div class="pillars pillars-2">
+          <div class="pillar">
+            <div class="pillar-num">📌</div>
+            <h3 class="pillar-title">Executive snapshot</h3>
+            <p class="pillar-text">A fast view of the current operating picture and where attention is needed first.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">🔎</div>
+            <h3 class="pillar-title">Key findings and root causes</h3>
+            <p class="pillar-text">The main issues holding performance back, plus the likely reasons behind them.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">⚡</div>
+            <h3 class="pillar-title">30-day quick wins</h3>
+            <p class="pillar-text">Fast, practical moves that can improve control, reduce waste, and create momentum quickly.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">📈</div>
+            <h3 class="pillar-title">KPI framework</h3>
+            <p class="pillar-text">Targets, frequency, and ownership so you can track whether the business is improving.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">🛡️</div>
+            <h3 class="pillar-title">Risks and mitigations</h3>
+            <p class="pillar-text">What could go wrong, what to watch for early, and how to reduce the risk.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">🗓️</div>
+            <h3 class="pillar-title">90-day action roadmap</h3>
+            <p class="pillar-text">A phased plan covering foundation, acceleration, and optimization.</p>
+          </div>
+        </div>
+
+        <div class="section-cta-row">
+          <a class="btn btn-ghost btn-lg"
+             href="/sample-report.html"
+             onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'report_section'})">
+            View Sample Report →
+          </a>
+          <p class="reassurance">Generated in minutes. No signup required to preview the output.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-intro">Three steps. No technical setup. No consultants needed.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-badge">1</div>
+            <h3>Answer a few business questions</h3>
+            <p>No sensitive numbers. No spreadsheets. Just top-line business context.</p>
+          </div>
+          <div class="step">
+            <div class="step-badge">2</div>
+            <h3>Keldron analyzes the bottleneck</h3>
+            <p>It identifies the likely constraint, risk exposure, and decision priorities.</p>
+          </div>
+          <div class="step">
+            <div class="step-badge">3</div>
+            <h3>Get your full diagnostic report</h3>
+            <p>You receive a report with findings, risks, KPIs, quick wins, and a 90-day action plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY THIS MATTERS -->
+    <section class="section section-dark">
+      <div class="container">
+        <p class="kicker kicker-center kicker-dark">Why this matters now</p>
+
+        <div class="deliverable-grid stats-grid">
+          <div class="deliverable-item stat-card">
+            <div class="deliverable-icon stat-number">51%</div>
+            <h3>Cash flow struggles</h3>
+            <p>of small businesses struggle with uneven cash flow</p>
+            <p class="stat-source">
+              <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener">2025 Small Business Credit Survey</a>
+            </p>
+          </div>
+          <div class="deliverable-item stat-card">
+            <div class="deliverable-icon stat-number">75%</div>
+            <h3>Rising costs</h3>
+            <p>cite rising costs as their top financial challenge</p>
+            <p class="stat-source">
+              <a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener">Federal Reserve, 2025</a>
+            </p>
+          </div>
+          <div class="deliverable-item stat-card">
+            <div class="deliverable-icon stat-number">3 in 4</div>
+            <h3>Not using AI yet</h3>
+            <p>small businesses have not adopted AI for operations</p>
+            <p class="stat-source">
+              <a href="https://www.reimaginemainstreet.org/" target="_blank" rel="noopener">Reimagine Main Street / SBA</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="section-cta-row center">
+          <a class="btn btn-primary btn-lg"
+             href="https://app.keldron.io"
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'stats'})">
+            Start Free Diagnostic
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="video-section">
+      <div class="container">
+        <div class="video-wrap">
+          <div class="video-copy">
+            <h2>See how it works in 45 seconds</h2>
+            <p>Watch the full flow before you start.</p>
+            <a class="btn btn-primary btn-lg"
+               href="https://app.keldron.io"
+               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'video_section'})">
+              Start Free Diagnostic
+            </a>
+          </div>
+
+          <div class="mock-card">
+            <div class="mock-top">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-title">Keldron — 45 Second Overview</span>
+            </div>
+
+            <div class="video-frame">
+              <div class="video-loader">
+                <div class="video-loader-circle">▶</div>
+                <span>Loading video…</span>
+              </div>
+              <iframe
+                src="https://share.synthesia.io/embeds/videos/dbdabe3f-1d3c-4bf3-8dc3-3fba12c166be"
+                loading="lazy"
+                title="Keldron business bottleneck diagnostic overview"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="mock-foot">
+              <span>45 seconds</span>
+              <span>No sound needed</span>
+              <span>Captions on</span>
+              <a href="https://app.keldron.io"
+                 class="mock-link"
+                 onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'hero_video', location: 'video_section'})">
+                Try it free →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT IS FOR -->
+    <section class="section soft-section">
+      <div class="container">
+        <h2 class="section-title">Built for businesses that need clarity fast</h2>
+        <p class="section-intro">
+          Best for teams that know something is off, but do not know what to fix first.
+        </p>
+
+        <div class="pillars pillars-4">
+          <div class="pillar pillar-center">
+            <div class="pillar-num">🏪</div>
+            <h3 class="pillar-title">Retail</h3>
+          </div>
+          <div class="pillar pillar-center">
+            <div class="pillar-num">📦</div>
+            <h3 class="pillar-title">Wholesale &amp; Distribution</h3>
+          </div>
+          <div class="pillar pillar-center">
+            <div class="pillar-num">🏭</div>
+            <h3 class="pillar-title">Light Manufacturing</h3>
+          </div>
+          <div class="pillar pillar-center">
+            <div class="pillar-num">🛠️</div>
+            <h3 class="pillar-title">Local Services</h3>
+          </div>
+        </div>
+
+        <p class="fit-line">
+          Especially useful when margins feel tighter than they should · operations feel busier than results justify · problems keep repeating · management needs a clearer next move
+        </p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonial-section">
+      <div class="container">
+        <p class="eyebrow">Practitioners are already seeing results</p>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card featured">
+            <div class="testimonial-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">"Keldron surfaced 5 issues we had completely missed. The action plan was simple and immediately useful."</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">K.A.</div>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">K.A.</span>
+                <span class="testimonial-role">SAP Implementation Consultant · Solopreneur</span>
+              </div>
+              <div class="testimonial-verified">Verified user</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"It showed exactly where performance was being held back."</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">R.O.</div>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">Retail owner</span>
+                <span class="testimonial-role">Small business user</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"Finally something that explains operational issues in plain English."</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">S.M.</div>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">SMB operator</span>
+                <span class="testimonial-role">Early user</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="section section-founder soft-section">
+      <div class="container">
+        <div class="founder-shell">
+          <div class="founder-mark">"</div>
+          <blockquote>
+            In 27 years running operations and supply chains across manufacturing, retail, and distribution,
+            I watched smart business owners make expensive decisions with incomplete visibility. Keldron is built
+            to surface the real constraint faster, so the next move is informed by what actually matters.
+          </blockquote>
+
+          <div class="founder-meta">
+            <img src="/assets/taufiq.jpg" alt="Taufiqur Rahman" />
+            <div class="founder-text">
+              <p class="founder-name">Taufiqur Rahman</p>
+              <p class="founder-role">Founder &amp; CEO, Keldron.io · 27 years in operations, supply chain &amp; growth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS -->
+    <section class="section section-links soft-section">
+      <div class="container">
+        <div class="links-block">
+          <h2 class="section-title links-title">Explore common business issues</h2>
+          <p class="section-intro links-intro">
+            These guides help explain the most common causes of slow growth, weak margins, and operational inefficiency in owner-led businesses.
+          </p>
+
+          <div class="topic-links">
+            <a href="/why-business-not-growing.html">Why your business is not growing →</a>
+            <a href="/profit-not-increasing.html">Why profit is not increasing →</a>
+            <a href="/business-bottlenecks.html">Business bottlenecks explained →</a>
+            <a href="/operational-inefficiencies.html">Operational inefficiencies →</a>
+            <a href="/slow-business-growth.html">Why business growth is slowing →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Common questions</h2>
+
+        <div class="faq">
+          <details>
+            <summary>What does Keldron actually identify?</summary>
+            <div class="faq-content">Keldron helps identify the bottleneck slowing business performance across areas like operations, inventory, finance, and sales. It also highlights likely root causes, risk factors, KPI priorities, and first-priority actions.</div>
+          </details>
+          <details>
+            <summary>Who gets the most value from Keldron?</summary>
+            <div class="faq-content">Owner-led businesses that know something is underperforming but do not yet know what to fix first. If margins feel tight, operations feel heavy, or growth feels slower than expected, Keldron is built for you.</div>
+          </details>
+          <details>
+            <summary>How fast do I get the report?</summary>
+            <div class="faq-content">Usually within minutes. You answer a short diagnostic and Keldron generates a structured report you can read immediately — including key findings, risks, KPIs, quick wins, and a 90-day action plan.</div>
+          </details>
+          <details>
+            <summary>Is this accounting software or a dashboard?</summary>
+            <div class="faq-content">No. Keldron is not bookkeeping software or another dashboard. It is a self-serve business diagnostic that helps clarify the issue most likely slowing performance and what to do next.</div>
+          </details>
+          <details>
+            <summary>Do I need to upload sensitive financial data?</summary>
+            <div class="faq-content">No. Keldron works from top-line business context — the kind of things you already know about your business. No spreadsheets, no sensitive numbers, no integrations required.</div>
+          </details>
+          <details>
+            <summary>What is included in the report?</summary>
+            <div class="faq-content">A typical report includes an executive snapshot, key findings, root causes, strategic recommendations, quick wins, KPI framework, risks and mitigations, and a 90-day action plan.</div>
+          </details>
+          <details>
+            <summary>Can I see a sample report before I start?</summary>
+            <div class="faq-content">Yes. <a href="/sample-report.html">View a real sample report here</a>.</div>
+          </details>
+          <details>
+            <summary>Will someone call me?</summary>
+            <div class="faq-content">No. Keldron is fully self-serve. You control the pace.</div>
+          </details>
+          <details>
+            <summary>How do you handle my data?</summary>
+            <div class="faq-content">We keep things minimal and purpose-driven. Read our <a href="privacy.html">Privacy Policy</a>.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="closing">
+      <div class="container">
+        <div class="closing-inner">
+          <h2 class="closing-title">Something is slowing your business down. See exactly what it is.</h2>
+          <p class="closing-text">Get a plain-English diagnostic with bottlenecks, risks, KPIs, and a 90-day action plan in minutes.</p>
+          <p class="closing-subtext">
+            Know what to fix first before you invest in more tools, more people, or more pressure.
+          </p>
+          <a class="btn btn-primary btn-lg"
+             href="https://app.keldron.io"
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'closing'})">
+            Start Free Diagnostic
+          </a>
+          <p class="closing-note">No credit card. No calls. Takes 3 minutes.</p>
+          <p class="closing-signoff">— Keldron</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="/" aria-label="Keldron home">
+          <img src="assets/keldron_with_tagline.png" alt="Keldron footer logo" class="footer-logo" />
+        </a>
+      </div>
+      <div class="footer-right">
+        <div class="footer-muted small">AI Business Diagnostic for Entrepreneurs &amp; SMBs</div>
+        <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors · Operating as Keldron.io</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
