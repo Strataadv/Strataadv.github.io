@@ -31,19 +31,14 @@
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google tag (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3YVBEJL4B2');
-    gtag('event', 'page_view', {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname
-    });
-  </script>
+ <!-- Google tag (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-3YVBEJL4B2');
+</script>
 
   <!-- PostHog -->
   <script>
@@ -99,25 +94,27 @@
     }, 3000);
   </script>
 
-  <script>
-    function trackAndGo(event, el, eventName, props) {
-      if (event) event.preventDefault();
-      const href = el.getAttribute('href');
+ <script>
+  function trackAndGo(event, el, eventName, props) {
+    if (event) event.preventDefault();
+    const href = el.getAttribute('href');
 
-      try {
-        posthog.capture(eventName, props || {});
+    try {
+      if (window.posthog && typeof window.posthog.capture === 'function') {
+        window.posthog.capture(eventName, props || {});
         console.log('Sent event:', eventName, props || {});
-      } catch (e) {
-        console.error('PostHog capture failed:', e);
       }
-
-      setTimeout(function () {
-        window.location.href = href;
-      }, 1200);
-
-      return false;
+    } catch (e) {
+      console.error('PostHog capture failed:', e);
     }
-  </script>
+
+    setTimeout(function () {
+      window.location.href = href;
+    }, 400);
+
+    return false;
+  }
+</script>
 
   <!-- Organization Schema -->
   <script type="application/ld+json">
