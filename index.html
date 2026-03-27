@@ -32,29 +32,13 @@
   <link rel="stylesheet" href="style.css" />
 
 <!-- Google tag (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag(){
-    dataLayer.push(arguments);
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  // ✅ Proper config
-  gtag('config', 'G-3YVBEJL4B2', {
-    send_page_view: true
-  });
-
-  // 🔥 FORCE page view (fixes your issue)
-  window.addEventListener('load', function () {
-    gtag('event', 'page_view', {
-      page_title: document.title,
-      page_location: window.location.href
-    });
-  });
+  gtag('config', 'G-3YVBEJL4B2');
 </script>
+<script async crossorigin="anonymous" src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
 
   <!-- PostHog -->
   <script>
