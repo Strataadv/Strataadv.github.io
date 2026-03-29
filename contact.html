@@ -5,118 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Keldron</title>
   <meta name="description" content="Get in touch with Keldron. Ask a question, share feedback, or tell us about your business. We read every message." />
-  <meta name="theme-color" content="#f6f1e6" />
+  <meta name="theme-color" content="#f9f9f8" />
   <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google tag (GA4) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YVBEJL4B2"></script>
+  <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3YVBEJL4B2');
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id=GTM-WM9ZCP22'+dl;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WM9ZCP22');
   </script>
 
   <!-- PostHog -->
   <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){
-    function g(t,e){var o=e.split(".");
-    2==o.length&&(t=t[o[0]],e=o[1]),
-    t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}
-    (p=t.createElement("script")).type="text/javascript",
-    p.async=!0,p.src=s.api_host+"/static/array.js",
-    (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
-    var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",
-    u.people=u.people||[],u.toString=function(t){
-    var e="posthog";return"posthog"!==a&&(e+="."+a),
-    t||(e+=" (stub)"),e},
-    u.people.toString=function(){return u.toString(1)+".people (stub)"},
-    o="capture identify alias people.set people.set_once".split(" ");
-    for(n=0;n<o.length;n++)g(u,o[n]);
-    e._i.push([i,s,a])},e.__SV=1)}
-    (document,window.posthog||[]);
-    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT',
-      api_host:'https://us.i.posthog.com'
-    });
+    !function(t,e){
+      var o,n,p,r;
+      e.__SV || (
+        window.posthog = e, e._i = [], e.init = function(i,s,a){
+          function g(t,e){ var o=e.split("."); 2==o.length && (t=t[o[0]], e=o[1]); t[e]=function(){ t.push([e].concat(Array.prototype.slice.call(arguments,0))); }; }
+          (p=t.createElement("script")).type="text/javascript"; p.async=!0; p.src=s.api_host+"/static/array.js";
+          (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
+          var u=e; void 0!==a ? u=e[a]=[] : a="posthog";
+          u.people=u.people||[]; u.toString=function(t){ var e="posthog"; "posthog"!==a && (e+="."+a); t || (e+=" (stub)"); return e; };
+          u.people.toString=function(){ return u.toString(1)+".people (stub)"; };
+          o="capture identify alias people.set people.set_once".split(" ");
+          for(n=0;n<o.length;n++) g(u,o[n]);
+          e._i.push([i,s,a]);
+        }, e.__SV=1
+      );
+    }(document,window.posthog||[]);
+    posthog.init('phc_VdE4IH6TzsXNqkBKcgqQUMvZiRlIWVwX7wAPFgsEkgT', { api_host: 'https://us.i.posthog.com' });
   </script>
 
   <style>
+    /* ---- PAGE-LEVEL OVERRIDES ---- */
+
     .contact-hero {
-      background: var(--ink, #0f0e0c);
-      color: var(--paper, #f6f1e6);
-      padding: 80px 0 64px;
+      background: linear-gradient(160deg, #1e2d28 0%, #0f1c18 100%);
+      color: #f9f9f8;
+      padding: 96px 0 80px;
       text-align: center;
     }
 
-    .contact-hero .kicker {
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 3px;
+    .contact-hero-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--gold, #c8a44a);
-      margin-bottom: 16px;
+      color: rgba(139,214,182,0.75);
+      margin-bottom: 20px;
       display: block;
     }
 
+    .contact-hero-accent {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: rgba(255,219,202,0.6);
+      margin: 0 auto 28px;
+    }
+
     .contact-hero h1 {
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-      max-width: 640px;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      margin: 0 0 18px;
+      color: #f9f9f8;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
 
     .contact-hero p {
-      font-size: 17px;
-      color: rgba(246,241,230,0.7);
-      max-width: 480px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(249,249,248,0.60);
+      max-width: 460px;
       margin: 0 auto;
-      line-height: 1.65;
+      line-height: 1.75;
     }
 
+    /* ---- CONTACT BODY ---- */
+
     .contact-body {
-      padding: 72px 0 96px;
-      background: var(--bg, #f6f1e6);
+      padding: 80px 0 96px;
+      background: var(--surface, #f9f9f8);
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1.6fr;
+      grid-template-columns: 1fr 1.7fr;
       gap: 64px;
       align-items: start;
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 0 24px;
     }
+
+    /* ---- LEFT COLUMN ---- */
 
     .contact-info {
       position: sticky;
-      top: 32px;
+      top: 96px;
     }
 
     .contact-info-title {
+      font-family: 'Manrope', sans-serif;
       font-size: 22px;
       font-weight: 700;
-      margin-bottom: 12px;
-      color: var(--ink, #0f0e0c);
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      color: var(--on-surface, #1a1c1c);
     }
 
     .contact-info-body {
       font-size: 15px;
-      color: #5a5248;
-      line-height: 1.7;
-      margin-bottom: 32px;
+      font-weight: 400;
+      color: var(--on-surface-variant, #3f4944);
+      line-height: 1.75;
+      margin-bottom: 36px;
     }
 
     .contact-divider {
       width: 40px;
-      height: 3px;
-      background: var(--gold, #c8a44a);
-      margin-bottom: 32px;
+      height: 2px;
+      background: rgba(253,138,66,0.5);
+      margin: 0 0 32px;
       border: none;
+      display: block;
     }
 
     .contact-method {
@@ -124,44 +147,57 @@
     }
 
     .contact-method-label {
-      font-size: 11px;
-      letter-spacing: 2.5px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--gold, #c8a44a);
-      font-weight: 600;
+      color: var(--on-primary-container, #8bd6b7);
       margin-bottom: 6px;
       display: block;
     }
 
     .contact-method-value {
-      font-size: 16px;
-      color: var(--ink, #0f0e0c);
+      font-size: 15px;
       font-weight: 500;
+      color: var(--on-surface, #1a1c1c);
       text-decoration: none;
-      border-bottom: 1px solid rgba(15,14,12,0.15);
-      padding-bottom: 2px;
-      transition: border-color 0.2s;
+      border-bottom: 1px solid rgba(190,201,194,0.4);
+      padding-bottom: 3px;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+      letter-spacing: -0.01em;
     }
 
     .contact-method-value:hover {
-      border-color: var(--gold, #c8a44a);
-      color: var(--gold, #c8a44a);
+      border-color: var(--primary-container, #065f46);
+      color: var(--primary-container, #065f46);
+      opacity: 1;
     }
 
     .contact-note {
-      margin-top: 32px;
-      padding: 16px 20px;
-      background: rgba(200,164,74,0.08);
-      border-left: 3px solid var(--gold, #c8a44a);
+      margin-top: 36px;
+      padding: 18px 20px;
+      background: rgba(6,95,70,0.06);
+      border-radius: 0.25rem;
+      border-left: 3px solid var(--primary-container, #065f46);
       font-size: 13.5px;
-      color: #5a5248;
-      line-height: 1.6;
+      font-weight: 400;
+      color: var(--on-surface-variant, #3f4944);
+      line-height: 1.65;
     }
 
+    .contact-note strong {
+      color: var(--on-surface, #1a1c1c);
+      font-weight: 600;
+    }
+
+    /* ---- FORM ---- */
+
     .contact-form-wrap {
-      background: #fff;
-      border: 1px solid rgba(15,14,12,0.08);
-      padding: 40px;
+      background: var(--surface-container-lowest, #ffffff);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 24px rgba(26,28,28,0.06), 0 1px 4px rgba(26,28,28,0.03);
+      padding: 48px 44px;
     }
 
     .form-group {
@@ -170,16 +206,16 @@
 
     .form-label {
       display: block;
-      font-size: 12px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #5a5248;
-      font-weight: 600;
+      color: var(--on-tertiary-fixed-variant, #4b4641);
       margin-bottom: 8px;
     }
 
     .form-label span {
-      color: var(--gold, #c8a44a);
+      color: var(--primary-container, #065f46);
       margin-left: 2px;
     }
 
@@ -187,161 +223,186 @@
     .form-select,
     .form-textarea {
       width: 100%;
-      padding: 12px 16px;
-      border: 1px solid rgba(15,14,12,0.15);
-      background: var(--bg, #f6f1e6);
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid rgba(190,201,194,0.5);
+      background: transparent;
       font-size: 15px;
-      color: var(--ink, #0f0e0c);
-      font-family: inherit;
+      font-weight: 400;
+      font-family: 'Manrope', sans-serif;
+      color: var(--on-surface, #1a1c1c);
       outline: none;
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color 0.2s;
       box-sizing: border-box;
       border-radius: 0;
       appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--outline, #6f7973);
+      font-weight: 400;
     }
 
     .form-input:focus,
     .form-select:focus,
     .form-textarea:focus {
-      border-color: var(--gold, #c8a44a);
-      background: #fff;
+      border-bottom-color: var(--primary-container, #065f46);
+      border-bottom-width: 2px;
     }
 
     .form-select {
       cursor: pointer;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a5248' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236f7973' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: right 16px center;
-      padding-right: 40px;
+      background-position: right 4px center;
+      padding-right: 28px;
     }
+
+    .form-select option { color: var(--on-surface, #1a1c1c); }
+    .form-select option[disabled] { color: var(--outline, #6f7973); }
 
     .form-textarea {
       resize: vertical;
       min-height: 140px;
-      line-height: 1.6;
+      line-height: 1.65;
+      padding-top: 8px;
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 24px;
     }
 
     .form-submit {
       width: 100%;
       padding: 15px 32px;
-      background: var(--ink, #0f0e0c);
-      color: var(--paper, #f6f1e6);
+      background: linear-gradient(135deg, var(--primary, #004532) 0%, var(--primary-container, #065f46) 100%);
+      color: #ffffff;
       border: none;
+      border-radius: 0.25rem;
       font-size: 15px;
       font-weight: 600;
-      font-family: inherit;
+      font-family: 'Manrope', sans-serif;
       cursor: pointer;
-      letter-spacing: 0.5px;
-      transition: background 0.2s, transform 0.1s;
-      margin-top: 8px;
+      letter-spacing: -0.01em;
+      transition: filter 0.2s, transform 0.1s, box-shadow 0.2s;
+      margin-top: 12px;
+      box-shadow: 0 4px 16px rgba(0,69,50,0.25);
     }
 
     .form-submit:hover {
-      background: var(--gold, #c8a44a);
-      color: var(--ink, #0f0e0c);
+      filter: brightness(1.08);
+      box-shadow: 0 6px 24px rgba(0,69,50,0.35);
     }
 
     .form-submit:active {
-      transform: translateY(1px);
+      transform: scale(0.98);
     }
 
     .form-submit:disabled {
-      opacity: 0.6;
+      opacity: 0.55;
       cursor: not-allowed;
+      transform: none;
     }
 
     .form-privacy {
       font-size: 12px;
-      color: #8a8070;
-      margin-top: 12px;
+      font-weight: 400;
+      color: var(--outline, #6f7973);
+      margin-top: 14px;
       text-align: center;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .form-privacy a {
-      color: #8a8070;
-      border-bottom: 1px solid rgba(138,128,112,0.4);
+      color: var(--primary-container, #065f46);
       text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(6,95,70,0.25);
     }
+
+    .form-privacy a:hover { opacity: 0.75; }
+
+    /* ---- SUCCESS STATE ---- */
 
     .form-success {
       display: none;
       text-align: center;
-      padding: 48px 24px;
+      padding: 56px 24px;
     }
 
-    .form-success.visible {
-      display: block;
-    }
+    .form-success.visible { display: block; }
 
     .success-icon {
       width: 56px;
       height: 56px;
-      background: var(--gold, #c8a44a);
+      background: linear-gradient(135deg, var(--primary, #004532) 0%, var(--primary-container, #065f46) 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px;
-      font-size: 24px;
+      font-size: 22px;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,69,50,0.25);
     }
 
     .success-title {
+      font-family: 'Manrope', sans-serif;
       font-size: 22px;
       font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--ink, #0f0e0c);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: var(--on-surface, #1a1c1c);
     }
 
     .success-body {
       font-size: 15px;
-      color: #5a5248;
-      line-height: 1.65;
-      margin-bottom: 28px;
+      color: var(--on-surface-variant, #3f4944);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 40ch;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    @media (max-width: 720px) {
+    /* ---- RESPONSIVE ---- */
+
+    @media (max-width: 760px) {
       .contact-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 48px;
       }
-      .contact-info {
-        position: static;
-      }
-      .contact-form-wrap {
-        padding: 28px 20px;
-      }
-      .form-row {
-        grid-template-columns: 1fr;
-      }
+      .contact-info { position: static; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM9ZCP22" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/">
+      <a class="brand" href="/" aria-label="Keldron homepage">
         <img
           src="assets/keldron_with_tagline.png"
-          alt="Keldron"
+          alt="Keldron logo"
           class="brand-mark"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
         />
-        <span style="display:none; font-size:20px; font-weight:800; color:var(--ink,#0f0e0c);">Keldron</span>
+        <span style="display:none; font-size:20px; font-weight:800; color:var(--on-surface);">Keldron</span>
       </a>
 
-      <nav class="nav">
-        <a href="/#why">Why Keldron</a>
-        <a href="/#deliverable">What You Get</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#why">What You Get</a>
+        <a href="/#report">Inside the Report</a>
         <a href="/#how">How It Works</a>
         <a href="/#faq">FAQ</a>
         <a href="/contact.html">Contact</a>
@@ -350,8 +411,8 @@
       <div class="header-cta">
         <a class="btn btn-primary"
            href="https://app.keldron.io"
-           onclick="posthog.capture('cta_clicked', {button: 'find_my_bottleneck', location: 'contact_header'})">
-          Find My Bottleneck — It's Free
+           onclick="posthog.capture('cta_clicked', {button: 'start_free_diagnostic', location: 'contact_header'})">
+          Start Free Diagnostic
         </a>
       </div>
     </div>
@@ -360,117 +421,120 @@
   <main>
 
     <div class="contact-hero">
-      <span class="kicker">Get in touch</span>
+      <span class="contact-hero-label">Get in touch</span>
+      <span class="contact-hero-accent"></span>
       <h1>We read every message.<br>Seriously.</h1>
       <p>Ask a question, share feedback, or tell us about your business. A real person will respond — usually within one business day.</p>
     </div>
 
     <div class="contact-body">
-      <div class="contact-grid">
+      <div class="container">
+        <div class="contact-grid">
 
-        <div class="contact-info">
-          <h2 class="contact-info-title">How can we help?</h2>
-          <p class="contact-info-body">
-            Whether you have a question about the diagnostic, want to share feedback on your report, or have a partnership enquiry — we want to hear from you.
-          </p>
-
-          <hr class="contact-divider" />
-
-          <div class="contact-method">
-            <span class="contact-method-label">Email us directly</span>
-            <a href="mailto:hello@keldron.io" class="contact-method-value">hello@keldron.io</a>
-          </div>
-
-          <div class="contact-method">
-            <span class="contact-method-label">Try the platform</span>
-            <a href="https://keldron.io" class="contact-method-value">app.keldron.io</a>
-          </div>
-
-          <div class="contact-method">
-            <span class="contact-method-label">Response time</span>
-            <span class="contact-method-value" style="border:none; cursor:default;">Within 1 business day</span>
-          </div>
-
-          <div class="contact-note">
-            💡 <strong>Already used the diagnostic?</strong> Include your report reference or business type so we can give you the most relevant response.
-          </div>
-        </div>
-
-        <div class="contact-form-wrap">
-
-          <div id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="firstName">First name <span>*</span></label>
-                <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Your first name" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="lastName">Last name</label>
-                <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Your last name" />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="email">Email address <span>*</span></label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="businessType">Business type</label>
-              <select class="form-select" id="businessType" name="businessType">
-                <option value="" disabled selected>Select your sector</option>
-                <option value="retail">Retail</option>
-                <option value="logistics">Logistics &amp; Supply Chain</option>
-                <option value="manufacturing">Manufacturing</option>
-                <option value="services">Professional Services</option>
-                <option value="hospitality">Hospitality &amp; F&amp;B</option>
-                <option value="tech">Technology / SaaS</option>
-                <option value="healthcare">Healthcare</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="reason">I want to <span>*</span></label>
-              <select class="form-select" id="reason" name="reason" required>
-                <option value="" disabled selected>Select a reason</option>
-                <option value="question">Ask a question about Keldron</option>
-                <option value="feedback">Share feedback on my report</option>
-                <option value="suggestion">Suggest a feature or improvement</option>
-                <option value="partnership">Explore a partnership</option>
-                <option value="press">Press or media enquiry</option>
-                <option value="other">Something else</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="message">Your message <span>*</span></label>
-              <textarea class="form-textarea" id="message" name="message" placeholder="Tell us what's on your mind. The more detail you share, the more useful our response will be." required></textarea>
-            </div>
-
-            <button class="form-submit" id="submitBtn" type="button" onclick="handleSubmit()">
-              Send Message →
-            </button>
-
-            <p class="form-privacy">
-              We respect your privacy. Read our <a href="/privacy.html">Privacy Policy</a>. We will never share your information with third parties.
+          <div class="contact-info">
+            <h2 class="contact-info-title">How can we help?</h2>
+            <p class="contact-info-body">
+              Whether you have a question about the diagnostic, want to share feedback on your report, or have a partnership enquiry — we want to hear from you.
             </p>
+
+            <span class="contact-divider"></span>
+
+            <div class="contact-method">
+              <span class="contact-method-label">Email us directly</span>
+              <a href="mailto:hello@keldron.io" class="contact-method-value">hello@keldron.io</a>
+            </div>
+
+            <div class="contact-method">
+              <span class="contact-method-label">Try the platform</span>
+              <a href="https://app.keldron.io" class="contact-method-value">app.keldron.io</a>
+            </div>
+
+            <div class="contact-method">
+              <span class="contact-method-label">Response time</span>
+              <span class="contact-method-value" style="border:none; cursor:default;">Within 1 business day</span>
+            </div>
+
+            <div class="contact-note">
+              💡 <strong>Already used the diagnostic?</strong> Include your report reference or business type so we can give you the most relevant response.
+            </div>
           </div>
 
-          <div class="form-success" id="formSuccess">
-            <div class="success-icon">✓</div>
-            <div class="success-title">Message received.</div>
-            <p class="success-body">
-              Thank you for reaching out. We'll get back to you at <strong id="confirmedEmail"></strong> within one business day.<br><br>
-              In the meantime, if you haven't tried the diagnostic yet — it takes less than 5 minutes.
-            </p>
-            <a class="btn btn-primary"
-               href="https://app.keldron.io"
-               onclick="posthog.capture('cta_clicked', {button: 'try_diagnostic', location: 'contact_success'})">
-              Try the Free Diagnostic →
-            </a>
-          </div>
+          <div class="contact-form-wrap">
 
+            <div id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="firstName">First name <span>*</span></label>
+                  <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Your first name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lastName">Last name</label>
+                  <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Your last name" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email address <span>*</span></label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="businessType">Business type</label>
+                <select class="form-select" id="businessType" name="businessType">
+                  <option value="" disabled selected>Select your sector</option>
+                  <option value="retail">Retail</option>
+                  <option value="logistics">Logistics &amp; Supply Chain</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="services">Professional Services</option>
+                  <option value="hospitality">Hospitality &amp; F&amp;B</option>
+                  <option value="tech">Technology / SaaS</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reason">I want to <span>*</span></label>
+                <select class="form-select" id="reason" name="reason" required>
+                  <option value="" disabled selected>Select a reason</option>
+                  <option value="question">Ask a question about Keldron</option>
+                  <option value="feedback">Share feedback on my report</option>
+                  <option value="suggestion">Suggest a feature or improvement</option>
+                  <option value="partnership">Explore a partnership</option>
+                  <option value="press">Press or media enquiry</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Your message <span>*</span></label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="Tell us what's on your mind. The more detail you share, the more useful our response will be." required></textarea>
+              </div>
+
+              <button class="form-submit" id="submitBtn" type="button" onclick="handleSubmit()">
+                Send Message →
+              </button>
+
+              <p class="form-privacy">
+                We respect your privacy. Read our <a href="/privacy.html">Privacy Policy</a>. We will never share your information with third parties.
+              </p>
+            </div>
+
+            <div class="form-success" id="formSuccess">
+              <div class="success-icon">✓</div>
+              <div class="success-title">Message received.</div>
+              <p class="success-body">
+                Thank you for reaching out. We'll get back to you at <strong id="confirmedEmail"></strong> within one business day.<br><br>
+                In the meantime, if you haven't tried the diagnostic yet — it takes less than 5 minutes.
+              </p>
+              <a class="btn btn-primary"
+                 href="https://app.keldron.io"
+                 onclick="posthog.capture('cta_clicked', {button: 'try_diagnostic', location: 'contact_success'})">
+                Try the Free Diagnostic →
+              </a>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
@@ -480,16 +544,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <a href="/">
-          <img
-            src="assets/keldron_with_tagline.png"
-            alt="Keldron"
-            style="height:48px; width:auto; display:block;"
-          />
+        <a href="/" aria-label="Keldron home">
+          <img src="assets/keldron_with_tagline.png" alt="Keldron footer logo" style="height:56px; width:auto; display:block;" />
         </a>
       </div>
       <div class="footer-right">
-        <div class="footer-muted small">AI Decision Intelligence for Entrepreneurs &amp; SMBs</div>
+        <div class="footer-muted small">AI Business Diagnostic for Entrepreneurs &amp; SMBs</div>
         <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors &nbsp;·&nbsp; Operating as Keldron.io</div>
       </div>
     </div>
