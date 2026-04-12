@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,13 +6,36 @@
 
   <title>Your Business Isn’t Growing. We Fix It in 90 Days | Keldron</title>
   <meta name="description" content="Tell Keldron what is happening in your business and get a clear 90-day execution plan in minutes. No spreadsheets, no calls, no sensitive data upload." />
-
+  <meta name="theme-color" content="#f9f9f8" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Keldron" />
+  <meta name="keywords" content="90-day business plan, business execution plan, business not growing, profit not increasing, small business growth plan, owner-led business, business turnaround plan, what to fix first in business, growth execution plan, operational improvement plan" />
   <link rel="canonical" href="https://keldron.io/" />
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Your Business Isn’t Growing. We Fix It in 90 Days | Keldron" />
+  <meta property="og:description" content="Get a clear 90-day execution plan for your business in minutes. No spreadsheets. No calls. No sensitive data upload." />
+  <meta property="og:image" content="https://keldron.io/assets/og-image.png" />
+  <meta property="og:image:alt" content="Keldron homepage showing a 90-day business execution plan." />
+  <meta property="og:url" content="https://keldron.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Keldron" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Business Isn’t Growing. We Fix It in 90 Days | Keldron" />
+  <meta name="twitter:description" content="Get a clear 90-day execution plan in minutes. Find what to fix first and what to do next." />
+  <meta name="twitter:image" content="https://keldron.io/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="Keldron 90-day execution plan homepage preview." />
+
   <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Google Tag Manager -->
-
   <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,7 +46,6 @@
   </script>
 
   <!-- PostHog -->
-
   <script>
     !function(t,e){
       var o,n,p,r;
@@ -55,158 +76,448 @@
     }
   </script>
 
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  { "@context":"https://schema.org","@type":"Organization","name":"Keldron","url":"https://keldron.io","logo":"https://keldron.io/assets/keldron_with_tagline.png","description":"AI-powered business execution planning for owner-led businesses.","founder":{"@type":"Person","name":"Taufiqur Rahman"} }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What do I get from Keldron?","acceptedAnswer":{"@type":"Answer","text":"Keldron gives owner-led businesses a plain-English 90-day execution plan that shows what is holding performance back, what to fix first, what actions to take next, and which KPIs to track."}},
+      {"@type":"Question","name":"Who gets the most value from Keldron?","acceptedAnswer":{"@type":"Answer","text":"Owner-led businesses that know growth or profit is off, but need a clear plan instead of more dashboards or vague advice."}},
+      {"@type":"Question","name":"How fast do I get the plan?","acceptedAnswer":{"@type":"Answer","text":"Usually within minutes. You answer a short set of questions and Keldron generates your plan immediately."}},
+      {"@type":"Question","name":"Do I need to upload sensitive financial data?","acceptedAnswer":{"@type":"Answer","text":"No. Keldron works from top-line business context. No spreadsheets, no sensitive numbers, and no integrations are required."}},
+      {"@type":"Question","name":"Can I see a sample plan before I start?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can view a real sample report before starting."}}
+    ]
+  }
+  </script>
+
+  <style>
+    /* page-specific color fixes only */
+    .site-header--minimal .header-inner{
+      justify-content: space-between;
+    }
+
+    .site-header--minimal .header-right{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .learn-more-link{
+      font-size:14px;
+      font-weight:600;
+      color: rgba(26,28,28,0.78);
+      letter-spacing:-0.01em;
+    }
+
+    .learn-more-link:hover{
+      color: var(--primary-container);
+      opacity:1;
+    }
+
+    .cv-hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg, rgba(15,28,24,0.18) 0%, rgba(15,28,24,0.42) 100%),
+        url("assets/hero_image.png") center/cover no-repeat;
+      min-height: 760px;
+      display:flex;
+      align-items:center;
+    }
+
+    .cv-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(90deg, rgba(15,28,24,0.68) 0%, rgba(15,28,24,0.48) 38%, rgba(15,28,24,0.18) 68%, rgba(15,28,24,0.08) 100%);
+      z-index:1;
+    }
+
+    .cv-hero__content{
+      position:relative;
+      z-index:2;
+      width:100%;
+      padding: 110px 0 90px;
+    }
+
+    .cv-hero__grid{
+      display:grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 460px);
+      gap: 56px;
+      align-items:center;
+    }
+
+    .cv-hero__copy{
+      max-width: 760px;
+    }
+
+    .cv-hero__badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background: rgba(255,255,255,0.08);
+      color: rgba(249,249,248,0.92);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .cv-hero__h1{
+      margin:0 0 18px;
+      font-family:'Manrope', sans-serif;
+      font-weight:800;
+      font-size: clamp(44px, 6vw, 84px);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      color: #f7f7f4;
+      max-width: 11ch;
+    }
+
+    .cv-hero__accent{
+      display:block;
+      color: #8bd6b6;
+    }
+
+    .cv-hero__sub{
+      margin:0 0 28px;
+      font-size: clamp(17px, 1.9vw, 22px);
+      font-weight:400;
+      line-height:1.6;
+      color: rgba(249,249,248,0.78);
+      max-width: 34ch;
+    }
+
+    .cv-hero__actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+
+    .cv-hero__subnote{
+      margin:0;
+      font-size:13px;
+      font-weight:500;
+      color: rgba(249,249,248,0.62);
+      letter-spacing: 0.01em;
+    }
+
+    .hero-plan-card{
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(190,201,194,0.35);
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(15,28,24,0.18);
+      overflow:hidden;
+      color: var(--on-surface);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-plan-card__top{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:14px 18px;
+      background: var(--surface-container-low);
+      border-bottom: 1px solid rgba(190,201,194,0.35);
+    }
+
+    .hero-plan-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background: var(--outline-variant);
+      flex-shrink:0;
+    }
+
+    .hero-plan-title{
+      margin-left:6px;
+      font-size:12px;
+      font-weight:700;
+      color: var(--outline);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-plan-card__body{
+      padding:22px 22px 10px;
+    }
+
+    .hero-plan-block{
+      margin-bottom:18px;
+      border-left: 3px solid rgba(6,95,70,0.22);
+      padding-left:14px;
+    }
+
+    .hero-plan-block:first-child{
+      border-left-color: var(--primary-container);
+    }
+
+    .hero-plan-label{
+      display:block;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color: var(--outline);
+      margin-bottom:8px;
+    }
+
+    .hero-plan-block ul{
+      margin:0;
+      padding-left:18px;
+      color: var(--on-surface);
+      font-size:14px;
+      line-height:1.75;
+    }
+
+    .hero-plan-card__foot{
+      padding:13px 18px;
+      background: var(--surface-container-low);
+      border-top: 1px solid rgba(190,201,194,0.35);
+      color: var(--outline);
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .cv-tension-strip{
+      background: linear-gradient(90deg, #27302d 0%, #2d3330 100%);
+      padding: 34px 0;
+    }
+
+    .cv-tension-strip__text{
+      margin:0;
+      text-align:center;
+      font-size: clamp(20px, 2vw, 28px);
+      line-height:1.45;
+      color: rgba(249,249,248,0.82);
+      font-weight:400;
+    }
+
+    .cv-tension-strip__text strong{
+      color:#ffffff;
+      font-weight:700;
+    }
+
+    @media (max-width: 980px){
+      .cv-hero{
+        min-height:auto;
+      }
+
+      .cv-hero__grid{
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .cv-hero__h1{
+        max-width:none;
+      }
+
+      .hero-plan-card{
+        max-width: 560px;
+      }
+    }
+
+    @media (max-width: 760px){
+      .site-header--minimal .header-right{
+        gap:12px;
+      }
+
+      .learn-more-link{
+        display:none;
+      }
+
+      .cv-hero__content{
+        padding: 90px 0 70px;
+      }
+
+      .cv-hero__h1{
+        font-size: clamp(38px, 11vw, 56px);
+      }
+
+      .cv-hero__sub{
+        font-size:16px;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="conversion-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM9ZCP22" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header class="site-header site-header--minimal">
-  <div class="container header-inner">
-    <a class="brand" href="/">
-      <img src="assets/keldron_with_tagline.png" class="brand-mark"/>
-    </a>
-    <a class="btn btn-primary"
-       href="https://app.keldron.io"
-       onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'header'})">
-      Get My 90-Day Plan
-    </a>
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-
-<section class="cv-hero">
-  <div class="container cv-hero__content">
-    <div class="cv-hero__grid">
-
-```
-  <div>
-    <h1 class="cv-hero__h1">
-      Your business isn’t growing.<br>
-      <span class="cv-hero__accent">We fix it in 90 days.</span>
-    </h1>
-
-    <p class="cv-hero__sub">
-      Tell us what’s happening. Get a clear execution plan you can follow starting today.
-    </p>
-
-    <div class="cv-hero__actions">
-      <a class="btn btn-primary btn-lg"
-         href="https://app.keldron.io"
-         onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'hero'})">
-        Get My 90-Day Plan Free
+  <header class="site-header site-header--minimal">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Keldron homepage">
+        <img
+          src="assets/keldron_with_tagline.png"
+          alt="Keldron logo"
+          class="brand-mark"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <span style="display:none; font-size:20px; font-weight:800; color:var(--on-surface);">Keldron</span>
       </a>
+
+      <div class="header-right">
+        <a href="/learnmore.html" class="learn-more-link">Learn more →</a>
+        <a class="btn btn-primary"
+           href="https://app.keldron.io"
+           onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'header'})">
+          Get My 90-Day Plan
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="cv-hero">
+      <div class="container cv-hero__content">
+        <div class="cv-hero__grid">
+          <div class="cv-hero__copy">
+            <div class="cv-hero__badge">
+              <span class="hero-badge-dot"></span>
+              Free access — open now
+            </div>
+
+            <h1 class="cv-hero__h1">
+              Your business isn’t growing.
+              <span class="cv-hero__accent">We fix it in 90 days.</span>
+            </h1>
+
+            <p class="cv-hero__sub">
+              Tell us what is happening. Get a clear execution plan you can follow starting today.
+            </p>
+
+            <div class="cv-hero__actions">
+              <a class="btn btn-primary btn-lg"
+                 href="https://app.keldron.io"
+                 onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'hero'})">
+                Get My 90-Day Plan Free
+              </a>
+            </div>
+
+            <p class="cv-hero__subnote">
+              3 minutes &nbsp;·&nbsp; No calls &nbsp;·&nbsp; No spreadsheets &nbsp;·&nbsp; No credit card
+            </p>
+          </div>
+
+          <div class="hero-plan-card">
+            <div class="hero-plan-card__top">
+              <span class="hero-plan-dot"></span>
+              <span class="hero-plan-dot"></span>
+              <span class="hero-plan-dot"></span>
+              <span class="hero-plan-title">90-Day Execution Plan</span>
+            </div>
+
+            <div class="hero-plan-card__body">
+              <div class="hero-plan-block">
+                <span class="hero-plan-label">Week 1</span>
+                <ul>
+                  <li>Fix one margin-draining decision</li>
+                  <li>Reduce dead stock on slow-moving items</li>
+                  <li>Prioritize top 3 actions by impact</li>
+                </ul>
+              </div>
+
+              <div class="hero-plan-block">
+                <span class="hero-plan-label">Week 2–4</span>
+                <ul>
+                  <li>Stabilize the main growth blocker</li>
+                  <li>Improve one operational workflow</li>
+                  <li>Track 3 KPIs weekly</li>
+                </ul>
+              </div>
+
+              <div class="hero-plan-block">
+                <span class="hero-plan-label">Month 2–3</span>
+                <ul>
+                  <li>Scale what is already working</li>
+                  <li>Stop low-return activity</li>
+                  <li>Build a cleaner execution rhythm</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="hero-plan-card__foot">
+              Plain English &nbsp;·&nbsp; Prioritized &nbsp;·&nbsp; Actionable
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRIP -->
+    <div class="cv-tension-strip">
+      <div class="container">
+        <p class="cv-tension-strip__text">
+          Most businesses don’t have a growth problem.<br>
+          <strong>They have a decision problem.</strong>
+        </p>
+      </div>
     </div>
 
-    <p class="cv-hero__subnote">
-      3 minutes · No calls · No spreadsheets · No credit card
-    </p>
-  </div>
+    <!-- WHAT YOU GET -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label">What you get</span>
+        <h2 class="section-title">A plan to fix what’s actually holding you back</h2>
 
-  <!-- RIGHT SIDE PLAN PREVIEW -->
-  <div class="hero-plan-card">
-    <div class="hero-plan-card__top">90-Day Execution Plan</div>
+        <div class="pillars">
+          <div class="pillar">
+            <h3 class="pillar-title">What’s slowing growth</h3>
+            <p class="pillar-text">The real constraint behind weak sales or profit.</p>
+          </div>
 
-    <div class="hero-plan-card__body">
-      <p><strong>Week 1</strong></p>
-      <ul>
-        <li>Fix one margin drain</li>
-        <li>Reduce dead stock</li>
-        <li>Prioritize top 3 actions</li>
-      </ul>
+          <div class="pillar">
+            <h3 class="pillar-title">What to fix first</h3>
+            <p class="pillar-text">The few decisions that actually matter.</p>
+          </div>
 
-      <p><strong>Week 2–4</strong></p>
-      <ul>
-        <li>Stabilize growth blocker</li>
-        <li>Improve workflow</li>
-        <li>Track 3 KPIs</li>
-      </ul>
+          <div class="pillar">
+            <h3 class="pillar-title">Your 90-day plan</h3>
+            <p class="pillar-text">Clear actions, week by week.</p>
+          </div>
+        </div>
 
-      <p><strong>Month 2–3</strong></p>
-      <ul>
-        <li>Scale what works</li>
-        <li>Cut low-return effort</li>
-        <li>Build execution rhythm</li>
-      </ul>
-    </div>
-  </div>
+        <div style="margin-top:40px;">
+          <a class="btn btn-primary btn-lg"
+             href="https://app.keldron.io"
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'middle'})">
+            Get My 90-Day Plan Free
+          </a>
+        </div>
+      </div>
+    </section>
 
-</div>
-```
+    <!-- FINAL CTA -->
+    <section class="section-dark">
+      <div class="container" style="padding-top:80px; padding-bottom:80px;">
+        <h2 class="section-title section-title-dark">Stop guessing. Start fixing.</h2>
 
-  </div>
-</section>
+        <div style="margin-top:24px;">
+          <a class="btn btn-primary btn-lg"
+             href="https://app.keldron.io"
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'final'})">
+            Get My 90-Day Plan
+          </a>
+        </div>
+      </div>
+    </section>
 
-<!-- STRIP -->
-
-<section class="cv-tension-strip">
-  <p>
-    Most businesses don’t have a growth problem.<br>
-    <strong>They have a decision problem.</strong>
-  </p>
-</section>
-
-<!-- WHAT YOU GET -->
-
-<section class="section">
-  <div class="container">
-
-```
-<h2 class="section-title">A plan to fix what’s actually holding you back</h2>
-
-<div class="pillars">
-  <div class="pillar">
-    <h3>What’s slowing growth</h3>
-    <p>The real constraint behind weak sales or profit.</p>
-  </div>
-
-  <div class="pillar">
-    <h3>What to fix first</h3>
-    <p>The few decisions that actually matter.</p>
-  </div>
-
-  <div class="pillar">
-    <h3>Your 90-day plan</h3>
-    <p>Clear actions, week by week.</p>
-  </div>
-</div>
-
-<div style="margin-top:40px;">
-  <a class="btn btn-primary btn-lg"
-     href="https://app.keldron.io"
-     onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'middle'})">
-    Get My 90-Day Plan Free
-  </a>
-</div>
-```
-
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-
-<section class="section-dark">
-  <div class="container">
-
-```
-<h2 class="section-title-dark">
-  Stop guessing. Start fixing.
-</h2>
-
-<div style="margin-top:24px;">
-  <a class="btn btn-primary btn-lg"
-     href="https://app.keldron.io"
-     onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'final'})">
-    Get My 90-Day Plan
-  </a>
-</div>
-```
-
-  </div>
-</section>
-
-</main>
+  </main>
 
 </body>
 </html>
