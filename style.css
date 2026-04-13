@@ -1129,3 +1129,50 @@ body.conversion-page .cv-tension-strip__text strong { color: var(--primary-fixed
   .display { font-size: clamp(28px, 8vw, 40px); }
   .closing-actions { flex-direction: column; align-items: stretch; }
 }
+/* === INDEX HERO IMAGE POLISH === */
+body.conversion-page .cv-hero__grid {
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 540px);
+  gap: 72px;
+}
+
+body.conversion-page .hero-image-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transform: translateY(18px);
+}
+
+body.conversion-page .hero-image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.34),
+    0 10px 30px rgba(0,0,0,0.18);
+  transform: rotate(-2deg);
+  transform-origin: center center;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 980px) {
+  body.conversion-page .cv-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  body.conversion-page .hero-image-wrap {
+    justify-content: flex-start;
+    transform: none;
+  }
+
+  body.conversion-page .hero-image {
+    max-width: 460px;
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 640px) {
+  body.conversion-page .hero-image {
+    max-width: 100%;
+  }
+}
