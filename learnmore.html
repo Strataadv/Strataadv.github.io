@@ -28,11 +28,11 @@
   <meta name="twitter:image" content="https://keldron.io/assets/og-image.png" />
   <meta name="twitter:image:alt" content="Keldron 90-day execution plan homepage preview." />
 
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" href="/assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 
   <!-- Google Tag Manager -->
   <script>
@@ -106,13 +106,14 @@
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Keldron homepage">
         <img
-          src="assets/keldron_with_tagline.png"
+          src="/assets/keldron_with_tagline.png"
           alt="Keldron logo"
           class="brand-mark"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
         />
         <span style="display:none; font-size:20px; font-weight:800; color:var(--on-surface);">Keldron</span>
       </a>
+
       <nav class="nav" aria-label="Primary">
         <a href="#why">What You Get</a>
         <a href="#report">Inside the Plan</a>
@@ -120,6 +121,7 @@
         <a href="#faq">FAQ</a>
         <a href="/contact.html">Contact</a>
       </nav>
+
       <div class="header-cta">
         <a class="btn btn-primary"
            href="https://app.keldron.io"
@@ -140,12 +142,16 @@
             <span class="hero-badge-dot"></span>
             Free access — open now
           </div>
+
           <span class="display-accent"></span>
+
           <h1 class="display">
             Your business isn’t growing.
             <span class="accent">We fix it in 90 days.</span>
           </h1>
+
           <p class="lead">Tell us what is happening. Get a clear execution plan you can follow starting today.</p>
+
           <div class="hero-actions">
             <a class="btn btn-primary btn-lg"
                href="https://app.keldron.io"
@@ -158,6 +164,7 @@
               See Sample Report
             </a>
           </div>
+
           <p class="cta-subnote">3 minutes &nbsp;·&nbsp; No calls &nbsp;·&nbsp; No spreadsheets &nbsp;·&nbsp; Instant plan &nbsp;·&nbsp; No credit card</p>
         </div>
 
@@ -170,43 +177,21 @@
               <span class="mock-title">90-Day Execution Plan</span>
             </div>
 
-            <div style="padding: 22px 22px 18px; background: var(--surface-container-lowest);">
-              <div style="border-left: 3px solid var(--primary-container); padding-left: 14px; margin-bottom: 18px;">
-                <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--outline); margin-bottom: 8px;">Week 1</div>
-                <div style="font-size: 14px; color: var(--on-surface); line-height: 1.7;">
-                  • Reduce dead stock on slow-moving items<br>
-                  • Fix one margin-draining decision<br>
-                  • Prioritize top 3 actions by impact
-                </div>
-              </div>
-
-              <div style="border-left: 3px solid rgba(6,95,70,0.45); padding-left: 14px; margin-bottom: 18px;">
-                <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--outline); margin-bottom: 8px;">Week 2–4</div>
-                <div style="font-size: 14px; color: var(--on-surface); line-height: 1.7;">
-                  • Stabilize the main growth blocker<br>
-                  • Improve one operational workflow<br>
-                  • Track 3 KPIs weekly
-                </div>
-              </div>
-
-              <div style="border-left: 3px solid rgba(6,95,70,0.25); padding-left: 14px;">
-                <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--outline); margin-bottom: 8px;">Month 2–3</div>
-                <div style="font-size: 14px; color: var(--on-surface); line-height: 1.7;">
-                  • Scale what is already working<br>
-                  • Stop low-return activity<br>
-                  • Build a cleaner execution rhythm
-                </div>
-              </div>
-            </div>
+            <a href="/sample-report.html"
+               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image'})">
+              <img
+                src="/assets/90day_plan.png"
+                alt="Keldron 90-Day Execution Plan"
+                style="width:100%; height:auto; display:block;"
+              />
+            </a>
 
             <div class="mock-foot">
-              <span>Plain English</span>
-              <span>Prioritized</span>
-              <span>Actionable</span>
+              <span>Real plan output — identifying details removed</span>
               <a href="/sample-report.html"
                  style="margin-left:auto; color: var(--primary-container); font-weight:600; text-decoration:none;"
                  onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image_foot'})">
-                View sample →
+                View full sample →
               </a>
             </div>
           </div>
@@ -604,7 +589,7 @@
           </details>
           <details>
             <summary>How do you handle my data?</summary>
-            <div class="faq-content">We keep things minimal and purpose-driven. Read our <a href="privacy.html" style="color: var(--primary-container); font-weight:600;">Privacy Policy</a>.</div>
+            <div class="faq-content">We keep things minimal and purpose-driven. Read our <a href="/privacy.html" style="color: var(--primary-container); font-weight:600;">Privacy Policy</a>.</div>
           </details>
         </div>
       </div>
@@ -641,7 +626,7 @@
     <div class="container footer-inner">
       <div class="footer-left">
         <a href="/" aria-label="Keldron home">
-          <img src="assets/keldron_with_tagline.png" alt="Keldron footer logo" style="height:56px; width:auto; display:block;" />
+          <img src="/assets/keldron_with_tagline.png" alt="Keldron footer logo" style="height:56px; width:auto; display:block;" />
         </a>
       </div>
       <div class="footer-right">
