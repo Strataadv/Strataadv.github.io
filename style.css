@@ -1176,3 +1176,33 @@ body.conversion-page .hero-image {
     max-width: 100%;
   }
 }
+/* learnmore hero image polish */
+.hero-mock {
+  max-width: 560px;
+  margin-top: 28px;
+}
+
+.hero-mock .mock-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-mock .mock-card {
+  border-radius: 18px;
+  box-shadow:
+    0 24px 70px rgba(26,28,28,0.10),
+    0 8px 24px rgba(26,28,28,0.06);
+}
+
+.hero-mock .mock-foot {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+@media (max-width: 980px) {
+  .hero-mock {
+    max-width: 100%;
+    margin-top: 0;
+  }
+}
