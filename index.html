@@ -91,7 +91,7 @@
       {"@type":"Question","name":"Who gets the most value from Keldron?","acceptedAnswer":{"@type":"Answer","text":"Owner-led businesses that know growth or profit is off, but need a clear plan instead of more dashboards or vague advice."}},
       {"@type":"Question","name":"How fast do I get the plan?","acceptedAnswer":{"@type":"Answer","text":"Usually within minutes. You answer a short set of questions and Keldron generates your plan immediately."}},
       {"@type":"Question","name":"Do I need to upload sensitive financial data?","acceptedAnswer":{"@type":"Answer","text":"No. Keldron works from top-line business context. No spreadsheets, no sensitive numbers, and no integrations are required."}},
-      {"@type":"Question","name":"Can I see a sample plan before I start?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can view a real sample report before starting."}}
+      {"@type":"Question","name":"Can I see a sample plan before I start?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can preview a real sample report on the homepage before starting."}}
     ]
   }
   </script>
@@ -151,14 +151,20 @@
             </h1>
 
             <p class="cv-hero__sub">
-              Tell us what is happening. Get a clear execution plan you can follow starting today.
+              Tell us what is happening. Get a clear execution plan that shows what is slowing you down, what to fix first, and what to do next.
             </p>
 
-            <div class="cv-hero__actions">
+            <div class="cv-hero__actions" style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
               <a class="btn btn-primary btn-lg"
                  href="https://app.keldron.io"
                  onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'hero'})">
                 Get My 90-Day Plan Free
+              </a>
+
+              <a class="btn btn-secondary btn-lg"
+                 href="#sample-report"
+                 onclick="try { if (window.posthog) posthog.capture('sample_report_view_clicked', {location: 'hero'}); } catch(e) {}">
+                View Sample Report
               </a>
             </div>
 
@@ -167,12 +173,61 @@
             </p>
           </div>
 
+          <!-- HERO PROOF CARD -->
           <div class="hero-image-wrap">
-            <img
-              src="assets/90day_plan.png"
-              alt="Keldron 90-Day Execution Plan"
-              class="hero-image"
-            />
+            <div style="
+              background: rgba(255,255,255,0.94);
+              border: 1px solid rgba(17,17,17,0.08);
+              border-radius: 22px;
+              box-shadow: 0 18px 50px rgba(0,0,0,0.14);
+              overflow: hidden;
+              max-width: 560px;
+              margin: 0 auto;
+              backdrop-filter: blur(4px);
+            ">
+              <div style="padding:14px 18px; border-bottom:1px solid rgba(17,17,17,0.08); background:#fcfaf5; display:flex; justify-content:space-between; align-items:center; gap:10px;">
+                <div>
+                  <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650;">Real sample report</div>
+                  <div style="font-size:14px; color:#444; margin-top:4px;">What business owners see in under 3 minutes</div>
+                </div>
+                <a href="#sample-report"
+                   style="font-size:13px; font-weight:700; color:#0d6650; text-decoration:none;"
+                   onclick="try { if (window.posthog) posthog.capture('sample_report_view_clicked', {location: 'hero_card'}); } catch(e) {}">
+                  Preview below
+                </a>
+              </div>
+
+              <div style="padding:20px 20px 16px;">
+                <div style="font-size:15px; font-weight:800; color:#111; margin-bottom:14px;">
+                  90-Day Execution Plan
+                </div>
+
+                <div style="background:#f8f5ee; border:1px solid rgba(17,17,17,0.06); border-radius:16px; padding:16px; margin-bottom:14px;">
+                  <div style="font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0d6650; margin-bottom:8px;">Executive Summary</div>
+                  <p style="margin:0; font-size:14px; line-height:1.6; color:#2c2c2c;">
+                    Your business is operating without critical control over a few key areas. That creates ongoing pressure on cash, service reliability, and day-to-day execution.
+                  </p>
+                </div>
+
+                <div style="background:#fff; border:1px solid rgba(17,17,17,0.06); border-radius:16px; padding:16px; margin-bottom:14px;">
+                  <div style="font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">What To Fix First</div>
+                  <ol style="margin:0; padding-left:18px; color:#222; font-size:14px; line-height:1.7;">
+                    <li>Fix inventory control first because inaccurate stock creates waste and blind purchasing decisions.</li>
+                    <li>Fix delivery reliability next because service inconsistency damages customer trust.</li>
+                    <li>Fix weekly cash visibility after that because key decisions are being made without enough control.</li>
+                  </ol>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; padding-top:4px;">
+                  <div style="font-size:12px; color:#666;">Sample preview only — your report is tailored to your business</div>
+                  <a class="btn btn-primary"
+                     href="https://app.keldron.io"
+                     onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'hero_proof_card'})">
+                    Get My Report
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -188,34 +243,96 @@
       </div>
     </div>
 
+    <!-- SAMPLE REPORT PREVIEW -->
+    <section id="sample-report" class="section" style="scroll-margin-top: 100px;">
+      <div class="container">
+        <span class="section-label">Sample report preview</span>
+        <h2 class="section-title">This is what you get in under 3 minutes</h2>
+        <p style="max-width:760px; margin:0 auto 40px; text-align:center; font-size:18px; line-height:1.7; color:#444;">
+          Not a dashboard. Not vague advice. A plain-English execution plan that shows what is slowing your business down and what to fix first.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:22px; align-items:stretch;">
+
+          <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:20px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+            <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
+              Executive Summary
+            </div>
+            <p style="margin:0; font-size:15px; line-height:1.75; color:#222;">
+              Coastal Fresh Produce is operating without critical controls over inventory and deliveries, and this creates ongoing revenue pressure and customer dissatisfaction.
+            </p>
+          </div>
+
+          <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:20px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+            <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
+              What To Fix First
+            </div>
+            <ol style="margin:0; padding-left:18px; font-size:15px; line-height:1.75; color:#222;">
+              <li>Fix daily inventory counts first because without accurate on-hand figures, ordering will continue to cause spoilage and stockouts.</li>
+              <li>Fix delivery route planning next because inconsistent deliveries are directly impacting customer satisfaction and creating unnecessary transport costs.</li>
+              <li>Fix supplier performance tracking after that because supply risks remain hidden until they disrupt availability.</li>
+            </ol>
+          </div>
+
+          <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:20px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+            <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
+              90-Day Action Plan
+            </div>
+            <div style="font-size:15px; line-height:1.75; color:#222;">
+              <strong style="color:#111;">Days 1-30:</strong> Establish controls<br>
+              <strong style="color:#111;">Days 31-60:</strong> Stabilize operations<br>
+              <strong style="color:#111;">Days 61-90:</strong> Strengthen systems
+            </div>
+            <p style="margin:14px 0 0; font-size:14px; line-height:1.7; color:#555;">
+              Your report shows what to address now, what to stabilize next, and how to reduce owner dependence over the next 90 days.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:28px; text-align:center;">
+          <a href="https://app.keldron.io"
+             class="btn btn-primary btn-lg"
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'sample_section'})">
+            Get a Report Like This for My Business
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- WHAT YOU GET -->
-    <section class="section">
+    <section class="section" style="padding-top:0;">
       <div class="container">
         <span class="section-label">What you get</span>
         <h2 class="section-title">A plan to fix what’s actually holding you back</h2>
 
         <div class="pillars">
           <div class="pillar">
-            <h3 class="pillar-title">What’s slowing growth</h3>
-            <p class="pillar-text">The real constraint behind weak sales, weak profit, or operational drag.</p>
+            <h3 class="pillar-title">What’s slowing execution</h3>
+            <p class="pillar-text">The real constraint behind missed growth, weak margins, slow delivery, or operational drag.</p>
           </div>
 
           <div class="pillar">
             <h3 class="pillar-title">What to fix first</h3>
-            <p class="pillar-text">The few decisions that matter most right now, not a list of generic advice.</p>
+            <p class="pillar-text">The few decisions that matter most right now, in the right order, with clear business impact.</p>
           </div>
 
           <div class="pillar">
             <h3 class="pillar-title">Your 90-day plan</h3>
-            <p class="pillar-text">Clear actions, week by week, so you know exactly what to do next.</p>
+            <p class="pillar-text">Clear next steps across the next 30, 60, and 90 days, so you know exactly what to do next.</p>
           </div>
         </div>
 
-        <div style="margin-top:40px;">
+        <div style="margin-top:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
           <a class="btn btn-primary btn-lg"
              href="https://app.keldron.io"
              onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'middle'})">
             Get My 90-Day Plan Free
+          </a>
+
+          <a class="btn btn-secondary btn-lg"
+             href="#sample-report"
+             onclick="try { if (window.posthog) posthog.capture('sample_report_view_clicked', {location: 'middle'}); } catch(e) {}">
+            View Sample Report
           </a>
         </div>
       </div>
@@ -223,14 +340,23 @@
 
     <!-- FINAL CTA -->
     <section class="section-dark">
-      <div class="container" style="padding-top:76px; padding-bottom:76px;">
+      <div class="container" style="padding-top:76px; padding-bottom:76px; text-align:center;">
         <h2 class="section-title section-title-dark">Stop guessing. Start fixing.</h2>
+        <p style="max-width:720px; margin:18px auto 0; font-size:18px; line-height:1.7; color:rgba(255,255,255,0.82);">
+          Get a free execution-focused report that shows what is slowing your business down and what to do next.
+        </p>
 
-        <div style="margin-top:24px;">
+        <div style="margin-top:24px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
           <a class="btn btn-primary btn-lg"
              href="https://app.keldron.io"
              onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'final'})">
             Get My 90-Day Plan
+          </a>
+
+          <a class="btn btn-secondary btn-lg"
+             href="#sample-report"
+             onclick="try { if (window.posthog) posthog.capture('sample_report_view_clicked', {location: 'final'}); } catch(e) {}">
+            View Sample Report
           </a>
         </div>
       </div>
