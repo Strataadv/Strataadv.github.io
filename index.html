@@ -138,8 +138,8 @@
       </div>
 
       <div class="container cv-hero__content">
-        <div class="cv-hero__grid">
-          <div class="cv-hero__copy">
+        <div class="cv-hero__grid" style="display:flex; justify-content:flex-end;">
+          <div class="cv-hero__copy" style="max-width:640px; margin-left:auto; text-align:left;">
             <div class="cv-hero__badge">
               <span class="hero-badge-dot"></span>
               Free access — open now
@@ -172,63 +172,6 @@
               3 minutes &nbsp;·&nbsp; No calls &nbsp;·&nbsp; No spreadsheets &nbsp;·&nbsp; No credit card
             </p>
           </div>
-
-          <!-- HERO PROOF CARD -->
-          <div class="hero-image-wrap">
-            <div style="
-              background: rgba(255,255,255,0.94);
-              border: 1px solid rgba(17,17,17,0.08);
-              border-radius: 22px;
-              box-shadow: 0 18px 50px rgba(0,0,0,0.14);
-              overflow: hidden;
-              max-width: 560px;
-              margin: 0 auto;
-              backdrop-filter: blur(4px);
-            ">
-              <div style="padding:14px 18px; border-bottom:1px solid rgba(17,17,17,0.08); background:#fcfaf5; display:flex; justify-content:space-between; align-items:center; gap:10px;">
-                <div>
-                  <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650;">Real sample report</div>
-                  <div style="font-size:14px; color:#444; margin-top:4px;">What business owners see in under 3 minutes</div>
-                </div>
-                <a href="#sample-report"
-                   style="font-size:13px; font-weight:700; color:#0d6650; text-decoration:none;"
-                   onclick="try { if (window.posthog) posthog.capture('sample_report_view_clicked', {location: 'hero_card'}); } catch(e) {}">
-                  Preview below
-                </a>
-              </div>
-
-              <div style="padding:20px 20px 16px;">
-                <div style="font-size:15px; font-weight:800; color:#111; margin-bottom:14px;">
-                  90-Day Execution Plan
-                </div>
-
-                <div style="background:#f8f5ee; border:1px solid rgba(17,17,17,0.06); border-radius:16px; padding:16px; margin-bottom:14px;">
-                  <div style="font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0d6650; margin-bottom:8px;">Executive Summary</div>
-                  <p style="margin:0; font-size:14px; line-height:1.6; color:#2c2c2c;">
-                    Your business is operating without critical control over a few key areas. That creates ongoing pressure on cash, service reliability, and day-to-day execution.
-                  </p>
-                </div>
-
-                <div style="background:#fff; border:1px solid rgba(17,17,17,0.06); border-radius:16px; padding:16px; margin-bottom:14px;">
-                  <div style="font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">What To Fix First</div>
-                  <ol style="margin:0; padding-left:18px; color:#222; font-size:14px; line-height:1.7;">
-                    <li>Fix inventory control first because inaccurate stock creates waste and blind purchasing decisions.</li>
-                    <li>Fix delivery reliability next because service inconsistency damages customer trust.</li>
-                    <li>Fix weekly cash visibility after that because key decisions are being made without enough control.</li>
-                  </ol>
-                </div>
-
-                <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; padding-top:4px;">
-                  <div style="font-size:12px; color:#666;">Sample preview only — your report is tailored to your business</div>
-                  <a class="btn btn-primary"
-                     href="https://app.keldron.io"
-                     onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'hero_proof_card'})">
-                    Get My Report
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -252,49 +195,65 @@
           Not a dashboard. Not vague advice. A plain-English execution plan that shows what is slowing your business down and what to fix first.
         </p>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:22px; align-items:stretch;">
-
-          <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:20px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
-            <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
-              Executive Summary
+        <div style="max-width:980px; margin:0 auto; background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:24px; box-shadow:0 16px 40px rgba(0,0,0,0.06); overflow:hidden;">
+          <div style="padding:16px 22px; border-bottom:1px solid rgba(17,17,17,0.08); background:#fcfaf5; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+            <div>
+              <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650;">Real sample report</div>
+              <div style="font-size:14px; color:#555; margin-top:4px;">A preview of the kind of decision-focused plan Keldron generates</div>
             </div>
-            <p style="margin:0; font-size:15px; line-height:1.75; color:#222;">
-              Coastal Fresh Produce is operating without critical controls over inventory and deliveries, and this creates ongoing revenue pressure and customer dissatisfaction.
-            </p>
+            <a class="btn btn-primary"
+               href="https://app.keldron.io"
+               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'sample_top'})">
+              Get My Report
+            </a>
           </div>
 
-          <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:20px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
-            <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
-              What To Fix First
-            </div>
-            <ol style="margin:0; padding-left:18px; font-size:15px; line-height:1.75; color:#222;">
-              <li>Fix daily inventory counts first because without accurate on-hand figures, ordering will continue to cause spoilage and stockouts.</li>
-              <li>Fix delivery route planning next because inconsistent deliveries are directly impacting customer satisfaction and creating unnecessary transport costs.</li>
-              <li>Fix supplier performance tracking after that because supply risks remain hidden until they disrupt availability.</li>
-            </ol>
-          </div>
+          <div style="padding:24px;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:22px; align-items:stretch;">
 
-          <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:20px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
-            <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
-              90-Day Action Plan
-            </div>
-            <div style="font-size:15px; line-height:1.75; color:#222;">
-              <strong style="color:#111;">Days 1-30:</strong> Establish controls<br>
-              <strong style="color:#111;">Days 31-60:</strong> Stabilize operations<br>
-              <strong style="color:#111;">Days 61-90:</strong> Strengthen systems
-            </div>
-            <p style="margin:14px 0 0; font-size:14px; line-height:1.7; color:#555;">
-              Your report shows what to address now, what to stabilize next, and how to reduce owner dependence over the next 90 days.
-            </p>
-          </div>
-        </div>
+              <div style="background:#f8f5ee; border:1px solid rgba(17,17,17,0.06); border-radius:18px; padding:22px;">
+                <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
+                  Executive Summary
+                </div>
+                <p style="margin:0; font-size:15px; line-height:1.75; color:#222;">
+                  Coastal Fresh Produce is operating without critical controls over inventory and deliveries, and this creates ongoing revenue pressure and customer dissatisfaction.
+                </p>
+              </div>
 
-        <div style="margin-top:28px; text-align:center;">
-          <a href="https://app.keldron.io"
-             class="btn btn-primary btn-lg"
-             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'sample_section'})">
-            Get a Report Like This for My Business
-          </a>
+              <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:18px; padding:22px;">
+                <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
+                  What To Fix First
+                </div>
+                <ol style="margin:0; padding-left:18px; font-size:15px; line-height:1.75; color:#222;">
+                  <li>Fix daily inventory counts first because without accurate on-hand figures, ordering will continue to cause spoilage and stockouts.</li>
+                  <li>Fix delivery route planning next because inconsistent deliveries are directly impacting customer satisfaction and creating unnecessary transport costs.</li>
+                  <li>Fix supplier performance tracking after that because supply risks remain hidden until they disrupt availability.</li>
+                </ol>
+              </div>
+
+              <div style="background:#fff; border:1px solid rgba(17,17,17,0.08); border-radius:18px; padding:22px;">
+                <div style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#0d6650; margin-bottom:10px;">
+                  90-Day Action Plan
+                </div>
+                <div style="font-size:15px; line-height:1.75; color:#222;">
+                  <strong style="color:#111;">Days 1-30:</strong> Establish controls<br>
+                  <strong style="color:#111;">Days 31-60:</strong> Stabilize operations<br>
+                  <strong style="color:#111;">Days 61-90:</strong> Strengthen systems
+                </div>
+                <p style="margin:14px 0 0; font-size:14px; line-height:1.7; color:#555;">
+                  Your report shows what to address now, what to stabilize next, and how to reduce owner dependence over the next 90 days.
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-top:28px; text-align:center;">
+              <a href="https://app.keldron.io"
+                 class="btn btn-primary btn-lg"
+                 onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'sample_section'})">
+                Get a Report Like This for My Business
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
