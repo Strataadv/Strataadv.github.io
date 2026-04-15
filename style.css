@@ -768,7 +768,7 @@ body.conversion-page .cv-hero__grid {
 body.conversion-page .cv-hero__copy {
   max-width: 640px;
   margin-left: auto;
-  transform: translateX(72px); /* ← MAIN SHIFT */
+  transform: translateX(90px); /* ← MAIN SHIFT */
 }
 
 /* Badge */
