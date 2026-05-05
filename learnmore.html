@@ -3,36 +3,312 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Business Isn’t Growing. We Fix It in 90 Days | Keldron</title>
-  <meta name="description" content="Tell Keldron what is happening in your business and get a clear 90-day execution plan in minutes. No spreadsheets, no calls, no sensitive data upload." />
-  <meta name="theme-color" content="#f9f9f8" />
+
+  <title>Why Your Business Feels Stuck | Keldron</title>
+  <meta name="description" content="Keldron helps SMB owners find the decision gaps holding their business back and get a clear 90-day execution plan in minutes." />
+  <meta name="theme-color" content="#f8faf9" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Keldron" />
-  <meta name="keywords" content="90-day business plan, business execution plan, business not growing, profit not increasing, small business growth plan, owner-led business, business turnaround plan, what to fix first in business, growth execution plan, operational improvement plan" />
   <link rel="canonical" href="https://keldron.io/learnmore.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Your Business Isn’t Growing. We Fix It in 90 Days | Keldron" />
-  <meta property="og:description" content="Get a clear 90-day execution plan for your business in minutes. No spreadsheets. No calls. No sensitive data upload." />
+  <meta property="og:title" content="Why Your Business Feels Stuck | Keldron" />
+  <meta property="og:description" content="Your business may not be slow. Your decisions may be misaligned. Find what to fix first in minutes." />
   <meta property="og:image" content="https://keldron.io/assets/og-image.png" />
-  <meta property="og:image:alt" content="Keldron homepage showing a 90-day business execution plan." />
   <meta property="og:url" content="https://keldron.io/learnmore.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Keldron" />
-  <meta property="og:locale" content="en_US" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Your Business Isn’t Growing. We Fix It in 90 Days | Keldron" />
-  <meta name="twitter:description" content="Get a clear 90-day execution plan in minutes. Find what to fix first and what to do next." />
+  <meta name="twitter:title" content="Why Your Business Feels Stuck | Keldron" />
+  <meta name="twitter:description" content="Find what is actually holding your business back and what to fix first." />
   <meta name="twitter:image" content="https://keldron.io/assets/og-image.png" />
-  <meta name="twitter:image:alt" content="Keldron 90-day execution plan homepage preview." />
 
   <link rel="icon" href="/assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .learn-page {
+      background:#f8faf9;
+      color:#111827;
+    }
+
+    .learn-hero {
+      padding:92px 0 76px;
+      background:
+        linear-gradient(90deg, rgba(248,250,249,.96) 0%, rgba(248,250,249,.86) 46%, rgba(248,250,249,.52) 100%),
+        url('/assets/hero_image.png') center top / cover no-repeat;
+      border-top:1px solid rgba(15,118,110,.08);
+      border-bottom:1px solid rgba(15,118,110,.08);
+    }
+
+    .learn-hero-inner {
+      max-width:760px;
+    }
+
+    .eyebrow {
+      color:#115e59;
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      margin:0 0 18px;
+    }
+
+    .learn-title {
+      font-size:clamp(42px,6vw,72px);
+      line-height:1.02;
+      letter-spacing:-.05em;
+      margin:0;
+      color:#111827;
+    }
+
+    .learn-title span {
+      color:#115e59;
+      display:block;
+    }
+
+    .learn-lead {
+      max-width:620px;
+      font-size:20px;
+      line-height:1.6;
+      color:#374151;
+      margin:26px 0 0;
+    }
+
+    .learn-actions {
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .learn-proof {
+      margin-top:18px;
+      color:#4b5563;
+      font-size:15px;
+    }
+
+    .learn-strip {
+      background:#ffffff;
+      padding:34px 0;
+      text-align:center;
+      border-bottom:1px solid rgba(15,118,110,.08);
+    }
+
+    .learn-strip p {
+      max-width:850px;
+      margin:0 auto;
+      font-size:23px;
+      line-height:1.45;
+      color:#111827;
+    }
+
+    .learn-strip strong {
+      color:#115e59;
+    }
+
+    .learn-section {
+      padding:82px 0;
+    }
+
+    .learn-section.alt {
+      background:#ecfdf5;
+    }
+
+    .learn-section.dark {
+      background:#0f2f2b;
+      color:#ffffff;
+    }
+
+    .learn-section h2 {
+      font-size:clamp(30px,4vw,48px);
+      line-height:1.12;
+      letter-spacing:-.035em;
+      margin:0 0 18px;
+      max-width:760px;
+    }
+
+    .learn-section.dark h2 {
+      color:#ffffff;
+    }
+
+    .learn-intro {
+      max-width:700px;
+      color:#4b5563;
+      font-size:18px;
+      line-height:1.7;
+      margin:0 0 34px;
+    }
+
+    .learn-section.dark .learn-intro {
+      color:rgba(255,255,255,.72);
+    }
+
+    .cards-3 {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .cards-2 {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .learn-card {
+      background:#ffffff;
+      border:1px solid rgba(15,118,110,.12);
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 16px 40px rgba(17,24,39,.05);
+    }
+
+    .learn-section.dark .learn-card {
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.12);
+      box-shadow:none;
+    }
+
+    .learn-card h3 {
+      margin:0 0 10px;
+      font-size:19px;
+      line-height:1.25;
+      color:#115e59;
+    }
+
+    .learn-section.dark .learn-card h3 {
+      color:#99f6e4;
+    }
+
+    .learn-card p {
+      margin:0;
+      color:#4b5563;
+      line-height:1.65;
+      font-size:15.5px;
+    }
+
+    .learn-section.dark .learn-card p {
+      color:rgba(255,255,255,.72);
+    }
+
+    .number {
+      width:34px;
+      height:34px;
+      display:grid;
+      place-items:center;
+      background:#ccfbf1;
+      color:#115e59;
+      border-radius:999px;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    .report-preview {
+      background:#ffffff;
+      border:1px solid rgba(15,118,110,.14);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 20px 50px rgba(17,24,39,.07);
+    }
+
+    .report-preview-top {
+      padding:18px 22px;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:center;
+      background:#ecfdf5;
+      border-bottom:1px solid rgba(15,118,110,.12);
+    }
+
+    .report-preview-body {
+      padding:26px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+    }
+
+    .mini-report-block {
+      border:1px solid rgba(15,118,110,.12);
+      border-radius:16px;
+      padding:22px;
+      background:#ffffff;
+    }
+
+    .mini-report-block h3 {
+      margin:0 0 10px;
+      color:#115e59;
+      font-size:18px;
+    }
+
+    .mini-report-block p,
+    .mini-report-block li {
+      color:#374151;
+      line-height:1.65;
+      font-size:15px;
+    }
+
+    .mini-report-block ul {
+      margin:0;
+      padding-left:18px;
+    }
+
+    .cta-band {
+      background:linear-gradient(135deg,#0f766e,#115e59);
+      color:#ffffff;
+      border-radius:24px;
+      padding:58px 34px;
+      text-align:center;
+      box-shadow:0 24px 70px rgba(15,118,110,.22);
+    }
+
+    .cta-band h2 {
+      margin:0 auto 16px;
+      color:#ffffff;
+    }
+
+    .cta-band p {
+      max-width:640px;
+      margin:0 auto 28px;
+      color:rgba(255,255,255,.78);
+      font-size:18px;
+      line-height:1.65;
+    }
+
+    .cta-band .btn {
+      background:#ffffff;
+      color:#115e59;
+    }
+
+    @media (max-width:900px) {
+      .cards-3,
+      .cards-2,
+      .report-preview-body {
+        grid-template-columns:1fr;
+      }
+
+      .learn-hero {
+        padding:72px 0 62px;
+      }
+
+      .learn-actions {
+        flex-direction:column;
+      }
+
+      .learn-actions .btn {
+        width:100%;
+      }
+
+      .report-preview-top {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
 
   <!-- Google Tag Manager -->
   <script>
@@ -74,59 +350,23 @@
       return false;
     }
   </script>
-
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  { "@context":"https://schema.org","@type":"Organization","name":"Keldron","url":"https://keldron.io","logo":"https://keldron.io/assets/keldron_with_tagline.png","description":"AI-powered business execution planning for owner-led businesses.","founder":{"@type":"Person","name":"Taufiqur Rahman"} }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What do I get from Keldron?","acceptedAnswer":{"@type":"Answer","text":"Keldron gives owner-led businesses a plain-English 90-day execution plan that shows what is holding performance back, what to fix first, what actions to take next, and which KPIs to track."}},
-      {"@type":"Question","name":"Who gets the most value from Keldron?","acceptedAnswer":{"@type":"Answer","text":"Owner-led businesses that know growth or profit is off, but need a clear plan instead of more dashboards or vague advice."}},
-      {"@type":"Question","name":"How fast do I get the plan?","acceptedAnswer":{"@type":"Answer","text":"Usually within minutes. You answer a short set of questions and Keldron generates your plan immediately."}},
-      {"@type":"Question","name":"Is this accounting software or a dashboard?","acceptedAnswer":{"@type":"Answer","text":"No. Keldron is not bookkeeping software or another dashboard. It is a self-serve business decision tool that turns business context into a practical 90-day execution plan."}},
-      {"@type":"Question","name":"Do I need to upload sensitive financial data?","acceptedAnswer":{"@type":"Answer","text":"No. Keldron works from top-line business context. No spreadsheets, no sensitive numbers, and no integrations are required."}},
-      {"@type":"Question","name":"Can I see a sample plan before I start?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can view a real sample report before starting."}},
-      {"@type":"Question","name":"Will someone call me?","acceptedAnswer":{"@type":"Answer","text":"No. Keldron is fully self-serve. You control the pace."}}
-    ]
-  }
-  </script>
 </head>
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
+<body class="learn-page">
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM9ZCP22" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Keldron homepage">
-        <img
-          src="/assets/keldron_with_tagline.png"
-          alt="Keldron logo"
-          class="brand-mark"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-        />
-        <span style="display:none; font-size:20px; font-weight:800; color:var(--on-surface);">Keldron</span>
+        <img src="/assets/keldron_with_tagline.png" alt="Keldron logo" class="brand-mark" />
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#why">What You Get</a>
-        <a href="#report">Inside the Plan</a>
-        <a href="#how">How It Works</a>
-        <a href="#faq">FAQ</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-
-      <div class="header-cta">
+      <div class="header-right">
+        <a href="/" class="learn-more-link">Back home →</a>
         <a class="btn btn-primary"
            href="https://app.keldron.io"
-           onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'header'})">
-          Get My 90-Day Plan
+           onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'learn_header'})">
+          Start Free Diagnostic
         </a>
       </div>
     </div>
@@ -134,488 +374,221 @@
 
   <main>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="hero-badge">
-            <span class="hero-badge-dot"></span>
-            Free access — open now
-          </div>
+    <section class="learn-hero">
+      <div class="container">
+        <div class="learn-hero-inner">
+          <p class="eyebrow">Why Keldron exists</p>
 
-          <span class="display-accent"></span>
-
-          <h1 class="display">
-            Your business isn’t growing.
-            <span class="accent">We fix it in 90 days.</span>
+          <h1 class="learn-title">
+            You may not have a growth problem.
+            <span>You may have a decision problem.</span>
           </h1>
 
-          <p class="lead">Tell us what is happening. Get a clear execution plan you can follow starting today.</p>
+          <p class="learn-lead">
+            Most owners are already working hard. The issue is not effort. It is that the wrong problems keep getting priority while the real constraint stays hidden.
+          </p>
 
-          <div class="hero-actions">
+          <div class="learn-actions">
             <a class="btn btn-primary btn-lg"
                href="https://app.keldron.io"
-               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'hero'})">
-              Get My 90-Day Plan Free
+               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'fix_whats_holding_me_back', location: 'learn_hero'})">
+              Fix what’s actually holding me back →
             </a>
-            <a class="btn btn-ghost btn-lg"
-               href="/sample-report.html"
-               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero'})">
-              See Sample Report
+
+            <a class="btn btn-secondary btn-lg"
+               href="#inside">
+              Show me what I get
             </a>
           </div>
 
-          <p class="cta-subnote">3 minutes &nbsp;·&nbsp; No calls &nbsp;·&nbsp; No spreadsheets &nbsp;·&nbsp; Instant plan &nbsp;·&nbsp; No credit card</p>
+          <p class="learn-proof">3 minutes · No calls · No data uploads · Instant clarity</p>
         </div>
+      </div>
+    </section>
 
-        <div class="hero-mock">
-          <div class="mock-card">
-            <div class="mock-top">
-              <span class="mock-dot"></span>
-              <span class="mock-dot"></span>
-              <span class="mock-dot"></span>
-              <span class="mock-title">90-Day Execution Plan</span>
+    <section class="learn-strip">
+      <div class="container">
+        <p>
+          If you keep fixing symptoms, the business keeps repeating the same pattern.
+          <strong>Keldron helps you find what to fix first.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="learn-section">
+      <div class="container">
+        <p class="eyebrow">The problem</p>
+        <h2>Most small businesses don’t fail from lack of effort.</h2>
+        <p class="learn-intro">
+          They get stuck because decisions are made late, from incomplete visibility, or through owner instinct instead of a repeatable system.
+        </p>
+
+        <div class="cards-3">
+          <div class="learn-card">
+            <div class="number">1</div>
+            <h3>You fix what is visible</h3>
+            <p>Delays, weak sales, stock issues, and rising costs are easy to see. But they are usually symptoms of a deeper control problem.</p>
+          </div>
+
+          <div class="learn-card">
+            <div class="number">2</div>
+            <h3>You decide without enough clarity</h3>
+            <p>When cash, inventory, customers, or operations are not reviewed consistently, decisions become reactive.</p>
+          </div>
+
+          <div class="learn-card">
+            <div class="number">3</div>
+            <h3>The wrong thing gets priority</h3>
+            <p>Energy goes into whatever feels urgent, not what will remove the constraint holding the business back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="learn-section dark">
+      <div class="container">
+        <p class="eyebrow" style="color:#99f6e4;">The shift</p>
+        <h2>Keldron turns business confusion into a decision sequence.</h2>
+        <p class="learn-intro">
+          The output is not a dashboard, not a lecture, and not another generic report. It gives you a practical order of attack.
+        </p>
+
+        <div class="cards-3">
+          <div class="learn-card">
+            <h3>What is really slowing you down</h3>
+            <p>The main constraint behind your current pressure — operations, cash, inventory, customers, or owner dependency.</p>
+          </div>
+
+          <div class="learn-card">
+            <h3>What you are fixing wrong</h3>
+            <p>A direct view of where your current decisions may be creating repeated pressure instead of solving it.</p>
+          </div>
+
+          <div class="learn-card">
+            <h3>What to fix next</h3>
+            <p>A 30/60/90-day plan with clear priorities, so you stop spreading effort across everything at once.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="learn-section" id="inside">
+      <div class="container">
+        <p class="eyebrow">Inside the output</p>
+        <h2>This is what the diagnostic gives you.</h2>
+        <p class="learn-intro">
+          You answer a short set of questions. Keldron turns that into a focused execution report built around decision clarity.
+        </p>
+
+        <div class="report-preview">
+          <div class="report-preview-top">
+            <div>
+              <strong style="color:#115e59;">Keldron Diagnostic Report</strong>
+              <div style="color:#4b5563; font-size:14px; margin-top:4px;">A decision-focused plan for what to fix first.</div>
             </div>
 
-            <a href="/sample-report.html"
-               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image'})">
-              <img
-                src="/assets/90day_plan.png"
-                alt="Keldron 90-Day Execution Plan"
-                style="width:100%; height:auto; display:block;"
-              />
+            <a class="btn btn-primary"
+               href="https://app.keldron.io"
+               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'preview_start', location: 'learn_report_preview'})">
+              Start Free Diagnostic
             </a>
+          </div>
 
-            <div class="mock-foot">
-              <span>Real plan output — identifying details removed</span>
-              <a href="/sample-report.html"
-                 style="margin-left:auto; color: var(--primary-container); font-weight:600; text-decoration:none;"
-                 onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'hero_image_foot'})">
-                View full sample →
-              </a>
+          <div class="report-preview-body">
+            <div class="mini-report-block">
+              <h3>Here’s what to fix first</h3>
+              <p>
+                The report identifies the priority issue that is most likely creating drag across the business.
+              </p>
+
+              <h3 style="margin-top:24px;">Decision misalignment snapshot</h3>
+              <ul>
+                <li>Where decisions are being made too late</li>
+                <li>Where owner judgment is replacing system control</li>
+                <li>Where missing visibility is creating hidden cost</li>
+              </ul>
+            </div>
+
+            <div class="mini-report-block" style="background:#ecfdf5;">
+              <h3>What unlocks next</h3>
+              <ul>
+                <li>Why this is happening</li>
+                <li>What you are likely getting wrong</li>
+                <li>90-day action plan</li>
+                <li>Weekly execution system</li>
+              </ul>
+              <p style="margin-top:18px;">
+                The free diagnostic gives clarity. The full plan gives the sequence.
+              </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="hero-micro-proof" style="margin-top:12px;">
-            <span class="star">★</span>
-            <span>Built to show what is holding the business back, what to fix first, and what to do over the next <strong>90 days</strong>.</span>
+    <section class="learn-section alt">
+      <div class="container">
+        <p class="eyebrow">How it works</p>
+        <h2>Three minutes. No setup. No sales call.</h2>
+
+        <div class="cards-3">
+          <div class="learn-card">
+            <div class="number">1</div>
+            <h3>Answer the diagnostic</h3>
+            <p>Tell Keldron what is happening in your business using simple, owner-level questions.</p>
+          </div>
+
+          <div class="learn-card">
+            <div class="number">2</div>
+            <h3>See the pattern</h3>
+            <p>The report shows where execution, cash, customers, inventory, or decision habits are creating pressure.</p>
+          </div>
+
+          <div class="learn-card">
+            <div class="number">3</div>
+            <h3>Act in the right order</h3>
+            <p>You get a practical plan showing what to fix first, what to watch, and what to do next.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROOF STRIP -->
-    <div class="proof-strip">
-      <div class="container proof-strip-inner">
-        <div class="proof-strip-item">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          No credit card required
-        </div>
-        <div class="proof-strip-item">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Plan ready in minutes
-        </div>
-        <div class="proof-strip-item">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          No sensitive data uploaded
-        </div>
-        <div class="proof-strip-item">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          27+ years of operator expertise
-        </div>
-      </div>
-    </div>
-
-    <!-- WHAT YOU GET -->
-    <section class="section section-dark" id="why">
+    <section class="learn-section">
       <div class="container">
-        <span class="section-label">What you get</span>
-        <h2 class="section-title section-title-dark">A plan to fix what is actually holding you back</h2>
-        <p class="section-intro section-intro-dark">Keldron turns business context into a structured, plain-English plan so you can stop guessing and move in the right order.</p>
+        <p class="eyebrow">Who it is for</p>
+        <h2>Built for owner-led businesses that feel busier than their results justify.</h2>
 
-        <div class="deliverable-grid">
-          <div class="deliverable-item">
-            <div class="deliverable-icon">01</div>
-            <h3>What is slowing growth</h3>
-            <p>The issue most likely limiting performance across operations, inventory, finance, sales, or management focus.</p>
+        <div class="cards-2">
+          <div class="learn-card">
+            <h3>Good fit</h3>
+            <p>
+              Retail, service, logistics, distribution, and light manufacturing businesses with 5–50 employees that feel stuck, stretched, or unclear on what to fix first.
+            </p>
           </div>
-          <div class="deliverable-item">
-            <div class="deliverable-icon">02</div>
-            <h3>What to fix first</h3>
-            <p>The few decisions and actions that matter most right now, not a long list of generic suggestions.</p>
-          </div>
-          <div class="deliverable-item">
-            <div class="deliverable-icon">03</div>
-            <h3>Quick wins</h3>
-            <p>Immediate actions that can improve control, reduce waste, and create momentum in the next 30 days.</p>
-          </div>
-          <div class="deliverable-item">
-            <div class="deliverable-icon">04</div>
-            <h3>90-Day Execution Plan</h3>
-            <p>A sequenced plan so management attention goes in the right order over the next 12 weeks.</p>
+
+          <div class="learn-card">
+            <h3>Not a fit</h3>
+            <p>
+              If you want accounting software, a complex dashboard, or a long consulting engagement, this is not that. Keldron is built for fast decision clarity.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INSIDE THE PLAN -->
-    <section class="section" id="report">
+    <section class="learn-section">
       <div class="container">
-        <span class="section-label">Inside your plan</span>
-        <h2 class="section-title">This is not another report. It is a decision-ready action plan.</h2>
-        <p class="section-intro">Keldron generates a practical output designed to tell you what is wrong, why it matters, and what to do next.</p>
+        <div class="cta-band">
+          <h2>Stop fixing the loudest problem.</h2>
+          <p>
+            Find what is actually holding the business back and get a clear first move in minutes.
+          </p>
 
-        <div class="pillars" style="grid-template-columns: repeat(2, 1fr);">
-          <div class="pillar">
-            <div class="pillar-num">📍</div>
-            <h3 class="pillar-title">Your situation</h3>
-            <p class="pillar-text">A fast view of the current business picture and where attention is needed first.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-num">🔎</div>
-            <h3 class="pillar-title">What is holding you back</h3>
-            <p class="pillar-text">The main issues slowing growth, weakening profit, or creating drag across the business.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-num">⚡</div>
-            <h3 class="pillar-title">What to do this week</h3>
-            <p class="pillar-text">Fast, practical moves that can improve control, reduce waste, and create momentum quickly.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-num">📈</div>
-            <h3 class="pillar-title">KPIs to track</h3>
-            <p class="pillar-text">The numbers, owners, and review rhythm needed to see whether the business is improving.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-num">🛡️</div>
-            <h3 class="pillar-title">Risks and watchouts</h3>
-            <p class="pillar-text">What could block progress, what to watch early, and where decisions need more discipline.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-num">🗓️</div>
-            <h3 class="pillar-title">90-day execution roadmap</h3>
-            <p class="pillar-text">A phased plan covering immediate action, stabilization, and improvement.</p>
-          </div>
-        </div>
-
-        <div class="dark-cta" style="margin-top:32px;">
-          <a class="btn btn-ghost btn-lg"
-             href="/sample-report.html"
-             onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'report_section'})">
-            View Sample Report →
-          </a>
-          <p class="reassurance" style="margin-top:10px;">Generated in minutes. No signup required to preview the output.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section" id="how" style="background: var(--surface-container-low);">
-      <div class="container">
-        <span class="section-label">How it works</span>
-        <h2 class="section-title">Three steps. No technical setup. No consultants needed.</h2>
-        <p class="section-intro">Built for owners who need clarity fast, without dashboards, integrations, or long advisory calls.</p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-badge">1</div>
-            <h3>Tell us what is happening</h3>
-            <p>No sensitive numbers. No spreadsheets. Just top-line business context.</p>
-          </div>
-          <div class="step">
-            <div class="step-badge">2</div>
-            <h3>Keldron finds what matters most</h3>
-            <p>It identifies the likely blocker, priority decisions, and performance pressure points.</p>
-          </div>
-          <div class="step">
-            <div class="step-badge">3</div>
-            <h3>Get your 90-day plan</h3>
-            <p>You receive a structured plan with priorities, quick wins, KPIs, and a practical action path.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY THIS MATTERS -->
-    <section class="section section-dark">
-      <div class="container">
-        <span class="section-label" style="color: rgba(139,214,182,0.7);">Why this matters now</span>
-        <h2 class="section-title section-title-dark">The reality for owner-led businesses</h2>
-
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-num">51%</div>
-            <h3>Cash flow struggles</h3>
-            <p>of small businesses struggle with uneven cash flow</p>
-            <p class="stat-source"><a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">2025 Small Business Credit Survey</a></p>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">75%</div>
-            <h3>Rising costs</h3>
-            <p>cite rising costs as their top financial challenge</p>
-            <p class="stat-source"><a href="https://www.federalreserve.gov/publications/2025-small-business-credit-survey.htm" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Federal Reserve, 2025</a></p>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">3 in 4</div>
-            <h3>Not using AI yet</h3>
-            <p>small businesses have not adopted AI for operations</p>
-            <p class="stat-source"><a href="https://www.reimaginemainstreet.org/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Reimagine Main Street / SBA</a></p>
-          </div>
-        </div>
-
-        <div class="dark-cta">
-          <a class="btn btn-primary btn-lg"
+          <a class="btn btn-lg"
              href="https://app.keldron.io"
-             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'stats'})">
-            Get My 90-Day Plan
+             onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'learn_final'})">
+            Start Free Diagnostic →
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIDEO -->
-    <section class="video-section">
-      <div class="container">
-        <div class="video-wrap">
-          <div class="video-copy">
-            <span class="section-label">Overview</span>
-            <h2>See how it works in 45 seconds</h2>
-            <p>Watch the full flow before you start.</p>
-            <a class="btn btn-primary btn-lg"
-               href="https://app.keldron.io"
-               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'video_section'})">
-              Get My 90-Day Plan
-            </a>
-          </div>
-
-          <div class="mock-card">
-            <div class="mock-top">
-              <span class="mock-dot"></span>
-              <span class="mock-dot"></span>
-              <span class="mock-dot"></span>
-              <span class="mock-title">Keldron — 45 Second Overview</span>
-            </div>
-            <div style="position:relative; overflow:hidden; aspect-ratio:1920/1080; background: linear-gradient(135deg, #0f1c18 0%, #1e2d28 100%);">
-              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; pointer-events:none; z-index:0;">
-                <div style="width:52px; height:52px; border-radius:50%; background:rgba(6,95,70,0.25); border:2px solid rgba(139,214,182,0.4); display:flex; align-items:center; justify-content:center;">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(139,214,182,0.9)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                </div>
-                <span style="font-size:12px; color:rgba(241,241,240,0.4); letter-spacing:0.04em; font-weight:500;">Loading video…</span>
-              </div>
-              <iframe
-                src="https://share.synthesia.io/embeds/videos/dbdabe3f-1d3c-4bf3-8dc3-3fba12c166be"
-                loading="lazy"
-                title="Keldron business execution plan overview"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowfullscreen
-                style="position:absolute; width:100%; height:100%; top:0; left:0; border:none; z-index:1;">
-              </iframe>
-            </div>
-            <div class="mock-foot">
-              <span>45 seconds</span>
-              <span>No sound needed</span>
-              <span>Captions on</span>
-              <a href="https://app.keldron.io"
-                 style="margin-left:auto; color: var(--primary-container); font-weight:600; text-decoration:none;"
-                 onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'hero_video', location: 'video_section'})">
-                Try it free →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHO IT IS FOR -->
-    <section class="section" style="padding-top:56px; padding-bottom:56px;">
-      <div class="container">
-        <span class="section-label">Fit</span>
-        <h2 class="section-title">Built for businesses that need clarity fast</h2>
-        <p class="section-intro">Best for teams that know something is off, but do not know what to fix first.</p>
-
-        <div class="industry-grid">
-          <div class="industry-card">
-            <span class="industry-icon">🏪</span>
-            <p class="industry-title">Retail</p>
-          </div>
-          <div class="industry-card">
-            <span class="industry-icon">📦</span>
-            <p class="industry-title">Wholesale &amp; Distribution</p>
-          </div>
-          <div class="industry-card">
-            <span class="industry-icon">🏭</span>
-            <p class="industry-title">Light Manufacturing</p>
-          </div>
-          <div class="industry-card">
-            <span class="industry-icon">🛠️</span>
-            <p class="industry-title">Local Services</p>
-          </div>
-        </div>
-
-        <p style="text-align:center; color: var(--outline); font-size:13px; font-weight:500; margin-top:24px; line-height:1.8;">
-          Especially useful when profits feel tighter than they should &nbsp;·&nbsp;
-          operations feel busier than results justify &nbsp;·&nbsp;
-          problems keep repeating &nbsp;·&nbsp;
-          management needs a clearer next move
-        </p>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="testimonial-section">
-      <div class="container">
-        <p style="text-align:center; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color: var(--outline); margin:0 0 28px;">Practitioners are already seeing results</p>
-
-        <div class="testimonial-grid">
-          <div class="testimonial-card featured">
-            <div class="testimonial-stars">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <p class="testimonial-quote">"Keldron surfaced 5 issues we had completely missed. The action plan was simple and immediately useful."</p>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">K.A.</div>
-              <div class="testimonial-meta">
-                <span class="testimonial-name">K.A.</span>
-                <span class="testimonial-role">SAP Implementation Consultant &nbsp;·&nbsp; Solopreneur</span>
-              </div>
-              <div class="testimonial-verified">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Verified user
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <p class="testimonial-quote">"It showed exactly where performance was being held back."</p>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">R.O.</div>
-              <div class="testimonial-meta">
-                <span class="testimonial-name">Retail owner</span>
-                <span class="testimonial-role">Small business user</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <p class="testimonial-quote">"Finally something that explains what is going wrong in plain English."</p>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">S.M.</div>
-              <div class="testimonial-meta">
-                <span class="testimonial-name">SMB operator</span>
-                <span class="testimonial-role">Early user</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOUNDER QUOTE -->
-    <section class="founder-section">
-      <div class="container">
-        <div class="founder-inner">
-          <div class="founder-mark">"</div>
-          <blockquote class="founder-quote">
-            In 27 years running operations and supply chains across manufacturing, retail, and distribution,
-            I watched smart business owners make expensive decisions with incomplete visibility. Keldron is built
-            to surface the real issue faster, so the next move is informed by what actually matters.
-          </blockquote>
-          <div style="display:flex; align-items:center; justify-content:center; gap:14px;">
-            <img src="/assets/taufiq.jpg" alt="Taufiqur Rahman" style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0;" />
-            <div style="text-align:left;">
-              <p style="margin:0; font-size:14px; font-weight:700; color: var(--on-surface); letter-spacing:-0.01em;">Taufiqur Rahman</p>
-              <p style="margin:0; font-size:12px; color: var(--outline);">Founder &amp; CEO, Keldron.io &nbsp;·&nbsp; 27 years in operations, supply chain &amp; growth</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTERNAL TOPIC LINKS -->
-    <section class="internal-links-section">
-      <div class="container" style="max-width:980px;">
-        <h2 class="section-title" style="font-size:clamp(18px,2.2vw,24px); margin-bottom:10px;">Explore common business issues</h2>
-        <p class="section-intro" style="margin-bottom:24px; font-size:15px;">
-          These guides explain the most common causes of slow growth, weak margins, and hidden drag in owner-led businesses.
-        </p>
-        <div class="internal-links-grid">
-          <a href="/why-business-not-growing.html" class="internal-link-pill">Why your business is not growing →</a>
-          <a href="/profit-not-increasing.html" class="internal-link-pill">Why profit is not increasing →</a>
-          <a href="/business-bottlenecks.html" class="internal-link-pill">What is holding your business back →</a>
-          <a href="/operational-inefficiencies.html" class="internal-link-pill">Hidden operational drag →</a>
-          <a href="/slow-business-growth.html" class="internal-link-pill">Why business growth is slowing →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq" style="padding-top:40px; background: var(--surface-container-low);">
-      <div class="container">
-        <span class="section-label">FAQ</span>
-        <h2 class="section-title">Common questions</h2>
-
-        <div class="faq">
-          <details>
-            <summary>What do I get from Keldron?</summary>
-            <div class="faq-content">Keldron gives owner-led businesses a plain-English 90-day execution plan that shows what is holding performance back, what to fix first, what actions to take next, and which KPIs to track.</div>
-          </details>
-          <details>
-            <summary>Who gets the most value from Keldron?</summary>
-            <div class="faq-content">Owner-led businesses that know growth or profit is off, but need a clear plan instead of more dashboards or vague advice. If profits feel tighter than they should, growth feels slower than expected, or the business feels stuck, Keldron is built for you.</div>
-          </details>
-          <details>
-            <summary>How fast do I get the plan?</summary>
-            <div class="faq-content">Usually within minutes. You answer a short set of questions and Keldron generates your plan immediately — including priorities, quick wins, KPIs, and a 90-day execution path.</div>
-          </details>
-          <details>
-            <summary>Is this accounting software or a dashboard?</summary>
-            <div class="faq-content">No. Keldron is not bookkeeping software or another dashboard. It is a self-serve business decision tool that helps clarify what is most likely slowing performance and what to do next.</div>
-          </details>
-          <details>
-            <summary>Do I need to upload sensitive financial data?</summary>
-            <div class="faq-content">No. Keldron works from top-line business context — the kind of things you already know about your business. No spreadsheets, no sensitive numbers, no integrations required.</div>
-          </details>
-          <details>
-            <summary>What is included in the plan?</summary>
-            <div class="faq-content">A typical plan includes your current situation, what is holding you back, priority actions, quick wins, KPI guidance, risks to watch, and a 90-day execution roadmap.</div>
-          </details>
-          <details>
-            <summary>Can I see a sample plan before I start?</summary>
-            <div class="faq-content">Yes. <a href="/sample-report.html" style="color: var(--primary-container); font-weight:600;">View a real sample report here</a>.</div>
-          </details>
-          <details>
-            <summary>Will someone call me?</summary>
-            <div class="faq-content">No. Keldron is fully self-serve. You control the pace.</div>
-          </details>
-          <details>
-            <summary>How do you handle my data?</summary>
-            <div class="faq-content">We keep things minimal and purpose-driven. Read our <a href="/privacy.html" style="color: var(--primary-container); font-weight:600;">Privacy Policy</a>.</div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING CTA -->
-    <section class="closing">
-      <div class="container">
-        <div class="closing-inner">
-          <h2 class="closing-title">Your business isn’t growing. Start fixing it with a clear 90-day plan.</h2>
-          <p class="closing-text">Get a plain-English plan with priorities, quick wins, KPIs, and a practical action path in minutes.</p>
-          <p class="closing-subtext">Know what to fix first before you invest in more tools, more people, or more pressure.</p>
-          <div class="closing-actions">
-            <a class="btn-closing-primary"
-               href="https://app.keldron.io"
-               onclick="return trackAndGo(event, this, 'cta_clicked', {button: 'start_free_diagnostic', location: 'closing'})">
-              Get My 90-Day Plan
-            </a>
-            <a class="btn-closing-ghost"
-               href="/sample-report.html"
-               onclick="return trackAndGo(event, this, 'sample_report_viewed', {location: 'closing'})">
-              View Sample Report
-            </a>
-          </div>
-          <p style="font-size:12px; color:rgba(166,242,209,0.45); margin-top:16px; position:relative; z-index:1;">No credit card. No calls. Takes 3 minutes.</p>
-          <p class="closing-signoff">— Keldron</p>
         </div>
       </div>
     </section>
@@ -630,7 +603,7 @@
         </a>
       </div>
       <div class="footer-right">
-        <div class="footer-muted small">90-Day Business Execution Plans for Entrepreneurs &amp; SMBs</div>
+        <div class="footer-muted small">Decision clarity for owner-led businesses</div>
         <div class="footer-muted small">© <span id="year"></span> Strata Growth Advisors &nbsp;·&nbsp; Operating as Keldron.io</div>
       </div>
     </div>
